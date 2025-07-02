@@ -1,0 +1,74 @@
+// User Registration Techniques
+Flow org.gluu.agama.registration.main
+     Basepath ""
+     Timeout 360 seconds
+// Create  variable for UI feedback
+uiFeedback = {}
+// Iterate x times max
+Repeat 6 times max
+     // Retrieve user profile  from UI
+     userInput = RRF "profile.ftlh" uiFeedback
+     // create an instance of Registration service
+     userRegistrationService = Call org.gluu.agama.user.UserRegistration#getInstance 
+     // Assign userName, email and password  to a variable
+     email = userInput.mail
+     userName = userInput.uid
+     userPassword = userInput.userPassword
+     // Check user name policy
+     isUsernamePolicyMatch = Call userRegistrationService usernamePolicyMatch userName
+     // if username policy match
+     When isUsernamePolicyMatch is true
+          // Password policy check
+          isPasswordPolicyMatch = Call userRegistrationService passwordPolicyMatch userPassword
+          // if password policy match
+          When isPasswordPolicyMatch is true
+               // Matching password 
+               When userInput.userPassword is userInput.confirmPassword
+                    // Check user already exist or not with mail
+                    user = Call userRegistrationService getUserEntityByMail email
+                    // If user not found
+                    When user.empty is true
+                         // Check user already exist or not with username
+                         userWithUid = Call userRegistrationService getUserEntityByUsername userName
+                         // user not found
+                         When userWithUid.empty is true
+                              // Call user registration service method to register a new user
+                              inum | E = Call userRegistrationService addNewUser userInput
+                              // If user registration success
+                              When inum is not null
+                                   // Show user creation log
+                                   Log "@info User % has been created" inum
+                                   // Show acknowledgement UI page for successful registration
+                                   acknowledgementInput = RRF "acknowledgement.ftlh" 
+                                   // Finish the flow successfully
+                                   Log "@info Finish the flow successfully"
+                                   // Finish the flow successfully
+                                   Finish userName
+                              // Registration failed log
+                              Log "@info User registration failed. Error : %" E
+                         Otherwise
+                              // User already registered with UID
+                              Log "@info User already registered with uid: %" userName
+                              // User already registered with UID
+                              uiFeedback.errorMessage = "User already registered with this UserName"
+                    Otherwise
+                         // User already registered with mail
+                         Log "@info User already registered with mail: %" email
+                         // User already Registered
+                         uiFeedback.errorMessage = "User already Registered with this mail"
+               Otherwise
+                    // Password and Confirm password doesn't match
+                    Log "@trace Password and Confirm password doesn't match"
+                    // Error variable assignment
+                    uiFeedback.errorMessage = "Password and confirm password not matching"
+          Otherwise
+               // password policy
+               uiFeedback.errorMessage = "Password must be at least 6 characters long and contain at least one special character"
+     Otherwise
+          // Name should contain only alphabets
+          uiFeedback.errorMessage = "Name should contain only alphabets"
+// Maximum attempt reached
+Log "@info Maximum attempt reached"
+// User Registration flow failed
+it_ejqjx = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_ejqjx

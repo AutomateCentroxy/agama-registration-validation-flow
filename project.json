@@ -1,0 +1,22 @@
+{
+    "projectName": "agama-registration",
+    "description": "Designing an Agama Flow for seamless user registration with validation and authentication.",
+    "type": "community",
+    "author": "GluuFederation",
+    "version": "1.0.5",
+    "authorWebsite": "https://github.com/GluuFederation/agama-registration",
+    "githubUri": "https://github.com/GluuFederation/agama-registration",
+    "license": "apache-2.0",
+    "lastUpdated": "1739300950582",
+    "tags": [
+        "jans",
+        "community",
+        "authentication"
+    ],
+    "noDirectLaunch": [],
+    "configs": {
+        "org.gluu.agama.registration.main": {},
+        "": {}
+    },
+    "name": "agama-registration"
+}
