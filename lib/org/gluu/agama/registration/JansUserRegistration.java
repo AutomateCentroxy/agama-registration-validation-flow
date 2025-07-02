@@ -50,12 +50,15 @@ public class JansUserRegistration extends UserRegistration {
     }
 
     public boolean passwordPolicyMatch(String userPassword) {
-        String regex = "^(?=.*[!@#$^&*])[A-Za-z0-9!@#$^&*]{6,}$";
+        String regex = '''^(?=.*[!@#$^&*])[A-Za-z0-9!@#$^&*]{6,}$''';
         return Pattern.compile(regex).matcher(userPassword).matches();
     }
 
     public boolean usernamePolicyMatch(String userName) {
-        return Pattern.compile("^[A-Za-z]+$").matcher(userName).matches();
+        // Regex: Only alphabets (uppercase and lowercase), minimum 1 character
+        String regex = '''^[A-Za-z]+$''';
+        Pattern pattern = Pattern.compile(regex);
+        return pattern.matcher(userName).matches();
     }
 
     public boolean checkIfUserExists(String username, String email) {
