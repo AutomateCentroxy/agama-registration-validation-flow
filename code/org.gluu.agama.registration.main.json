@@ -1291,6 +1291,41 @@
 				"width": 170,
 				"height": 122
 			},
+			"selected": false
+		},
+		{
+			"id": "rrfNode-3fbcaf85-fdc3-49a0-a03b-2589f4d800ba",
+			"type": "rrfNode",
+			"position": {
+				"x": 2529.928202747176,
+				"y": 802.721858870189
+			},
+			"data": {
+				"id": "rrfNode-3fbcaf85-fdc3-49a0-a03b-2589f4d800ba",
+				"type": "rrfNode",
+				"position": {
+					"x": 2529.928202747176,
+					"y": 802.721858870189
+				},
+				"previousNodeId": "logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5",
+				"agamaData": {
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "emailOtp.ftlh",
+					"asssignedVariableName": "uiInput",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Email OTP page",
+					"hasComment": true,
+					"comment": "Redirect to page asking for OTP received using email",
+					"arguments": "uiFeedback"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
 			"selected": true
 		}
 	],
@@ -1875,11 +1910,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_callNode-e7b9ec45-6230-4076-9750-46196dd44459"
+		},
+		{
+			"id": "logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5-rrfNode-3fbcaf85-fdc3-49a0-a03b-2589f4d800ba",
+			"type": "default",
+			"source": "logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5",
+			"target": "rrfNode-3fbcaf85-fdc3-49a0-a03b-2589f4d800ba",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5"
 		}
 	],
 	"viewport": {
-		"x": -1574.6667354364722,
-		"y": -553.972156779021,
-		"zoom": 1
+		"x": -2797.8595310765772,
+		"y": -860.8294831277735,
+		"zoom": 1.3491025343396987
 	}
 }
