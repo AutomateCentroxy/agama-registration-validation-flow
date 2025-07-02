@@ -36,6 +36,7 @@ Repeat 6 times max
                          When userWithUid.empty is true
                               // Email Otp send to user
                               emailOtp = Call userRegistrationService sendEmailOtp email
+                              Log "@info uiFeedback.infoMessage: Email otp send"
                          Otherwise
                               // User already registered with UID
                               Log "@info User already registered with uid: %" userName
@@ -60,5 +61,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_cgkqs = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_cgkqs
+it_bbtkr = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_bbtkr
