@@ -3,11 +3,7 @@
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>User Registration
 	</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></head>
-<body>[#ftl output_format="HTML"]
-
-
-
-
+<body>
 
   
 	
@@ -15,7 +11,7 @@
 	
 	
   
-  
+  [#ftl output_format="HTML"]
 	<div class="registration-container">
 	  <div align="center" class="flex">
 		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
@@ -40,24 +36,24 @@
 			<input type="text" id="uid" name="uid" pattern="[A-Za-z]+" title="Name should contain only alphabets" required="" placeholder="Choose a username" class="form-control">
 		  </div>
 		  <div class="form-group">
-			<label class="form-label">Display Name: <span class="required">*</span></label>
-			<input type="text" id="displayName" name="displayName" required="" placeholder="Enter your display name" class="form-control">
-		  </div>
-		  <div class="form-group">
-			<label class="form-label">First Name: <span class="required">*</span></label>
-			<input type="text" id="givenName" name="givenName" required="" placeholder="Enter your first name" class="form-control">
-		  </div>
-		  <div class="form-group">
-			<label class="form-label">Last Name: <span class="required">*</span></label>
-			<input type="text" id="sn" name="sn" required="" placeholder="Enter your last name" class="form-control">
-		  </div>
-		  <div class="form-group">
 			<label class="form-label">Email: <span class="required">*</span></label>
 			<input type="email" id="mail" name="mail" required="" placeholder="Enter your email" class="form-control">
 		  </div>
 		  <div class="form-group">
+			<label class="form-label">Mobile Number: <span class="required">*</span></label>
+			<input type="tel" id="jansMobile" name="jansMobile" pattern="^\+?\d{10,15}$" title="Enter a valid phone number with country code" required="" placeholder="+911234567890" class="form-control">
+		  </div>
+		  <div class="form-group">
+			<label class="form-label">Country: <span class="required">*</span></label>
+			<input type="text" id="jansCountry" name="jansCountry" required="" placeholder="Enter your country" class="form-control">
+		  </div>
+		  <div class="form-group">
+			<label class="form-label">Referral Code:</label>
+			<input type="text" id="referralCode" name="referralCode" placeholder="Optional referral code" class="form-control">
+		  </div>
+		  <div class="form-group">
 			<label class="form-label">Password: <span class="required">*</span></label>
-			<input type="password" id="userPassword" name="userPassword" minlength="6" pattern="^(?=.*[!@#$%^&amp;*])(?=.*[A-Za-z0-9]).{6,}$" required="" placeholder="Choose a strong password" class="form-control" title="Password must be at least 6 characters long and contain at least one special character (!@#$%^&amp;*)">
+			<input type="password" id="userPassword" name="userPassword" minlength="6" pattern="^(?=.*[!@#$%^&amp;*])(?=.*[A-Za-z0-9]).{6,}$" required="" placeholder="Choose a strong password" title="Password must be at least 6 characters long and contain at least one special character (!@#$%^&amp;*)" class="form-control">
 		  </div>
 		  <div class="form-group">
 			<label class="form-label">Repeat Password: <span class="required">*</span></label>
@@ -75,9 +71,6 @@
   
   
   
-
-
-
 </body>
 <style>
 	body {
