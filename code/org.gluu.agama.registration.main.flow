@@ -35,7 +35,7 @@ Repeat 6 times max
                          // user not found
                          When userWithUid.empty is true
                               // Email Otp send to user
-                              emailOtp = Call userRegistrationService sendEmailOtp email
+                              emailOtp = Call userRegistrationService sendEmailOtp email context
                               Log "@info uiFeedback.infoMessage: Email otp send"
                               // Redirect to page asking for OTP received using email
                               uiInput = RRF "emailOtp.ftlh" uiFeedback
@@ -64,5 +64,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_aieko = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_aieko
+it_szapy = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_szapy
