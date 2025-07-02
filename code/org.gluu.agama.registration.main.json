@@ -863,8 +863,8 @@
 			"id": "logNode-cf757d75-ec10-456e-ada2-9736b843df04",
 			"type": "logNode",
 			"position": {
-				"x": 1892.301164722427,
-				"y": 307.96871880533035
+				"x": 1953.0107787677134,
+				"y": 348.44179483552136
 			},
 			"data": {
 				"id": "logNode-cf757d75-ec10-456e-ada2-9736b843df04",
@@ -1237,24 +1237,28 @@
 				"branching": "success",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "",
-					"javaVariableName": "",
+					"javaMethodName": "sendEmailOtp",
+					"javaVariableName": "userRegistrationService",
 					"exceptionVariableField": "",
-					"callType": "Call static method",
-					"arguments": [],
+					"callType": "Call method on instance",
+					"arguments": [
+						"email"
+					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "Email Otp send to user",
 					"hasComment": true,
-					"comment": ""
+					"comment": "Email Otp send to user",
+					"asssignedVariableName": "emailOtp"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1822,8 +1826,8 @@
 		}
 	],
 	"viewport": {
-		"x": -904.6460180874783,
-		"y": -283.3120063097109,
-		"zoom": 0.7412335049014176
+		"x": -1355.5658987269417,
+		"y": -611.1954861126949,
+		"zoom": 1
 	}
 }
