@@ -243,7 +243,7 @@
 						{
 							"variableTypeCheck": false,
 							"assignmentExpression": "userInput.uid",
-							"assignedVariableName": "userName"
+							"assignedVariableName": "userNuserInput.residenceCountryame"
 						},
 						{
 							"variableTypeCheck": true,
