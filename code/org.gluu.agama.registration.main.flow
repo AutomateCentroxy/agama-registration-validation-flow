@@ -39,6 +39,7 @@ Repeat 6 times max
                               Log "@info uiFeedback.infoMessage: Email otp send"
                               // Redirect to page asking for OTP received using email
                               uiInput = RRF "emailOtp.ftlh" uiFeedback
+                              Call __________#__________ 
                          Otherwise
                               // User already registered with UID
                               Log "@info User already registered with uid: %" userName
@@ -63,5 +64,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_fyspf = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_fyspf
+it_aieko = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_aieko
