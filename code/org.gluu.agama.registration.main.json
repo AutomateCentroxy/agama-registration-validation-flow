@@ -982,8 +982,8 @@
 			"id": "assignmentNode-d8c56ab7-a159-4915-af18-bc30025ff928",
 			"type": "assignmentNode",
 			"position": {
-				"x": 2200.415611833358,
-				"y": 194.57846075155476
+				"x": 2242.2377903978886,
+				"y": 227.63147284287743
 			},
 			"data": {
 				"id": "assignmentNode-d8c56ab7-a159-4915-af18-bc30025ff928",
@@ -1252,6 +1252,39 @@
 					"hasComment": true,
 					"comment": "Email Otp send to user",
 					"asssignedVariableName": "emailOtp"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": false
+		},
+		{
+			"id": "logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5",
+			"type": "logNode",
+			"position": {
+				"x": 2279.928202747176,
+				"y": 802.721858870189
+			},
+			"data": {
+				"id": "logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5",
+				"type": "logNode",
+				"position": {
+					"x": 2279.928202747176,
+					"y": 802.721858870189
+				},
+				"previousNodeId": "callNode-e7b9ec45-6230-4076-9750-46196dd44459",
+				"agamaData": {
+					"logMessage": "\"uiFeedback.infoMessage: Email otp send\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Email otp send",
+					"hasComment": true,
+					"comment": ""
 				}
 			},
 			"measured": {
@@ -1823,11 +1856,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-f6e375d5-6064-4609-89e8-b0943c226c08_success"
+		},
+		{
+			"id": "callNode-e7b9ec45-6230-4076-9750-46196dd44459-logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5",
+			"type": "default",
+			"source": "callNode-e7b9ec45-6230-4076-9750-46196dd44459",
+			"target": "logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-e7b9ec45-6230-4076-9750-46196dd44459"
 		}
 	],
 	"viewport": {
-		"x": -1355.5658987269417,
-		"y": -611.1954861126949,
+		"x": -1574.6667354364722,
+		"y": -553.972156779021,
 		"zoom": 1
 	}
 }
