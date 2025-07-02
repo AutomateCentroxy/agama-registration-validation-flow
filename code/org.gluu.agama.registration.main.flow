@@ -34,6 +34,7 @@ Repeat 6 times max
                          userWithUid = Call userRegistrationService getUserEntityByUsername userName
                          // user not found
                          When userWithUid.empty is true
+                              Call __________#__________ 
                          Otherwise
                               // User already registered with UID
                               Log "@info User already registered with uid: %" userName
@@ -58,5 +59,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_gveds = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_gveds
+it_xnosy = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_xnosy
