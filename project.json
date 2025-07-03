@@ -16,7 +16,8 @@
     "noDirectLaunch": [],
     "configs": {
         "org.gluu.agama.registration.main": {},
-        "": {}
+        "": {},
+        "org.gluu.agama.smtp.emailVerification": {}
     },
     "name": "agama-registration"
 }
