@@ -65,5 +65,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_mgeer = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_mgeer
+it_izdic = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_izdic
