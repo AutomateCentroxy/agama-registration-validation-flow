@@ -189,7 +189,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-b904a8bb-ab87-48ce-b75b-c425e631337d",
@@ -233,6 +233,45 @@
 				"height": 58
 			},
 			"selected": false
+		},
+		{
+			"id": "assignmentNode-321f378c-d318-4917-b88e-91f33d591528",
+			"type": "assignmentNode",
+			"position": {
+				"x": 1280,
+				"y": 480
+			},
+			"data": {
+				"id": "assignmentNode-321f378c-d318-4917-b88e-91f33d591528",
+				"type": "assignmentNode",
+				"position": {
+					"x": 1280,
+					"y": 480
+				},
+				"previousNodeId": "whenNode-b904a8bb-ab87-48ce-b75b-c425e631337d",
+				"branching": "success",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "false",
+							"assignedVariableName": "sendMail"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Tun off send mail"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -330,11 +369,30 @@
 			},
 			"id": "xy-edge__repeatNode-86854c10-1921-4d62-a40d-0ee5f7fe233asource_repeatNode-86854c10-1921-4d62-a40d-0ee5f7fe233a_continue-finishNode-a3375c3a-48b8-4483-bc2b-cb25e4703332target_finishNode-a3375c3a-48b8-4483-bc2b-cb25e4703332",
 			"selected": false
+		},
+		{
+			"id": "whenNode-b904a8bb-ab87-48ce-b75b-c425e631337d-assignmentNode-321f378c-d318-4917-b88e-91f33d591528",
+			"type": "default",
+			"source": "whenNode-b904a8bb-ab87-48ce-b75b-c425e631337d",
+			"target": "assignmentNode-321f378c-d318-4917-b88e-91f33d591528",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-b904a8bb-ab87-48ce-b75b-c425e631337d_success"
 		}
 	],
 	"viewport": {
-		"x": -506,
-		"y": 128,
+		"x": -792,
+		"y": -116,
 		"zoom": 1
 	}
 }
