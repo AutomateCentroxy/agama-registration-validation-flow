@@ -204,8 +204,8 @@
 			"id": "assignmentNode-321f378c-d318-4917-b88e-91f33d591528",
 			"type": "assignmentNode",
 			"position": {
-				"x": 1280,
-				"y": 480
+				"x": 1217.4598903273813,
+				"y": 477.447342462342
 			},
 			"data": {
 				"id": "assignmentNode-321f378c-d318-4917-b88e-91f33d591528",
@@ -237,7 +237,8 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "assignmentNode-600b8038-1aaf-43b9-858c-06775a7460a9",
@@ -304,6 +305,47 @@
 					"returnVariable": "obj.error",
 					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": false
+		},
+		{
+			"id": "callNode-ece73344-1545-4b50-b428-234b9f03c503",
+			"type": "callNode",
+			"position": {
+				"x": 1467.4598903273813,
+				"y": 477.447342462342
+			},
+			"data": {
+				"id": "callNode-ece73344-1545-4b50-b428-234b9f03c503",
+				"type": "callNode",
+				"position": {
+					"x": 1467.4598903273813,
+					"y": 477.447342462342
+				},
+				"previousNodeId": "assignmentNode-321f378c-d318-4917-b88e-91f33d591528",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "sendEmail",
+					"javaVariableName": "emailService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"email",
+						"context"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Call email service to send mail",
+					"asssignedVariableName": "otpCode"
 				}
 			},
 			"measured": {
@@ -446,11 +488,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_assignmentNode-600b8038-1aaf-43b9-858c-06775a7460a9"
+		},
+		{
+			"id": "assignmentNode-321f378c-d318-4917-b88e-91f33d591528-callNode-ece73344-1545-4b50-b428-234b9f03c503",
+			"type": "default",
+			"source": "assignmentNode-321f378c-d318-4917-b88e-91f33d591528",
+			"target": "callNode-ece73344-1545-4b50-b428-234b9f03c503",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_assignmentNode-321f378c-d318-4917-b88e-91f33d591528"
 		}
 	],
 	"viewport": {
-		"x": -621.2037759522254,
-		"y": 128.3239764734663,
-		"zoom": 1.161508731925722
+		"x": -1815.6160561141369,
+		"y": -466.45116973773304,
+		"zoom": 1.5669943738986813
 	}
 }
