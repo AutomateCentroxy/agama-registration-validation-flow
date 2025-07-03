@@ -1,3 +1,5 @@
 Flow org.gluu.agama.registration.emailVerification
      Basepath ""
      Inputs profile extUid
+// Assign the email obtain from input profile to a variable
+origEmail = profile.email
