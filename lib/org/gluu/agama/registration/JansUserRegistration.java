@@ -9,6 +9,7 @@ import io.jans.service.MailService;
 import io.jans.service.cdi.util.CdiUtil;
 import io.jans.util.StringHelper;
 import io.jans.agama.engine.script.LogUtils;
+import org.gluu.agama.registration.jans.model.ContextData;
 
 import org.gluu.agama.smtp.EmailTemplate;
 import org.gluu.agama.user.UserRegistration;
@@ -78,7 +79,8 @@ public class JansUserRegistration extends UserRegistration {
         String from = smtpConfiguration.getFromEmailAddress();
         String subject = String.format(SUBJECT_TEMPLATE, otp);
         String textBody = String.format(MSG_TEMPLATE_TEXT, otp);
-        String htmlBody = EmailTemplate.get(otp);
+         ContextData context = new ContextData();
+        String htmlBody = EmailTemplate.get(otp, context);
 
         MailService mailService = CdiUtil.bean(MailService.class);
 
