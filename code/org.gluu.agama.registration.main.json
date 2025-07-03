@@ -1342,48 +1342,6 @@
 			"dragging": false
 		},
 		{
-			"id": "callNode-f17afaaf-2ad7-4e85-ae14-cbf6c6f0aa46",
-			"type": "callNode",
-			"position": {
-				"x": 2489.3039518415435,
-				"y": 705.0321444308348
-			},
-			"data": {
-				"id": "callNode-f17afaaf-2ad7-4e85-ae14-cbf6c6f0aa46",
-				"type": "callNode",
-				"position": {
-					"x": 2029.9282027471759,
-					"y": 802.721858870189
-				},
-				"previousNodeId": "assignmentNode-eb51d943-fffd-4291-8a5e-27d233569a8a",
-				"agamaData": {
-					"javaClassName": "",
-					"javaMethodName": "sendEmail",
-					"javaVariableName": "userRegistrationService",
-					"exceptionVariableField": "",
-					"callType": "Call method on instance",
-					"arguments": [
-						"email",
-						"context"
-					],
-					"nodeIcon": "material-symbols:code",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "",
-					"hasComment": true,
-					"comment": "Call email service to send mail",
-					"asssignedVariableName": "otpCode"
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 122
-			},
-			"selected": false,
-			"dragging": false
-		},
-		{
 			"id": "whenNode-e3132e39-f1e7-4989-98b4-9847846a1ec2",
 			"type": "whenNode",
 			"position": {
@@ -1664,7 +1622,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1700,6 +1658,45 @@
 				"height": 122
 			},
 			"selected": false
+		},
+		{
+			"id": "triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
+			"type": "triggerNode",
+			"position": {
+				"x": 2481.057748962963,
+				"y": 693.5778454187802
+			},
+			"data": {
+				"id": "triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
+				"type": "triggerNode",
+				"position": {
+					"x": 2481.057748962963,
+					"y": 693.5778454187802
+				},
+				"previousNodeId": "assignmentNode-eb51d943-fffd-4291-8a5e-27d233569a8a",
+				"agamaData": {
+					"nodeIcon": "fluent-mdl2:trigger-approval",
+					"flowFileName": "org.gluu.agama.registration.emailVerification",
+					"arguments": [
+						"email",
+						"context"
+					],
+					"asssignedVariableName": "emailVerificationResult",
+					"exceptionVariableField": "",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Trigger sub-routine to verify email",
+					"overrides": []
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -2303,25 +2300,6 @@
 			"sourceHandle": "source_whenNode-cb1cdb5b-ae87-4328-9160-a875bfb6312a_otherwise"
 		},
 		{
-			"id": "callNode-f17afaaf-2ad7-4e85-ae14-cbf6c6f0aa46-whenNode-e3132e39-f1e7-4989-98b4-9847846a1ec2",
-			"type": "default",
-			"source": "callNode-f17afaaf-2ad7-4e85-ae14-cbf6c6f0aa46",
-			"target": "whenNode-e3132e39-f1e7-4989-98b4-9847846a1ec2",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_callNode-f17afaaf-2ad7-4e85-ae14-cbf6c6f0aa46"
-		},
-		{
 			"id": "whenNode-e3132e39-f1e7-4989-98b4-9847846a1ec2-assignmentNode-a36c4a11-7868-4323-b720-704c9ff70b0a",
 			"type": "default",
 			"source": "whenNode-e3132e39-f1e7-4989-98b4-9847846a1ec2",
@@ -2417,25 +2395,6 @@
 			"sourceHandle": "source_assignmentNode-80770955-19cb-4d90-bb8d-614f0aadb5ab"
 		},
 		{
-			"id": "assignmentNode-eb51d943-fffd-4291-8a5e-27d233569a8a-callNode-f17afaaf-2ad7-4e85-ae14-cbf6c6f0aa46",
-			"type": "default",
-			"source": "assignmentNode-eb51d943-fffd-4291-8a5e-27d233569a8a",
-			"target": "callNode-f17afaaf-2ad7-4e85-ae14-cbf6c6f0aa46",
-			"label": "",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"sourceHandle": "source_assignmentNode-eb51d943-fffd-4291-8a5e-27d233569a8a",
-			"targetHandle": "target_callNode-f17afaaf-2ad7-4e85-ae14-cbf6c6f0aa46"
-		},
-		{
 			"id": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08-logNode-a180ecaa-75ce-405b-9a7b-b4a37268c370",
 			"type": "default",
 			"source": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08",
@@ -2472,11 +2431,30 @@
 			},
 			"sourceHandle": "source_logNode-a180ecaa-75ce-405b-9a7b-b4a37268c370",
 			"targetHandle": "target_assignmentNode-eb51d943-fffd-4291-8a5e-27d233569a8a"
+		},
+		{
+			"id": "assignmentNode-eb51d943-fffd-4291-8a5e-27d233569a8a-triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
+			"type": "default",
+			"source": "assignmentNode-eb51d943-fffd-4291-8a5e-27d233569a8a",
+			"target": "triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_assignmentNode-eb51d943-fffd-4291-8a5e-27d233569a8a"
 		}
 	],
 	"viewport": {
-		"x": -1637.33554518143,
-		"y": -371.10273741835226,
+		"x": -1757.963109137982,
+		"y": -379.1047098319842,
 		"zoom": 1
 	}
 }
