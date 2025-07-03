@@ -1280,7 +1280,14 @@
 					"variableField": "",
 					"valueField": "",
 					"conditionInputField": "",
-					"conditions": [],
+					"conditions": [
+						{
+							"variable": "emailService",
+							"operator": "is",
+							"dataValue": "true",
+							"combinator": "none"
+						}
+					],
 					"nodeIcon": "ph:swap",
 					"nodeColor": "",
 					"titleColor": "",
@@ -1293,24 +1300,25 @@
 			"measured": {
 				"width": 109,
 				"height": 58
-			}
+			},
+			"selected": true
 		},
 		{
-			"id": "callNode-72efdd36-93c9-4192-9a3b-902e37df36da",
+			"id": "callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891ff",
 			"type": "callNode",
 			"position": {
 				"x": 2523.928202747176,
-				"y": 761.721858870189
+				"y": 961.721858870189
 			},
 			"data": {
-				"id": "callNode-72efdd36-93c9-4192-9a3b-902e37df36da",
+				"id": "callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891ff",
 				"type": "callNode",
 				"position": {
 					"x": 2523.928202747176,
-					"y": 761.721858870189
+					"y": 961.721858870189
 				},
 				"previousNodeId": "whenNode-cb1cdb5b-ae87-4328-9160-a875bfb6312a",
-				"branching": "continue",
+				"branching": "success",
 				"agamaData": {
 					"javaClassName": "",
 					"javaMethodName": "",
@@ -1916,28 +1924,28 @@
 			"sourceHandle": "source_callNode-5234f9f3-136a-46e5-9524-21f1468252b0"
 		},
 		{
-			"id": "whenNode-cb1cdb5b-ae87-4328-9160-a875bfb6312a-callNode-72efdd36-93c9-4192-9a3b-902e37df36da",
+			"id": "whenNode-cb1cdb5b-ae87-4328-9160-a875bfb6312a-callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891ff",
 			"type": "default",
 			"source": "whenNode-cb1cdb5b-ae87-4328-9160-a875bfb6312a",
-			"target": "callNode-72efdd36-93c9-4192-9a3b-902e37df36da",
+			"target": "callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891ff",
 			"labelBgPadding": [
 				8,
 				4
 			],
 			"labelBgBorderRadius": 4,
-			"label": "continue",
+			"label": "Condition met",
 			"labelBgStyle": {
 				"fill": "#009688",
 				"color": "#ffffff",
 				"fillOpacity": 0.7
 			},
 			"labelShowBg": true,
-			"sourceHandle": "source_whenNode-cb1cdb5b-ae87-4328-9160-a875bfb6312a_continue"
+			"sourceHandle": "source_whenNode-cb1cdb5b-ae87-4328-9160-a875bfb6312a_success"
 		}
 	],
 	"viewport": {
-		"x": -2974.400921187335,
-		"y": -841.9188000847118,
-		"zoom": 1.5669943738986813
+		"x": -2426.0173218518407,
+		"y": -810.7518869656813,
+		"zoom": 1.3491025343396987
 	}
 }
