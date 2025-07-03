@@ -148,9 +148,10 @@ public class JansUserRegistration extends UserRegistration {
     }
 
     // Implementing this to satisfy abstract class requirement
-    @Override
-    public boolean sendSmsOtp(String phoneNumber) {
-        LogUtils.log("sendSmsOtp(String) is not supported.");
-        return false;
+    private SmtpConfiguration getSmtpConfiguration() {
+        ConfigurationService configurationService = CdiUtil.bean(ConfigurationService.class);
+        SmtpConfiguration smtpConfiguration = configurationService.getConfiguration().getSmtpConfiguration();
+        return smtpConfiguration;
+
     }
 }
