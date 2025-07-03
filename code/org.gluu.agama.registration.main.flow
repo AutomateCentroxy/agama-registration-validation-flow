@@ -36,7 +36,7 @@ Repeat 6 times max
                          When userWithUid.empty is true
                               Log "@info userWithUid value: userWithUid"
                               // Trigger sub-routine to verify email
-                              emailVerificationResult = Trigger org.gluu.agama.registration.emailVerification email context
+                              emailVerificationResult = Trigger org.gluu.agama.registration.emailVerification email
                               // Reset error message to empty after email verification
                               emailObj.errorMessage = ""
                               // If email data is valid
@@ -84,5 +84,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_vxsxp = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_vxsxp
+it_zcjzp = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_zcjzp
