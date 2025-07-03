@@ -1220,6 +1220,46 @@
 			},
 			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "callNode-5234f9f3-136a-46e5-9524-21f1468252b0",
+			"type": "callNode",
+			"position": {
+				"x": 2023.9282027471759,
+				"y": 761.721858870189
+			},
+			"data": {
+				"id": "callNode-5234f9f3-136a-46e5-9524-21f1468252b0",
+				"type": "callNode",
+				"position": {
+					"x": 2029.9282027471759,
+					"y": 802.721858870189
+				},
+				"previousNodeId": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08",
+				"branching": "success",
+				"agamaData": {
+					"javaClassName": "org.gluu.agama.registration.emailVerification",
+					"javaMethodName": "getInstance",
+					"javaVariableName": "",
+					"exceptionVariableField": "",
+					"callType": "Call static method",
+					"arguments": [],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Create Email Service",
+					"asssignedVariableName": "emailService"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -1765,11 +1805,30 @@
 				"fillOpacity": 0.7
 			},
 			"id": "xy-edge__callNode-7836f867-adb4-4021-bdcb-93f6acf4547asource_callNode-7836f867-adb4-4021-bdcb-93f6acf4547a-whenNode-0b3db374-cf00-42bb-8819-bafa86adee9dtarget_whenNode-0b3db374-cf00-42bb-8819-bafa86adee9d"
+		},
+		{
+			"id": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08-callNode-5234f9f3-136a-46e5-9524-21f1468252b0",
+			"type": "default",
+			"source": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08",
+			"target": "callNode-5234f9f3-136a-46e5-9524-21f1468252b0",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-f6e375d5-6064-4609-89e8-b0943c226c08_success"
 		}
 	],
 	"viewport": {
-		"x": -1628.4345586314457,
-		"y": -401.06689352588774,
+		"x": -1776.4345586314457,
+		"y": -441.06689352588774,
 		"zoom": 1
 	}
 }
