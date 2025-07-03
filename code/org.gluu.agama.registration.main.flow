@@ -29,6 +29,7 @@ Repeat 6 times max
                When userInput.userPassword is userInput.confirmPassword
                     // Check user already exist or not with mail
                     user = Call userRegistrationService getUserEntityByMail email
+                    user.context = { location: uiInput.location, timeZone: uiInput.zone, device: uiInput.device }
                     // If user not found
                     When user.empty is true
                          // Check user already exist or not with username
@@ -85,5 +86,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_bcjwr = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_bcjwr
+it_ngqnt = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_ngqnt
