@@ -22,7 +22,7 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
-					"inputs": "email existingAccount context",
+					"inputs": "email existingAccount",
 					"configs": "",
 					"flowname": "org.gluu.agama.registration.emailVerification",
 					"displayName": "org.gluu.agama.registration.emailVerification",
@@ -335,8 +335,7 @@
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
 					"arguments": [
-						"email",
-						"context"
+						"email"
 					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
@@ -1171,8 +1170,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1052.2831445200204,
-		"y": -272.4811596787596,
-		"zoom": 1.161508731925722
+		"x": -1139.7738725452725,
+		"y": -486.75889824136334,
+		"zoom": 1.3491025343396987
 	}
 }
