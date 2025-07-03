@@ -59,26 +59,6 @@
 							"variableTypeCheck": false,
 							"assignmentExpression": "{}",
 							"assignedVariableName": "uiFeedback"
-						},
-						{
-							"variableTypeCheck": true,
-							"assignmentExpression": "true",
-							"assignedVariableName": "sendMail"
-						},
-						{
-							"variableTypeCheck": true,
-							"assignmentExpression": "{}",
-							"assignedVariableName": "emailObj"
-						},
-						{
-							"variableTypeCheck": true,
-							"assignmentExpression": "{matches: true, resent: false}",
-							"assignedVariableName": "uiInput"
-						},
-						{
-							"variableTypeCheck": true,
-							"assignmentExpression": "{ location: uiInput.location, timeZone: uiInput.zone, device: uiInput.device }",
-							"assignedVariableName": "userData.context"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -94,7 +74,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1358,7 +1338,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2384,8 +2364,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1522.0549236512675,
-		"y": -446.7639019484926,
-		"zoom": 0.7834971869493407
+		"x": 1760.4922576772415,
+		"y": 243.22992603669854,
+		"zoom": 1.9238549093295492
 	}
 }
