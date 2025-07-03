@@ -42,6 +42,7 @@ Repeat 6 times max
                               emailObj.errorMessage = ""
                               // If email data is valid
                               When emailVerificationResult.success is true
+                                   Log "@ " __________
                               // When email verification is invalid
                               When emailVerificationResult.success is false
                                    // Error variable assignment. 
@@ -70,5 +71,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_yrbha = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_yrbha
+it_dajsc = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_dajsc
