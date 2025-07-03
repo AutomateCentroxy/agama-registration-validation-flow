@@ -42,6 +42,11 @@ Repeat 6 times max
                               // When OTP code null
                               When otpCode is null
                                    Finish __________
+                              // Variable assignment after successful email delivery
+                              emailObj.email = email
+                              emailObj.matches = uiInput.matches
+                              emailObj.resent = uiInput.resent
+                              emailObj.accountExists = existingAccount
                               RRF "__________" 
                          Otherwise
                               // User already registered with UID
@@ -67,5 +72,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_pfifi = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_pfifi
+it_mmhfm = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_mmhfm
