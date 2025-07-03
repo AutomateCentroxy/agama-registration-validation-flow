@@ -1571,7 +1571,7 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "1. Logic to determine if user is already registered 2. Initialize location, timezone info from UI to user-data"
 				}
 			},
 			"measured": {
