@@ -14,13 +14,11 @@
         "authentication"
     ],
     "noDirectLaunch": [
-        "org.gluu.agama.smtp.emailVerification",
         "org.gluu.agama.registration.emailVerification.flow"
     ],
     "configs": {
         "org.gluu.agama.registration.main": {},
         "": {},
-        "org.gluu.agama.smtp.emailVerification": {},
         "org.gluu.agama.registration.emailVerification.flow": {}
     },
     "name": "agama-registration"
