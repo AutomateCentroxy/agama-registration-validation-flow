@@ -34,8 +34,10 @@ public class JansUserRegistration extends UserRegistration {
     private static final String REFERRAL = "referralCode";
     private static final String EXT_ATTR = "jansExtUid";
     private static final int OTP_LENGTH = 6;
-
+    private static final String SUBJECT_TEMPLATE = "Here's your verification code: %s";
+    private static final String MSG_TEMPLATE_TEXT = "%s is the code to complete your verification";
     private static final SecureRandom RAND = new SecureRandom();
+
     private static JansUserRegistration INSTANCE = null;
 
     private final Map<String, String> emailOtpStore = new HashMap<>();
@@ -64,35 +66,26 @@ public class JansUserRegistration extends UserRegistration {
         return pwd1 != null && pwd1.equals(pwd2);
     }
 
-    public boolean sendEmailOtp(String email) {
-        try {
-            ContextData context = new ContextData();
-            String otp = generateOtpCode(OTP_LENGTH);
-            SmtpConfiguration smtpConfiguration = getSmtpConfiguration();
+    public String sendEmail(String to, ContextData context) {
 
-            String from = smtpConfiguration.getFromEmailAddress();
-            String subject = String.format("Here's your verification code: %s", otp);
-            String textBody = String.format("%s is the code to complete your verification", otp);
-            String htmlBody = EmailTemplate.get(otp, context);
+        SmtpConfiguration smtpConfiguration = getSmtpConfiguration();
+        IntStream digits = RAND.ints(OTP_LENGTH, 0, 10);
+        String otp = digits.mapToObj(i -> "" + i).collect(Collectors.joining());
 
-            MailService mailService = CdiUtil.bean(MailService.class);
-            boolean sent = mailService.sendMailSigned(from, from, email, null, subject, textBody, htmlBody);
+        String from = smtpConfiguration.getFromEmailAddress();
+        String subject = String.format(SUBJECT_TEMPLATE, otp);
+        String textBody = String.format(MSG_TEMPLATE_TEXT, otp);
+        String htmlBody = EmailTemplate.get(otp, context);
 
-            if (sent) {
-                emailOtpStore.put(email, otp);
-                return true;
-            }
+        MailService mailService = CdiUtil.bean(MailService.class);
 
-            return false;
-        } catch (Exception e) {
-            LogUtils.log("Error sending email OTP to %: %", email, e.getMessage());
-            return false;
+        if (mailService.sendMailSigned(from, from, to, null, subject, textBody, htmlBody)) {
+            logger.debug("E-mail has been delivered to {} with code {}", to, otp);
+            return otp;
         }
-    }
+        logger.debug("E-mail delivery failed, check jans-auth logs");
+        return null;
 
-    public boolean validateEmailOtp(String email, String otp) {
-        String sentOtp = emailOtpStore.get(email);
-        return otp != null && otp.equals(sentOtp);
     }
 
     public String addNewUser(Map<String, String> profile) throws Exception {
