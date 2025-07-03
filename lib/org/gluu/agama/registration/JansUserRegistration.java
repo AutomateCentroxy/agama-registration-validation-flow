@@ -186,6 +186,7 @@ public class JansUserRegistration extends UserRegistration {
         return RAND.ints(length, 0, 10).mapToObj(String::valueOf).collect(Collectors.joining());
     }
 
+
     private void associateOtpWithPhone(String phone, String otp) {
         smsOtpStore.put(phone, otp);
     }
