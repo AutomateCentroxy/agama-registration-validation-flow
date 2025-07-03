@@ -36,7 +36,8 @@ max = Repeat 3 times max
                // Variable assignment when user clicked on "resend code" button
                sendMail = true
                uiInput.resent = true
-          When 
+          // When passcode entered by user matches
+          When uiInput.passcode is otpCode
                Finish __________
 // Variable assignment when user exceeds the number of attempts allowed
 obj.error = "You have exceeded the number of attempts allowed"
