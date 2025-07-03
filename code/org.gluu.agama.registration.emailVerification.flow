@@ -1,7 +1,7 @@
 // Verifies the possession of an e-mail address by sending a random passcode
 Flow org.gluu.agama.registration.emailVerification
      Basepath ""
-     Inputs email existingAccount context
+     Inputs email existingAccount
 // Initialize variables
 emailObj = {}
 sendMail = true
@@ -15,7 +15,7 @@ max = Repeat 3 times max
           // Tun off send mail
           sendMail = false
           // Call email service to send mail
-          otpCode = Call emailService sendEmail email context
+          otpCode = Call emailService sendEmail email
           // When OTP code null
           When otpCode is null
                // Variable assignment for unsuccessful Email delivery
