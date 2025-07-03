@@ -20,6 +20,7 @@ max = Repeat 3 times max
           When otpCode is null
                // Variable assignment for unsuccessful Email delivery
                emailObj.error = "Unable to deliver e-mail message"
+               // Finish flow unsuccessfully
                Finish emailObj.error
           // Variable assignment after successful email delivery
           emailObj.email = email
