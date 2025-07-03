@@ -17,6 +17,9 @@ max = Repeat 3 times max
           // Call email service to send mail
           otpCode = Call emailService sendEmail email context
           When 
+               // Variable assignment for unsuccessful Email delivery
+               emailObj.success = false
+               emailObj.error = "Unable to deliver e-mail message"
           // Variable assignment after successful email delivery
           emailObj.email = email
           emailObj.accountExists = existingAccount
