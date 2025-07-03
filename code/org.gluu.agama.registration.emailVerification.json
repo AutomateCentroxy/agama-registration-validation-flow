@@ -83,8 +83,46 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "callNode-413fe07b-31c5-475c-b555-6c7c3e5da505",
+			"type": "callNode",
+			"position": {
+				"x": 530,
+				"y": 30
+			},
+			"data": {
+				"id": "callNode-413fe07b-31c5-475c-b555-6c7c3e5da505",
+				"type": "callNode",
+				"position": {
+					"x": 530,
+					"y": 30
+				},
+				"previousNodeId": "assignmentNode-278be43a-d475-4c46-a887-3a805d414c25",
+				"agamaData": {
+					"javaClassName": "org.gluu.agama.user.UserRegistration",
+					"javaMethodName": "getInstance",
+					"javaVariableName": "",
+					"exceptionVariableField": "",
+					"callType": "Call static method",
+					"arguments": [],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Get instance email service",
+					"asssignedVariableName": "emailService"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -106,11 +144,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_startNode-6f037bf8-f740-4dc4-acb5-e2bc3412467c"
+		},
+		{
+			"id": "assignmentNode-278be43a-d475-4c46-a887-3a805d414c25-callNode-413fe07b-31c5-475c-b555-6c7c3e5da505",
+			"type": "default",
+			"source": "assignmentNode-278be43a-d475-4c46-a887-3a805d414c25",
+			"target": "callNode-413fe07b-31c5-475c-b555-6c7c3e5da505",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_assignmentNode-278be43a-d475-4c46-a887-3a805d414c25"
 		}
 	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
+		"x": -18,
+		"y": 123,
 		"zoom": 1
 	}
 }
