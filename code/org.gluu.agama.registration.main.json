@@ -379,7 +379,7 @@
 					"x": 2030,
 					"y": 480
 				},
-				"previousNodeId": "callNode-1e9e2090-3521-421c-b1a9-e8bafc4b306c",
+				"previousNodeId": "assignmentNode-7e956de4-c41b-40d9-9498-b159a5f4b4eb",
 				"agamaData": {
 					"variableField": "",
 					"valueField": "",
@@ -1105,8 +1105,8 @@
 			"id": "callNode-10bd705b-7d64-4d18-bde1-aa3069aea8d1",
 			"type": "callNode",
 			"position": {
-				"x": -222.62756359242437,
-				"y": 185.9789564668108
+				"x": -253.89761842873372,
+				"y": 184.0644633135674
 			},
 			"data": {
 				"id": "callNode-10bd705b-7d64-4d18-bde1-aa3069aea8d1",
@@ -1336,7 +1336,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1543,6 +1543,44 @@
 			"dragging": false
 		},
 		{
+			"id": "assignmentNode-7e956de4-c41b-40d9-9498-b159a5f4b4eb",
+			"type": "assignmentNode",
+			"position": {
+				"x": 1212,
+				"y": 1111
+			},
+			"data": {
+				"id": "assignmentNode-7e956de4-c41b-40d9-9498-b159a5f4b4eb",
+				"type": "assignmentNode",
+				"position": {
+					"x": 1212,
+					"y": 1111
+				},
+				"previousNodeId": "callNode-1e9e2090-3521-421c-b1a9-e8bafc4b306c",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{ location: uiInput.location, timeZone: uiInput.zone, device: uiInput.device }",
+							"assignedVariableName": "user.context"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true
+		},
+		{
 			"id": "logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7",
 			"type": "logNode",
 			"position": {
@@ -1653,25 +1691,6 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-9706dda7-3f9f-43e8-8506-2a5cb6bb30db"
-		},
-		{
-			"id": "callNode-1e9e2090-3521-421c-b1a9-e8bafc4b306c-whenNode-c1ae3675-fb2f-40f2-8290-c5190571a966",
-			"type": "default",
-			"source": "callNode-1e9e2090-3521-421c-b1a9-e8bafc4b306c",
-			"target": "whenNode-c1ae3675-fb2f-40f2-8290-c5190571a966",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_callNode-1e9e2090-3521-421c-b1a9-e8bafc4b306c"
 		},
 		{
 			"id": "whenNode-51e74368-a147-4d88-a03f-76daebffff2c-logNode-dfc16af5-4d1b-4bd5-88b8-36562fd3c788",
@@ -2307,11 +2326,49 @@
 				"fillOpacity": 0.7
 			},
 			"id": "xy-edge__logNode-a180ecaa-75ce-405b-9a7b-b4a37268c370source_logNode-a180ecaa-75ce-405b-9a7b-b4a37268c370-triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20target_triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20"
+		},
+		{
+			"id": "callNode-1e9e2090-3521-421c-b1a9-e8bafc4b306c-assignmentNode-7e956de4-c41b-40d9-9498-b159a5f4b4eb",
+			"type": "default",
+			"source": "callNode-1e9e2090-3521-421c-b1a9-e8bafc4b306c",
+			"target": "assignmentNode-7e956de4-c41b-40d9-9498-b159a5f4b4eb",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-1e9e2090-3521-421c-b1a9-e8bafc4b306c"
+		},
+		{
+			"id": "assignmentNode-7e956de4-c41b-40d9-9498-b159a5f4b4eb-whenNode-c1ae3675-fb2f-40f2-8290-c5190571a966",
+			"type": "default",
+			"source": "assignmentNode-7e956de4-c41b-40d9-9498-b159a5f4b4eb",
+			"target": "whenNode-c1ae3675-fb2f-40f2-8290-c5190571a966",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_assignmentNode-7e956de4-c41b-40d9-9498-b159a5f4b4eb",
+			"targetHandle": "target_whenNode-c1ae3675-fb2f-40f2-8290-c5190571a966"
 		}
 	],
 	"viewport": {
-		"x": -2459.586503506895,
-		"y": -699.6370687441442,
-		"zoom": 1.3491025343396987
+		"x": -708.8966730036102,
+		"y": -644.5177934921747,
+		"zoom": 0.9100388240808991
 	}
 }
