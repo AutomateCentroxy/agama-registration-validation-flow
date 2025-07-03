@@ -18,7 +18,6 @@ import java.security.SecureRandom;
 import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 import static org.gluu.agama.registration.jans.Attrs.*;
 
@@ -31,7 +30,6 @@ public class JansUserRegistration extends UserRegistration {
     private static final String PASSWORD = "userPassword";
     private static final String INUM_ATTR = "inum";
     private static final String USER_STATUS = "jansStatus";
-    private static final String PHONE = "jansMobile";
     private static final String COUNTRY = "residenceCountry";
     private static final String REFERRAL = "referralCode";
     private static final String EXT_ATTR = "jansExtUid";
@@ -40,7 +38,6 @@ public class JansUserRegistration extends UserRegistration {
     private static final SecureRandom RAND = new SecureRandom();
     private static JansUserRegistration INSTANCE = null;
 
-    private final Map<String, String> smsOtpStore = new HashMap<>();
     private final Map<String, String> emailOtpStore = new HashMap<>();
 
     public static synchronized JansUserRegistration getInstance() {
@@ -55,10 +52,8 @@ public class JansUserRegistration extends UserRegistration {
     }
 
     public boolean usernamePolicyMatch(String userName) {
-        // Regex: Only alphabets (uppercase and lowercase), minimum 1 character
         String regex = '''^[A-Za-z]+$''';
-        Pattern pattern = Pattern.compile(regex);
-        return pattern.matcher(userName).matches();
+        return Pattern.compile(regex).matcher(userName).matches();
     }
 
     public boolean checkIfUserExists(String username, String email) {
@@ -67,40 +62,6 @@ public class JansUserRegistration extends UserRegistration {
 
     public boolean matchPasswords(String pwd1, String pwd2) {
         return pwd1 != null && pwd1.equals(pwd2);
-    }
-
-    public boolean sendSmsOtp(String phoneNumber, Map<String, String> conf) {
-        try {
-            LogUtils.log("Sending OTP Code via SMS to %.", phoneNumber);
-            String otpCode = generateOtpCode(OTP_LENGTH);
-            String message = "Hi, your OTP Code to complete your registration is: " + otpCode;
-            associateOtpWithPhone(phoneNumber, otpCode);
-
-            String ACCOUNT_SID = conf.get("ACCOUNT_SID");
-            String AUTH_TOKEN = conf.get("AUTH_TOKEN");
-            String FROM_NUMBER = conf.get("FROM_NUMBER");
-
-            com.twilio.Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
-            com.twilio.rest.api.v2010.account.Message.creator(
-                new com.twilio.type.PhoneNumber(phoneNumber),
-                new com.twilio.type.PhoneNumber(FROM_NUMBER),
-                message
-            ).create();
-
-            return true;
-        } catch (Exception e) {
-            LogUtils.log("Failed to send SMS to %: %", phoneNumber, e.getMessage());
-            return false;
-        }
-    }
-
-    public boolean validateSmsOtp(String phoneNumber, String code) {
-        String storedCode = smsOtpStore.getOrDefault(phoneNumber, "NULL");
-        if (storedCode.equalsIgnoreCase(code)) {
-            smsOtpStore.remove(phoneNumber);
-            return true;
-        }
-        return false;
     }
 
     public boolean sendEmailOtp(String email) {
@@ -135,7 +96,7 @@ public class JansUserRegistration extends UserRegistration {
     }
 
     public String addNewUser(Map<String, String> profile) throws Exception {
-        Set<String> attributes = Set.of("uid", "mail", "displayName", "givenName", "sn", "userPassword", PHONE, COUNTRY, REFERRAL);
+        Set<String> attributes = Set.of("uid", "mail", "displayName", "givenName", "sn", "userPassword", COUNTRY, REFERRAL);
         User user = new User();
 
         attributes.forEach(attr -> {
@@ -186,12 +147,10 @@ public class JansUserRegistration extends UserRegistration {
         return RAND.ints(length, 0, 10).mapToObj(String::valueOf).collect(Collectors.joining());
     }
 
-
-    private void associateOtpWithPhone(String phone, String otp) {
-        smsOtpStore.put(phone, otp);
-    }
-
-    private SmtpConfiguration getSmtpConfiguration() {
-        return CdiUtil.bean(ConfigurationService.class).getConfiguration().getSmtpConfiguration();
+    // Implementing this to satisfy abstract class requirement
+    @Override
+    public boolean sendSmsOtp(String phoneNumber) {
+        LogUtils.log("sendSmsOtp(String) is not supported.");
+        return false;
     }
 }
