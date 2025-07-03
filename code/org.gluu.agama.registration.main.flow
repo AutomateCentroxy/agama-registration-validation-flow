@@ -7,6 +7,7 @@ uiFeedback = {}
 sendMail = true
 emailObj = {}
 uiInput = {matches: true, resent: false}
+userData.context = { location: uiInput.location, timeZone: uiInput.zone, device: uiInput.device }
 // Iterate x times max
 Repeat 6 times max
      // Retrieve user profile  from UI
@@ -76,5 +77,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_auoxh = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_auoxh
+it_eqodz = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_eqodz
