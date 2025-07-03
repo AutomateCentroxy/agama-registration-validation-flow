@@ -43,6 +43,6 @@ max = Repeat 3 times max
           uiInput.matches = false
           sendMail = true
 // Variable assignment when user exceeds the number of attempts allowed
-obj = { success: false, error: You_have_exceeded_the_number_of_attempts_allowed" }
+obj = { success: false, error: ExceededTheNumberOfAttemptsAllowed" }
 // Finish flow when user exceeds maximum number of flows allowed
 Finish obj
