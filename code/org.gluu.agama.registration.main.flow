@@ -12,7 +12,7 @@ Repeat 6 times max
      userRegistrationService = Call org.gluu.agama.user.UserRegistration#getInstance 
      // Assign userName, email and password  to a variable
      email = userInput.mail
-     userNuserInput.residenceCountryame = userInput.uid
+     userName = userInput.uid
      userPassword = userInput.userPassword
      referralCode = userInput.referralCode
      residenceCountry = userInput.residenceCountry
@@ -65,5 +65,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_dgmrl = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_dgmrl
+it_mgeer = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_mgeer
