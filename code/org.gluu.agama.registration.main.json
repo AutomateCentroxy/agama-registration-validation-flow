@@ -774,7 +774,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1346,24 +1346,28 @@
 				"previousNodeId": "rrfNode-3fbcaf85-fdc3-49a0-a03b-2589f4d800ba",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "",
-					"javaVariableName": "",
+					"javaMethodName": "sendEmailOtp",
+					"javaVariableName": "userRegistrationService",
 					"exceptionVariableField": "",
-					"callType": "Call static method",
-					"arguments": [],
+					"callType": "Call method on instance",
+					"arguments": [
+						"email"
+					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "email otp send value",
 					"hasComment": true,
-					"comment": ""
+					"comment": "email otp send value",
+					"asssignedVariableName": "emailOtp"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1988,8 +1992,8 @@
 		}
 	],
 	"viewport": {
-		"x": -844.5899853270648,
-		"y": -558.674875814828,
-		"zoom": 1.0570180405613803
+		"x": -2127.6791353390613,
+		"y": -297.01941809081495,
+		"zoom": 0.9100388240808991
 	}
 }
