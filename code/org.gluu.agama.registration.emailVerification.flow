@@ -10,6 +10,7 @@ uiInput = {matches: true, resent: false}
 emailService = Call org.gluu.agama.user.UserRegistration#getInstance 
 // Iterate x times max
 max = Repeat 3 times max
-     When 
+     // When send mail is allowed
+     When sendMail is true
 // Finish flow when user exceeds maximum number of flows allowed
 Finish obj.error
