@@ -14,7 +14,6 @@ public abstract class UserRegistration {
 
     public abstract String sendEmail(String to);
 
-    public abstract boolean validateEmailOtp(String email, String otp);
     
     public abstract boolean checkIfUserExists(String username, String email);
 
