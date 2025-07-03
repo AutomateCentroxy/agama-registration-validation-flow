@@ -22,13 +22,13 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
-					"inputs": "profile extUid",
+					"inputs": "email existingAccount context",
 					"configs": "",
 					"flowname": "org.gluu.agama.registration.emailVerification",
 					"displayName": "org.gluu.agama.registration.emailVerification",
 					"creationDate": "03/07/2025",
 					"hasComment": true,
-					"comment": ""
+					"comment": "Verifies the possession of an e-mail address by sending a random passcode"
 				}
 			},
 			"measured": {
@@ -56,8 +56,18 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "emailHint",
-							"assignedVariableName": "email"
+							"assignmentExpression": "{}",
+							"assignedVariableName": "emailObj"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "true",
+							"assignedVariableName": "sendMail"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{matches: true, resent: false}",
+							"assignedVariableName": "uiInput"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -66,14 +76,15 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Assign the email obtain from input profile to a variable"
+					"comment": "Initialize variables"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
