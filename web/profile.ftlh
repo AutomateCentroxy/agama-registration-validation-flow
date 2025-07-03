@@ -11,7 +11,7 @@
 	
 	
   
-  [#ftl output_format="HTML"]
+  
 	<div class="registration-container">
 	  <div align="center" class="flex">
 		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
@@ -38,10 +38,6 @@
 		  <div class="form-group">
 			<label class="form-label">Email: <span class="required">*</span></label>
 			<input type="email" id="mail" name="mail" required="" placeholder="Enter your email" class="form-control">
-		  </div>
-		  <div class="form-group">
-			<label class="form-label">Mobile Number: <span class="required">*</span></label>
-			<input type="tel" id="jansMobile" name="jansMobile" pattern="^\+?\d{10,15}$" title="Enter a valid phone number with country code" required="" placeholder="+911234567890" class="form-control">
 		  </div>
 		  <div class="form-group">
 			<label class="form-label">Country: <span class="required">*</span></label>
