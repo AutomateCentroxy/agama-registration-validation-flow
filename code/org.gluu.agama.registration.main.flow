@@ -4,6 +4,9 @@ Flow org.gluu.agama.registration.main
      Timeout 360 seconds
 // Create  variable for UI feedback
 uiFeedback = {}
+sendMail = true
+emailObj = {}
+uiInput = {matches: true, resent: false}
 // Iterate x times max
 Repeat 6 times max
      // Retrieve user profile  from UI
@@ -60,5 +63,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_bsuqp = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_bsuqp
+it_htrxp = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_htrxp
