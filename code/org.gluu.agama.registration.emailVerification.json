@@ -616,20 +616,28 @@
 					"variableField": "",
 					"valueField": "",
 					"conditionInputField": "",
-					"conditions": [],
+					"conditions": [
+						{
+							"variable": "uiInput.resent",
+							"operator": "is",
+							"dataValue": "\"\"",
+							"combinator": "none"
+						}
+					],
 					"nodeIcon": "ph:swap",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "If user clicked on \"resend code\" button"
 				}
 			},
 			"measured": {
 				"width": 109,
 				"height": 58
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "whenNode-6dfdc4fa-669b-48b0-b681-ae47f0c0931e",
@@ -735,8 +743,8 @@
 			"id": "assignmentNode-3a11390a-8ff6-43da-8f58-08461ae4ac56",
 			"type": "assignmentNode",
 			"position": {
-				"x": 2951.8939867244517,
-				"y": 669.2937739084264
+				"x": 2841.4501944941403,
+				"y": 690.0483120456661
 			},
 			"data": {
 				"id": "assignmentNode-3a11390a-8ff6-43da-8f58-08461ae4ac56",
@@ -761,7 +769,9 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -1128,8 +1138,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3098.4581773001055,
-		"y": -470.3642668767807,
+		"x": -3467.458177300106,
+		"y": -436.3642668767807,
 		"zoom": 1.3491025343396987
 	}
 }
