@@ -33,6 +33,9 @@ max = Repeat 3 times max
           uiInput.resent = false
           // If user clicked on "resend code" button
           When uiInput.resent is ""
+               // Variable assignment when user clicked on "resend code" button
+               sendMail = true
+               uiInput.resent = true
           When 
                Finish __________
 // Variable assignment when user exceeds the number of attempts allowed
