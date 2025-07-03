@@ -741,8 +741,8 @@
 			"id": "callNode-e0397613-59c0-4299-b673-d3d21576d65d",
 			"type": "callNode",
 			"position": {
-				"x": 1474.1148093840732,
-				"y": 630.8887718829734
+				"x": 1414.7766816349215,
+				"y": 579.2426236568601
 			},
 			"data": {
 				"id": "callNode-e0397613-59c0-4299-b673-d3d21576d65d",
@@ -793,7 +793,7 @@
 					"x": 2530,
 					"y": 680
 				},
-				"previousNodeId": "callNode-e0397613-59c0-4299-b673-d3d21576d65d",
+				"previousNodeId": "assignmentNode-da1245cf-dbe8-4ed1-9168-8e08a6f935e3",
 				"agamaData": {
 					"variableField": "",
 					"valueField": "",
@@ -1578,7 +1578,46 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
+		},
+		{
+			"id": "assignmentNode-da1245cf-dbe8-4ed1-9168-8e08a6f935e3",
+			"type": "assignmentNode",
+			"position": {
+				"x": 1605.4385538857703,
+				"y": 633.0864803181272
+			},
+			"data": {
+				"id": "assignmentNode-da1245cf-dbe8-4ed1-9168-8e08a6f935e3",
+				"type": "assignmentNode",
+				"position": {
+					"x": 1724.1148093840732,
+					"y": 630.8887718829734
+				},
+				"previousNodeId": "callNode-e0397613-59c0-4299-b673-d3d21576d65d",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{ location: uiInput.location, timeZone: uiInput.zone, device: uiInput.device }",
+							"assignedVariableName": "userWithUid.context"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "1. Logic to determine if user email is already registered 2. Initialize location, timezone info from UI to user-data"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7",
@@ -1877,25 +1916,6 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-c1ae3675-fb2f-40f2-8290-c5190571a966_success"
-		},
-		{
-			"id": "callNode-e0397613-59c0-4299-b673-d3d21576d65d-whenNode-f6e375d5-6064-4609-89e8-b0943c226c08",
-			"type": "default",
-			"source": "callNode-e0397613-59c0-4299-b673-d3d21576d65d",
-			"target": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_callNode-e0397613-59c0-4299-b673-d3d21576d65d"
 		},
 		{
 			"id": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08-logNode-cf757d75-ec10-456e-ada2-9736b843df04",
@@ -2364,11 +2384,49 @@
 			},
 			"sourceHandle": "source_assignmentNode-7e956de4-c41b-40d9-9498-b159a5f4b4eb",
 			"targetHandle": "target_whenNode-c1ae3675-fb2f-40f2-8290-c5190571a966"
+		},
+		{
+			"id": "callNode-e0397613-59c0-4299-b673-d3d21576d65d-assignmentNode-da1245cf-dbe8-4ed1-9168-8e08a6f935e3",
+			"type": "default",
+			"source": "callNode-e0397613-59c0-4299-b673-d3d21576d65d",
+			"target": "assignmentNode-da1245cf-dbe8-4ed1-9168-8e08a6f935e3",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-e0397613-59c0-4299-b673-d3d21576d65d"
+		},
+		{
+			"id": "assignmentNode-da1245cf-dbe8-4ed1-9168-8e08a6f935e3-whenNode-f6e375d5-6064-4609-89e8-b0943c226c08",
+			"type": "default",
+			"source": "assignmentNode-da1245cf-dbe8-4ed1-9168-8e08a6f935e3",
+			"target": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_assignmentNode-da1245cf-dbe8-4ed1-9168-8e08a6f935e3",
+			"targetHandle": "target_whenNode-f6e375d5-6064-4609-89e8-b0943c226c08"
 		}
 	],
 	"viewport": {
-		"x": -708.8966730036102,
-		"y": -644.5177934921747,
+		"x": -785.0419260664103,
+		"y": -287.67272559742264,
 		"zoom": 0.9100388240808991
 	}
 }
