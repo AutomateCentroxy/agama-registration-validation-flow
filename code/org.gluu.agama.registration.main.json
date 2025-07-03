@@ -267,7 +267,7 @@
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "Taking user variable",
 					"hasComment": true,
 					"comment": "Assign userName, email and password  to a variable"
 				}
@@ -276,7 +276,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -924,7 +924,7 @@
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "username policy check",
 					"hasComment": true,
 					"comment": "Check user name policy",
 					"asssignedVariableName": "isUsernamePolicyMatch"
@@ -934,7 +934,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1994,8 +1994,8 @@
 		}
 	],
 	"viewport": {
-		"x": 433.0661755226288,
-		"y": 36.96779089413138,
-		"zoom": 1.161508731925722
+		"x": 596.3824830236051,
+		"y": 107.48591113089083,
+		"zoom": 1.276328768828953
 	}
 }
