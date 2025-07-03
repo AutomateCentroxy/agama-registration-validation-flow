@@ -260,7 +260,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "{ success: false, error: You_have_exceeded_the_number_of_attempts_allowed\" }",
+							"assignmentExpression": "{ success: false, error: ExceededTheNumberOfAttemptsAllowed\" }",
 							"assignedVariableName": "obj"
 						}
 					],
