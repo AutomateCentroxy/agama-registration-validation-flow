@@ -934,7 +934,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1220,156 +1220,6 @@
 			},
 			"selected": false,
 			"dragging": false
-		},
-		{
-			"id": "callNode-e7b9ec45-6230-4076-9750-46196dd44459",
-			"type": "callNode",
-			"position": {
-				"x": 2029.9282027471759,
-				"y": 802.721858870189
-			},
-			"data": {
-				"id": "callNode-e7b9ec45-6230-4076-9750-46196dd44459",
-				"type": "callNode",
-				"position": {
-					"x": 2029.9282027471759,
-					"y": 802.721858870189
-				},
-				"previousNodeId": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08",
-				"branching": "success",
-				"agamaData": {
-					"javaClassName": "",
-					"javaMethodName": "sendEmailOtp",
-					"javaVariableName": "userRegistrationService",
-					"exceptionVariableField": "",
-					"callType": "Call method on instance",
-					"arguments": [
-						"email",
-						"context"
-					],
-					"nodeIcon": "material-symbols:code",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "Email Otp send to user",
-					"hasComment": true,
-					"comment": "Email Otp send to user",
-					"asssignedVariableName": "emailOtp"
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 122
-			},
-			"selected": false
-		},
-		{
-			"id": "logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5",
-			"type": "logNode",
-			"position": {
-				"x": 2279.928202747176,
-				"y": 802.721858870189
-			},
-			"data": {
-				"id": "logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5",
-				"type": "logNode",
-				"position": {
-					"x": 2279.928202747176,
-					"y": 802.721858870189
-				},
-				"previousNodeId": "callNode-e7b9ec45-6230-4076-9750-46196dd44459",
-				"agamaData": {
-					"logMessage": "\"uiFeedback.infoMessage: Email otp send\"",
-					"logLevel": "info",
-					"nodeIcon": "octicon:log-16",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "Email otp send",
-					"hasComment": true,
-					"comment": ""
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 122
-			},
-			"selected": false
-		},
-		{
-			"id": "rrfNode-3fbcaf85-fdc3-49a0-a03b-2589f4d800ba",
-			"type": "rrfNode",
-			"position": {
-				"x": 2529.928202747176,
-				"y": 802.721858870189
-			},
-			"data": {
-				"id": "rrfNode-3fbcaf85-fdc3-49a0-a03b-2589f4d800ba",
-				"type": "rrfNode",
-				"position": {
-					"x": 2529.928202747176,
-					"y": 802.721858870189
-				},
-				"previousNodeId": "logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5",
-				"agamaData": {
-					"assignments": [],
-					"nodeIcon": "ph:globe-simple",
-					"templatePath": "emailOtp.ftlh",
-					"asssignedVariableName": "uiInput",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "Email OTP page",
-					"hasComment": true,
-					"comment": "Redirect to page asking for OTP received using email",
-					"arguments": "uiFeedback"
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 122
-			},
-			"selected": false
-		},
-		{
-			"id": "callNode-6e365974-d55b-4d03-b9a1-4968d05c419c",
-			"type": "callNode",
-			"position": {
-				"x": 2779.928202747176,
-				"y": 802.721858870189
-			},
-			"data": {
-				"id": "callNode-6e365974-d55b-4d03-b9a1-4968d05c419c",
-				"type": "callNode",
-				"position": {
-					"x": 2779.928202747176,
-					"y": 802.721858870189
-				},
-				"previousNodeId": "rrfNode-3fbcaf85-fdc3-49a0-a03b-2589f4d800ba",
-				"agamaData": {
-					"javaClassName": "",
-					"javaMethodName": "sendEmailOtp",
-					"javaVariableName": "userRegistrationService",
-					"exceptionVariableField": "",
-					"callType": "Call method on instance",
-					"arguments": [
-						"email"
-					],
-					"nodeIcon": "material-symbols:code",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "email otp send value",
-					"hasComment": true,
-					"comment": "email otp send value",
-					"asssignedVariableName": "emailOtp"
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 122
-			},
-			"selected": false
 		}
 	],
 	"edges": [
@@ -1915,87 +1765,11 @@
 				"fillOpacity": 0.7
 			},
 			"id": "xy-edge__callNode-7836f867-adb4-4021-bdcb-93f6acf4547asource_callNode-7836f867-adb4-4021-bdcb-93f6acf4547a-whenNode-0b3db374-cf00-42bb-8819-bafa86adee9dtarget_whenNode-0b3db374-cf00-42bb-8819-bafa86adee9d"
-		},
-		{
-			"id": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08-callNode-e7b9ec45-6230-4076-9750-46196dd44459",
-			"type": "default",
-			"source": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08",
-			"target": "callNode-e7b9ec45-6230-4076-9750-46196dd44459",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "Condition met",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_whenNode-f6e375d5-6064-4609-89e8-b0943c226c08_success"
-		},
-		{
-			"id": "callNode-e7b9ec45-6230-4076-9750-46196dd44459-logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5",
-			"type": "default",
-			"source": "callNode-e7b9ec45-6230-4076-9750-46196dd44459",
-			"target": "logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_callNode-e7b9ec45-6230-4076-9750-46196dd44459"
-		},
-		{
-			"id": "logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5-rrfNode-3fbcaf85-fdc3-49a0-a03b-2589f4d800ba",
-			"type": "default",
-			"source": "logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5",
-			"target": "rrfNode-3fbcaf85-fdc3-49a0-a03b-2589f4d800ba",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_logNode-e1fc411c-cfee-49bc-941f-cab4eb8ccbb5"
-		},
-		{
-			"id": "rrfNode-3fbcaf85-fdc3-49a0-a03b-2589f4d800ba-callNode-6e365974-d55b-4d03-b9a1-4968d05c419c",
-			"type": "default",
-			"source": "rrfNode-3fbcaf85-fdc3-49a0-a03b-2589f4d800ba",
-			"target": "callNode-6e365974-d55b-4d03-b9a1-4968d05c419c",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_rrfNode-3fbcaf85-fdc3-49a0-a03b-2589f4d800ba"
 		}
 	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
+		"x": -1628.4345586314457,
+		"y": -401.06689352588774,
 		"zoom": 1
 	}
 }
