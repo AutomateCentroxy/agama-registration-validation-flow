@@ -56,8 +56,8 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "profile.email",
-							"assignedVariableName": "origEmail"
+							"assignmentExpression": "emailHint",
+							"assignedVariableName": "email"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -98,8 +98,8 @@
 		}
 	],
 	"viewport": {
-		"x": 127,
-		"y": 160,
+		"x": 0,
+		"y": 0,
 		"zoom": 1
 	}
 }
