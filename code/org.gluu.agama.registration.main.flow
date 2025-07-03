@@ -34,6 +34,8 @@ Repeat 6 times max
                          userWithUid = Call userRegistrationService getUserEntityByUsername userName
                          // user not found
                          When userWithUid.empty is true
+                              // Create Email Service
+                              emailService = Call org.gluu.agama.registration.emailVerification#getInstance 
                          Otherwise
                               // User already registered with UID
                               Log "@info User already registered with uid: %" userName
@@ -58,5 +60,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_xroxk = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_xroxk
+it_vgixa = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_vgixa
