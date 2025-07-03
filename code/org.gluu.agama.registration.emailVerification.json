@@ -199,7 +199,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "finishNode-a3375c3a-48b8-4483-bc2b-cb25e4703332",
@@ -222,9 +222,10 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "",
+					"comment": "Finish flow when user exceeds maximum number of flows allowed",
 					"flowfilename": "",
-					"returnVariable": "",
+					"returnVariable": "obj.error",
+					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
 			},
@@ -232,7 +233,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-b904a8bb-ab87-48ce-b75b-c425e631337d",
