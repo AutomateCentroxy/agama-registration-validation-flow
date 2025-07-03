@@ -35,13 +35,71 @@
 				"width": 170,
 				"height": 122
 			},
+			"selected": false
+		},
+		{
+			"id": "assignmentNode-278be43a-d475-4c46-a887-3a805d414c25",
+			"type": "assignmentNode",
+			"position": {
+				"x": 280,
+				"y": 30
+			},
+			"data": {
+				"id": "assignmentNode-278be43a-d475-4c46-a887-3a805d414c25",
+				"type": "assignmentNode",
+				"position": {
+					"x": 280,
+					"y": 30
+				},
+				"previousNodeId": "startNode-6f037bf8-f740-4dc4-acb5-e2bc3412467c",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "profile.email",
+							"assignedVariableName": "origEmail"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Assign the email obtain from input profile to a variable"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
 			"selected": true
 		}
 	],
-	"edges": [],
+	"edges": [
+		{
+			"id": "startNode-6f037bf8-f740-4dc4-acb5-e2bc3412467c-assignmentNode-278be43a-d475-4c46-a887-3a805d414c25",
+			"type": "default",
+			"source": "startNode-6f037bf8-f740-4dc4-acb5-e2bc3412467c",
+			"target": "assignmentNode-278be43a-d475-4c46-a887-3a805d414c25",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_startNode-6f037bf8-f740-4dc4-acb5-e2bc3412467c"
+		}
+	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
+		"x": 127,
+		"y": 160,
 		"zoom": 1
 	}
 }
