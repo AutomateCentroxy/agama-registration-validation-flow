@@ -174,20 +174,32 @@
 				"previousNodeId": "repeatNode-86854c10-1921-4d62-a40d-0ee5f7fe233a",
 				"branching": "continue",
 				"agamaData": {
-					"assignments": [],
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "false",
+							"assignedVariableName": "obj.success"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"You have exceeded the number of attempts allowed\"",
+							"assignedVariableName": "obj.error"
+						}
+					],
 					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "Variable assignment when user exceeds the number of attempts allowed"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "finishNode-a3375c3a-48b8-4483-bc2b-cb25e4703332",
@@ -219,7 +231,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "whenNode-b904a8bb-ab87-48ce-b75b-c425e631337d",
