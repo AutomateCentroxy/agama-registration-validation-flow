@@ -38,6 +38,8 @@ Repeat 6 times max
                               context = { location: userInput.location, timeZone: userInput.zone, device: userInput.device }
                               // Trigger sub-routine to verify email
                               emailVerificationResult = Trigger org.gluu.agama.registration.emailVerification email context
+                              // Reset error message to empty after email verification
+                              emailObj.errorMessage = ""
                          Otherwise
                               // User already registered with UID
                               Log "@info User already registered with uid: %" userName
@@ -62,5 +64,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_jqwgz = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_jqwgz
+it_qjxjh = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_qjxjh
