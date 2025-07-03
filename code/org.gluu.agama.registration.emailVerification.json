@@ -260,8 +260,8 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "\"You have exceeded the number of attempts allowed\"",
-							"assignedVariableName": "obj.error"
+							"assignmentExpression": "{ success: false, error: You_have_exceeded_the_number_of_attempts_allowed\" }",
+							"assignedVariableName": "obj"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -302,7 +302,7 @@
 					"hasComment": true,
 					"comment": "Finish flow when user exceeds maximum number of flows allowed",
 					"flowfilename": "",
-					"returnVariable": "obj.error",
+					"returnVariable": "obj",
 					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
@@ -311,7 +311,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "callNode-ece73344-1545-4b50-b428-234b9f03c503",
@@ -759,7 +759,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-3a11390a-8ff6-43da-8f58-08461ae4ac56",
@@ -1171,8 +1171,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3467.458177300106,
-		"y": -436.3642668767807,
-		"zoom": 1.3491025343396987
+		"x": -788.712627518498,
+		"y": 29.216990491185413,
+		"zoom": 1.2277356839150602
 	}
 }
