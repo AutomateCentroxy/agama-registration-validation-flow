@@ -10,7 +10,6 @@ import io.jans.service.cdi.util.CdiUtil;
 import io.jans.util.StringHelper;
 import io.jans.agama.engine.script.LogUtils;
 
-import org.gluu.agama.registration.jans.model.ContextData;
 import org.gluu.agama.smtp.EmailTemplate;
 import org.gluu.agama.user.UserRegistration;
 
@@ -66,16 +65,20 @@ public class JansUserRegistration extends UserRegistration {
         return pwd1 != null && pwd1.equals(pwd2);
     }
 
-    public String sendEmail(String to, ContextData context) {
+    public String sendEmail(String to) {
 
         SmtpConfiguration smtpConfiguration = getSmtpConfiguration();
-        IntStream digits = RAND.ints(OTP_LENGTH, 0, 10);
-        String otp = digits.mapToObj(i -> "" + i).collect(Collectors.joining());
+
+        StringBuilder otpBuilder = new StringBuilder();
+        for (int i = 0; i < OTP_LENGTH; i++) {
+            otpBuilder.append(RAND.nextInt(10));  // Generates 0–9
+        }
+        String otp = otpBuilder.toString();
 
         String from = smtpConfiguration.getFromEmailAddress();
         String subject = String.format(SUBJECT_TEMPLATE, otp);
         String textBody = String.format(MSG_TEMPLATE_TEXT, otp);
-        String htmlBody = EmailTemplate.get(otp, context);
+        String htmlBody = EmailTemplate.get(otp);
 
         MailService mailService = CdiUtil.bean(MailService.class);
 
