@@ -74,6 +74,11 @@
 							"variableTypeCheck": true,
 							"assignmentExpression": "{matches: true, resent: false}",
 							"assignedVariableName": "uiInput"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{ location: uiInput.location, timeZone: uiInput.zone, device: uiInput.device }",
+							"assignedVariableName": "userData.context"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -89,7 +94,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1641,7 +1646,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -2379,8 +2384,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2728.8389740455905,
-		"y": -736.3274959361377,
-		"zoom": 1.276328768828953
+		"x": 1038.066326779809,
+		"y": 302.856841576499,
+		"zoom": 0.8145075630702155
 	}
 }
