@@ -13,7 +13,9 @@
         "community",
         "authentication"
     ],
-    "noDirectLaunch": [],
+    "noDirectLaunch": [
+        "org.gluu.agama.smtp.emailVerification"
+    ],
     "configs": {
         "org.gluu.agama.registration.main": {},
         "": {},
