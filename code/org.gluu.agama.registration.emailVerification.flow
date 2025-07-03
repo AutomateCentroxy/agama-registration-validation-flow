@@ -19,6 +19,11 @@ max = Repeat 3 times max
           // When OTP code null
           When otpCode is null
                Finish __________
+          // Variable assignment after successful email delivery
+          emailObj.email = email
+          emailObj.accountExists = existingAccount
+          emailObj.matches = uiInput.matches
+          emailObj.resent = uiInput.resent
           RRF "__________" 
 // Variable assignment when user exceeds the number of attempts allowed
 obj.error = "You have exceeded the number of attempts allowed"
