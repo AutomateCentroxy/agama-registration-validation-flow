@@ -1649,7 +1649,7 @@
 				"previousNodeId": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08",
 				"branching": "success",
 				"agamaData": {
-					"logMessage": "userWithUid value:\" userWithUid",
+					"logMessage": "\"userWithUid value: userWithUid\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
