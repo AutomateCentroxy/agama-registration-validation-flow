@@ -19,9 +19,9 @@ max = Repeat 3 times max
           // When OTP code null
           When otpCode is null
                // Variable assignment for unsuccessful Email delivery
-               emailObj.error = "Unable to deliver e-mail message"
+               emailObj = { success: false, error: "Unable_to_deliver_email_message" }
                // Finish flow unsuccessfully
-               Finish emailObj.error
+               Finish emailObj
           // Variable assignment after successful email delivery
           emailObj.email = email
           emailObj.accountExists = existingAccount
