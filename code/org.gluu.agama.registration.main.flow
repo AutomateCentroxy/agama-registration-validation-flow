@@ -37,7 +37,7 @@ Repeat 6 times max
                               // call the  Email Service
                               emailService = Call org.gluu.agama.registration.emailVerification#getInstance 
                               When emailService is true
-                                   Call __________#__________ 
+                                   inum | E = Call userRegistrationService addNewUser userInput
                          Otherwise
                               // User already registered with UID
                               Log "@info User already registered with uid: %" userName
@@ -62,5 +62,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_uqdlb = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_uqdlb
+it_qphnk = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_qphnk
