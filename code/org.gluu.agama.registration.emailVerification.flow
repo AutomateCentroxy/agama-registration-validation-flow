@@ -12,6 +12,7 @@ emailService = Call org.gluu.agama.user.UserRegistration#getInstance
 max = Repeat 3 times max
      When 
 // Variable assignment when user exceeds the number of attempts allowed
+obj = {}
 obj.success = false
 obj.error = "You have exceeded the number of attempts allowed"
 // Finish flow when user exceeds maximum number of flows allowed
