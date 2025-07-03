@@ -147,7 +147,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -245,7 +245,7 @@
 						{
 							"variableTypeCheck": false,
 							"assignmentExpression": "userInput.uid",
-							"assignedVariableName": "userNuserInput.residenceCountryame"
+							"assignedVariableName": "userName"
 						},
 						{
 							"variableTypeCheck": true,
@@ -276,7 +276,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1994,8 +1994,8 @@
 		}
 	],
 	"viewport": {
-		"x": 1098.2533930511681,
-		"y": 233.1901435799964,
-		"zoom": 1.3491025343396987
+		"x": 433.0661755226288,
+		"y": 36.96779089413138,
+		"zoom": 1.161508731925722
 	}
 }
