@@ -1614,7 +1614,7 @@
 						{
 							"variableTypeCheck": true,
 							"assignmentExpression": "{ location: userInput.location, timeZone: userInput.zone, device: userInput.device }",
-							"assignedVariableName": "context.value"
+							"assignedVariableName": "context"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -2422,8 +2422,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1962.6593669536255,
-		"y": -564.1038409425805,
+		"x": -2180.6593669536255,
+		"y": -583.1038409425805,
 		"zoom": 1.2277356839150602
 	}
 }
