@@ -680,7 +680,7 @@
 				"width": 109,
 				"height": 58
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-184b8f77-c3aa-4727-9d93-0375ff29533a",
@@ -699,20 +699,32 @@
 				"previousNodeId": "whenNode-6dfdc4fa-669b-48b0-b681-ae47f0c0931e",
 				"branching": "continue",
 				"agamaData": {
-					"assignments": [],
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "false",
+							"assignedVariableName": "uiInput.matches"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "true",
+							"assignedVariableName": "sendMail"
+						}
+					],
 					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "Variable assigned when OTP entered by user does not matches"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "finishNode-57d108a2-a5a6-4a52-96d0-8cfafc5cfdc9",
