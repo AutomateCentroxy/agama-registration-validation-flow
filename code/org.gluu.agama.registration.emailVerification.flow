@@ -31,6 +31,9 @@ max = Repeat 3 times max
           uiInput = RRF "emailOtp.ftlh" emailObj
           // resent will false
           uiInput.resent = false
+          When 
+          When 
+               Finish __________
 // Variable assignment when user exceeds the number of attempts allowed
 obj.error = "You have exceeded the number of attempts allowed"
 // Finish flow when user exceeds maximum number of flows allowed
