@@ -6,7 +6,7 @@
 
   
   
-  &lt; &gt;
+  
 	<div class="text-center">
 	  <img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" alt="gluu logo" class="mx-auto mb-4">
 	  <h2 class="text-2xl font-bold mb-4">Verify your email
