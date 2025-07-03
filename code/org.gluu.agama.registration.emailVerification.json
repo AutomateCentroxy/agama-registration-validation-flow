@@ -277,7 +277,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "finishNode-c251181f-4929-4c93-a290-781b6207ad38",
@@ -544,8 +544,8 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "\"Unable to deliver e-mail message\"",
-							"assignedVariableName": "emailObj.error"
+							"assignmentExpression": "{ success: false, error: \"Unable_to_deliver_email_message\" }",
+							"assignedVariableName": "emailObj"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -586,7 +586,7 @@
 					"hasComment": true,
 					"comment": "Finish flow unsuccessfully",
 					"flowfilename": "",
-					"returnVariable": "emailObj.error",
+					"returnVariable": "emailObj",
 					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
@@ -595,7 +595,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-147a967b-a133-4b00-b1b8-d2539a9029f1",
@@ -1171,8 +1171,8 @@
 		}
 	],
 	"viewport": {
-		"x": -516.8519203387762,
-		"y": -2.1837008893243137,
+		"x": -1604.2300623298215,
+		"y": -407.33166824185537,
 		"zoom": 1.0570180405613803
 	}
 }
