@@ -18,15 +18,8 @@ max = Repeat 3 times max
           otpCode = Call emailService sendEmail email context
           // When OTP code null
           When otpCode is null
-               // Variable assignment for unsuccessful Email delivery
-               emailObj.success = false
-               emailObj.error = "Unable to deliver e-mail message"
                Finish __________
-          // Variable assignment after successful email delivery
-          emailObj.email = email
-          emailObj.accountExists = existingAccount
-          emailObj.matches = uiInput.matches
-          emailObj.resent = uiInput.resent
+          RRF "__________" 
 // Variable assignment when user exceeds the number of attempts allowed
 obj.error = "You have exceeded the number of attempts allowed"
 // Finish flow when user exceeds maximum number of flows allowed
