@@ -16,6 +16,7 @@ Repeat 6 times max
      userPassword = userInput.userPassword
      referralCode = userInput.referralCode
      residenceCountry = userInput.residenceCountry
+     context = { location: userInput.location, timeZone: userInput.zone, device: userInput.device }
      // Check user name policy
      isUsernamePolicyMatch = Call userRegistrationService usernamePolicyMatch userName
      // if username policy match
@@ -85,5 +86,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_illcq = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_illcq
+it_yelsp = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_yelsp
