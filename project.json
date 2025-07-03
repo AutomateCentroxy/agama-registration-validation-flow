@@ -19,7 +19,8 @@
     "configs": {
         "org.gluu.agama.registration.main": {},
         "": {},
-        "org.gluu.agama.registration.emailVerification.flow": {}
+        "org.gluu.agama.registration.emailVerification.flow": {},
+        "org.gluu.agama.registration.emailVerification.low": {}
     },
     "name": "agama-registration"
 }
