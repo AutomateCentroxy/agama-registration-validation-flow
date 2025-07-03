@@ -41,6 +41,8 @@ Repeat 6 times max
                               otpCode = Call userRegistrationService sendEmail email context
                               // When OTP code null
                               When otpCode is null
+                                   // Variable assignment for unsuccessful Email delivery
+                                   emailObj = { success: false, error: "Unable_to_deliver_e-mail_message" }
                                    Finish __________
                               // Variable assignment after successful email delivery
                               emailObj.email = email
@@ -74,5 +76,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_fwehs = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_fwehs
+it_zywhw = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_zywhw
