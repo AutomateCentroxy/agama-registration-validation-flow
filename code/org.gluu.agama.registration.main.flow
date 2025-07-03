@@ -49,6 +49,7 @@ Repeat 6 times max
                               emailObj.accountExists = existingAccount
                               // Redirect to page asking for OTP received using email
                               uiInput = RRF "emailOtp.ftlh" emailObj
+                              uiInput.resent = false
                          Otherwise
                               // User already registered with UID
                               Log "@info User already registered with uid: %" userName
@@ -73,5 +74,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_mbwon = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_mbwon
+it_fwehs = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_fwehs
