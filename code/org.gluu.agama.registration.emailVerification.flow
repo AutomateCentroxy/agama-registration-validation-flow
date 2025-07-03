@@ -12,3 +12,5 @@ emailService = Call org.gluu.agama.user.UserRegistration#getInstance
 max = Repeat 3 times max
      // When send mail is allowed
      When sendMail is true
+          // Tun off send mail
+          sendMail = false
