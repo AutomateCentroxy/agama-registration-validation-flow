@@ -34,13 +34,6 @@ Repeat 6 times max
                          userWithUid = Call userRegistrationService getUserEntityByUsername userName
                          // user not found
                          When userWithUid.empty is true
-                              // Email Otp send to user
-                              emailOtp = Call userRegistrationService sendEmailOtp email context
-                              Log "@info uiFeedback.infoMessage: Email otp send"
-                              // Redirect to page asking for OTP received using email
-                              uiInput = RRF "emailOtp.ftlh" uiFeedback
-                              // email otp send value
-                              emailOtp = Call userRegistrationService sendEmailOtp email
                          Otherwise
                               // User already registered with UID
                               Log "@info User already registered with uid: %" userName
@@ -65,5 +58,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_pqfsu = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_pqfsu
+it_xroxk = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_xroxk
