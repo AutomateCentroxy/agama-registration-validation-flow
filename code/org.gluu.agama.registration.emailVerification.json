@@ -407,21 +407,42 @@
 				"previousNodeId": "whenNode-1007dbbd-7380-4c8c-aa2b-06121b7fcb86",
 				"branching": "continue",
 				"agamaData": {
-					"assignments": [],
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "email",
+							"assignedVariableName": "emailObj.email"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "existingAccount",
+							"assignedVariableName": "emailObj.accountExists"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "uiInput.matches",
+							"assignedVariableName": "emailObj.matches"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "uiInput.resent",
+							"assignedVariableName": "emailObj.resent"
+						}
+					],
 					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "Variable assignment after successful email delivery"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -455,7 +476,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
@@ -671,8 +692,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1713.4581773001046,
-		"y": -331.3642668767807,
+		"x": -1950.458177300105,
+		"y": -410.3642668767808,
 		"zoom": 1.3491025343396987
 	}
 }
