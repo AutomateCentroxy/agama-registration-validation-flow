@@ -34,7 +34,7 @@ Repeat 6 times max
                          userWithUid = Call userRegistrationService getUserEntityByUsername userName
                          // user not found
                          When userWithUid.empty is true
-                              Log "@info " userWithUid value:" userWithUid
+                              Log "@info userWithUid value: userWithUid"
                               context = { location: userInput.location, timeZone: userInput.zone, device: userInput.device }
                               // Call email service to send mail
                               otpCode = Call userRegistrationService sendEmail email context
@@ -75,5 +75,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_jutzb = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_jutzb
+it_jznik = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_jznik
