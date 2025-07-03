@@ -1568,7 +1568,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-80770955-19cb-4d90-bb8d-614f0aadb5ab",
@@ -1587,20 +1587,27 @@
 				"previousNodeId": "whenNode-e3132e39-f1e7-4989-98b4-9847846a1ec2",
 				"branching": "success",
 				"agamaData": {
-					"assignments": [],
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{ success: false, error: \"Unable_to_deliver_e-mail_message\" }",
+							"assignedVariableName": "emailObj"
+						}
+					],
 					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "Variable assignment for unsuccessful Email delivery"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "finishNode-36b9dfcd-b72d-436c-97de-3096c2a72eeb",
