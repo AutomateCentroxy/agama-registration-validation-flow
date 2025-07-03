@@ -1647,8 +1647,48 @@
 				}
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
+				"width": 170,
+				"height": 122
+			},
+			"selected": false
+		},
+		{
+			"id": "callNode-38d3f7de-12d3-4680-ba8c-1202602f425f",
+			"type": "callNode",
+			"position": {
+				"x": 3481.057748962963,
+				"y": 893.5778454187802
+			},
+			"data": {
+				"id": "callNode-38d3f7de-12d3-4680-ba8c-1202602f425f",
+				"type": "callNode",
+				"position": {
+					"x": 3481.057748962963,
+					"y": 893.5778454187802
+				},
+				"previousNodeId": "logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "addNewUser",
+					"javaVariableName": "userRegistrationService",
+					"exceptionVariableField": "E",
+					"callType": "Call method on instance",
+					"arguments": [
+						"userInput"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Call the user reg service method",
+					"asssignedVariableName": "inum"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
 			},
 			"selected": true
 		}
@@ -2404,11 +2444,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11_success"
+		},
+		{
+			"id": "logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7-callNode-38d3f7de-12d3-4680-ba8c-1202602f425f",
+			"type": "default",
+			"source": "logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7",
+			"target": "callNode-38d3f7de-12d3-4680-ba8c-1202602f425f",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7"
 		}
 	],
 	"viewport": {
-		"x": -4117.449840595287,
-		"y": -861.0973232422443,
+		"x": -4029.6381028648884,
+		"y": -847.8186532096524,
 		"zoom": 1.3491025343396987
 	}
 }
