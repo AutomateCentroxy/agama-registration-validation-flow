@@ -1,5 +1,8 @@
+// Verifies the possession of an e-mail address by sending a random passcode
 Flow org.gluu.agama.registration.emailVerification
      Basepath ""
-     Inputs profile extUid
-// Assign the email obtain from input profile to a variable
-email = emailHint
+     Inputs email existingAccount context
+// Initialize variables
+emailObj = {}
+sendMail = true
+uiInput = {matches: true, resent: false}
