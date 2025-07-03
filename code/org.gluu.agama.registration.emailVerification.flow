@@ -6,3 +6,5 @@ Flow org.gluu.agama.registration.emailVerification
 emailObj = {}
 sendMail = true
 uiInput = {matches: true, resent: false}
+// Get instance email service
+emailService = Call org.gluu.agama.user.UserRegistration#getInstance 
