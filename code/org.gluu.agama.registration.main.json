@@ -1636,8 +1636,8 @@
 			"id": "logNode-a180ecaa-75ce-405b-9a7b-b4a37268c370",
 			"type": "logNode",
 			"position": {
-				"x": 1932.18729517875,
-				"y": 727.7871630677291
+				"x": 1983.8334434048634,
+				"y": 664.0536184482701
 			},
 			"data": {
 				"id": "logNode-a180ecaa-75ce-405b-9a7b-b4a37268c370",
@@ -1649,7 +1649,7 @@
 				"previousNodeId": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08",
 				"branching": "success",
 				"agamaData": {
-					"logMessage": "userWithUid value: %\" userWithUid",
+					"logMessage": "userWithUid value:\" userWithUid",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -2475,8 +2475,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1887.6593669536255,
-		"y": -534.1038409425805,
-		"zoom": 1.2277356839150602
+		"x": -1443.1489017262427,
+		"y": -288.57769849805527,
+		"zoom": 0.9100388240808991
 	}
 }
