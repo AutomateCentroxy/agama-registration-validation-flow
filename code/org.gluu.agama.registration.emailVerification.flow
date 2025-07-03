@@ -1,2 +1,3 @@
 Flow org.gluu.agama.registration.emailVerification
      Basepath ""
+     Inputs profile extUid
