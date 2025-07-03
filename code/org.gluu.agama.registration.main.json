@@ -447,7 +447,7 @@
 				"width": 109,
 				"height": 58
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1340,6 +1340,49 @@
 			},
 			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "callNode-f17afaaf-2ad7-4e85-ae14-cbf6c6f0aa46",
+			"type": "callNode",
+			"position": {
+				"x": 1994.190997219965,
+				"y": 722.9513108183794
+			},
+			"data": {
+				"id": "callNode-f17afaaf-2ad7-4e85-ae14-cbf6c6f0aa46",
+				"type": "callNode",
+				"position": {
+					"x": 2029.9282027471759,
+					"y": 802.721858870189
+				},
+				"previousNodeId": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08",
+				"branching": "success",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "sendEmail",
+					"javaVariableName": "userRegistrationService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"email",
+						"context"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Call email service to send mail",
+					"asssignedVariableName": "otpCode"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -1941,11 +1984,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-cb1cdb5b-ae87-4328-9160-a875bfb6312a_otherwise"
+		},
+		{
+			"id": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08-callNode-f17afaaf-2ad7-4e85-ae14-cbf6c6f0aa46",
+			"type": "default",
+			"source": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08",
+			"target": "callNode-f17afaaf-2ad7-4e85-ae14-cbf6c6f0aa46",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-f6e375d5-6064-4609-89e8-b0943c226c08_success"
 		}
 	],
 	"viewport": {
-		"x": -1039.0827563977857,
-		"y": -21.153030488644674,
-		"zoom": 0.6745512671698494
+		"x": -1423.375879132137,
+		"y": -377.9971960589785,
+		"zoom": 1
 	}
 }
