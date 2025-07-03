@@ -9,7 +9,7 @@ import io.jans.service.MailService;
 import io.jans.service.cdi.util.CdiUtil;
 import io.jans.util.StringHelper;
 import io.jans.agama.engine.script.LogUtils;
-import org.gluu.agama.registration.jans.model.ContextData;
+import org.gluu.agama.smtp.jans.model.ContextData;
 
 import org.gluu.agama.smtp.EmailTemplate;
 import org.gluu.agama.user.UserRegistration;
