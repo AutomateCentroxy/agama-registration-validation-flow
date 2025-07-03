@@ -1301,7 +1301,7 @@
 				"width": 109,
 				"height": 58
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891ff",
@@ -1321,24 +1321,28 @@
 				"branching": "success",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "",
-					"javaVariableName": "",
-					"exceptionVariableField": "",
-					"callType": "Call static method",
-					"arguments": [],
+					"javaMethodName": "addNewUser",
+					"javaVariableName": "userRegistrationService",
+					"exceptionVariableField": "E",
+					"callType": "Call method on instance",
+					"arguments": [
+						"userInput"
+					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "",
+					"asssignedVariableName": "inum"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1944,8 +1948,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2426.0173218518407,
-		"y": -810.7518869656813,
+		"x": -2556.0173218518407,
+		"y": -923.7518869656813,
 		"zoom": 1.3491025343396987
 	}
 }
