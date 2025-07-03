@@ -12,7 +12,7 @@ public abstract class UserRegistration {
 
     public abstract boolean passwordPolicyMatch(String userPassword);
 
-    public abstract String sendEmail(String to, ContextData context);
+    public abstract String sendEmail(String to);
 
     public abstract boolean validateEmailOtp(String email, String otp);
     
