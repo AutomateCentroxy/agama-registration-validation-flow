@@ -575,7 +575,7 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "",
+					"comment": "Finish flow unsuccessfully",
 					"flowfilename": "",
 					"returnVariable": "emailObj.error",
 					"finishMode": "withVariable",
