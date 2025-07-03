@@ -1342,6 +1342,40 @@
 				"width": 170,
 				"height": 122
 			},
+			"selected": false
+		},
+		{
+			"id": "logNode-4dba84f4-4caa-4501-b01c-a1d8fee2094b",
+			"type": "logNode",
+			"position": {
+				"x": 2523.928202747176,
+				"y": 511.72185887018895
+			},
+			"data": {
+				"id": "logNode-4dba84f4-4caa-4501-b01c-a1d8fee2094b",
+				"type": "logNode",
+				"position": {
+					"x": 2523.928202747176,
+					"y": 511.72185887018895
+				},
+				"previousNodeId": "whenNode-cb1cdb5b-ae87-4328-9160-a875bfb6312a",
+				"branching": "otherwise",
+				"agamaData": {
+					"logMessage": "\"Unable to create User\"",
+					"logLevel": "error",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
 			"selected": true
 		}
 	],
@@ -1963,11 +1997,30 @@
 				"fillOpacity": 0.7
 			},
 			"id": "xy-edge__callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891ffsource_callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891ff-whenNode-51e74368-a147-4d88-a03f-76daebffff2ctarget_whenNode-51e74368-a147-4d88-a03f-76daebffff2c"
+		},
+		{
+			"id": "whenNode-cb1cdb5b-ae87-4328-9160-a875bfb6312a-logNode-4dba84f4-4caa-4501-b01c-a1d8fee2094b",
+			"type": "default",
+			"source": "whenNode-cb1cdb5b-ae87-4328-9160-a875bfb6312a",
+			"target": "logNode-4dba84f4-4caa-4501-b01c-a1d8fee2094b",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "otherwise",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-cb1cdb5b-ae87-4328-9160-a875bfb6312a_otherwise"
 		}
 	],
 	"viewport": {
-		"x": -1985.781489207879,
-		"y": -701.3008420411661,
+		"x": -1750.4576547134766,
+		"y": -419.42441231190844,
 		"zoom": 1
 	}
 }
