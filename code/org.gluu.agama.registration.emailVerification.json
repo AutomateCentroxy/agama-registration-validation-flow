@@ -659,21 +659,28 @@
 					"variableField": "",
 					"valueField": "",
 					"conditionInputField": "",
-					"conditions": [],
+					"conditions": [
+						{
+							"variable": "uiInput.passcode",
+							"operator": "is",
+							"dataValue": "otpCode",
+							"combinator": "none"
+						}
+					],
 					"nodeIcon": "ph:swap",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "When passcode entered by user matches"
 				}
 			},
 			"measured": {
 				"width": 109,
 				"height": 58
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-184b8f77-c3aa-4727-9d93-0375ff29533a",
@@ -782,7 +789,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
