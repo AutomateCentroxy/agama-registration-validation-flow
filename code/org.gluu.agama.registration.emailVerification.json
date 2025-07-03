@@ -373,21 +373,28 @@
 					"variableField": "",
 					"valueField": "",
 					"conditionInputField": "",
-					"conditions": [],
+					"conditions": [
+						{
+							"variable": "otpCode",
+							"operator": "is",
+							"dataValue": "null",
+							"combinator": "none"
+						}
+					],
 					"nodeIcon": "ph:swap",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "When OTP code null"
 				}
 			},
 			"measured": {
 				"width": 109,
 				"height": 58
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -487,8 +494,41 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "finishNode-04b951da-10d8-45b4-8959-5e859f6c4209",
+			"type": "finishNode",
+			"position": {
+				"x": 2176.6920475578036,
+				"y": 609.9950935163129
+			},
+			"data": {
+				"id": "finishNode-04b951da-10d8-45b4-8959-5e859f6c4209",
+				"type": "finishNode",
+				"position": {
+					"x": 2176.6920475578036,
+					"y": 609.9950935163129
+				},
+				"previousNodeId": "assignmentNode-860b6a27-220b-4583-a1c0-828b5e196004",
+				"agamaData": {
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "",
+					"flowfilename": "",
+					"returnVariable": "",
+					"nodeIcon": "material-symbols:line-end-square-rounded"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": false
 		}
 	],
 	"edges": [
@@ -700,11 +740,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-1007dbbd-7380-4c8c-aa2b-06121b7fcb86_success"
+		},
+		{
+			"id": "assignmentNode-860b6a27-220b-4583-a1c0-828b5e196004-finishNode-04b951da-10d8-45b4-8959-5e859f6c4209",
+			"type": "default",
+			"source": "assignmentNode-860b6a27-220b-4583-a1c0-828b5e196004",
+			"target": "finishNode-04b951da-10d8-45b4-8959-5e859f6c4209",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_assignmentNode-860b6a27-220b-4583-a1c0-828b5e196004"
 		}
 	],
 	"viewport": {
-		"x": -1950.458177300105,
-		"y": -410.3642668767808,
+		"x": -1827.458177300105,
+		"y": -419.3642668767807,
 		"zoom": 1.3491025343396987
 	}
 }
