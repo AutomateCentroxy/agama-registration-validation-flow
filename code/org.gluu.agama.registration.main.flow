@@ -44,6 +44,8 @@ Repeat 6 times max
                               When emailVerificationResult.success is true
                               // When email verification is invalid
                               When emailVerificationResult.success is false
+                                   // Error variable assignment. 
+                                   emailObj.errorMessage = "Error sending email. Check email address and SMTP configuration."
                          Otherwise
                               // User already registered with UID
                               Log "@info User already registered with uid: %" userName
@@ -68,5 +70,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_lnwkh = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_lnwkh
+it_yrbha = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_yrbha
