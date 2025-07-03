@@ -61,6 +61,10 @@
 			<button type="submit" class="btn btn-primary">Register</button>
 			<button type="reset" id="cancel" name="cancel" value="cancel" class="btn btn-primary">Reset</button>
 		  </div>
+		  <!-- Hidden fields for context auto-fill -->
+			<input type="hidden" id="location" name="location" value="Unknown">
+			<input type="hidden" id="zone" name="zone" value="">
+			<input type="hidden" id="device" name="device" value="">
 		</form>
 	  </div>
 	</div>
@@ -183,5 +187,23 @@
 	  errorMessage.innerText = "";
 	  return true;
 	}
+	// Auto-fill time zone
+  document.getElementById("zone").value = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+  // Auto-fill device info
+  const userAgent = navigator.userAgent;
+  let device = "Unknown";
+  if (userAgent.includes("Firefox")) device = "Firefox";
+  else if (userAgent.includes("Chrome")) device = "Chrome";
+  else if (userAgent.includes("Safari")) device = "Safari";
+  else if (userAgent.includes("Edge")) device = "Edge";
+  else if (userAgent.includes("Windows")) device = "Windows";
+  else if (userAgent.includes("Linux")) device = "Linux";
+  else if (userAgent.includes("Mac")) device = "Mac";
+
+  document.getElementById("device").value = device;
+
+  // Optional: location default as "Unknown"
+  document.getElementById("location").value = "Web";
   </script>
 </html>
