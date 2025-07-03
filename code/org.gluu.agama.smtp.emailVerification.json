@@ -12,7 +12,7 @@
 					"inputs": "email existingAccount context",
 					"configs": "",
 					"flowname": "org.gluu.agama.smtp.emailVerification",
-					"displayName": "org.gluu.agama.smtp.emailVerification",
+					"displayName": "org.gluu.agama.registration.emailVerification",
 					"hasComment": true,
 					"comment": "Verifies the possession of an e-mail address by sending a random passcode"
 				},
@@ -32,7 +32,9 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true,
+			"deletable": false
 		},
 		{
 			"data": {
@@ -1061,8 +1063,8 @@
 		}
 	],
 	"viewport": {
-		"x": 86.69033680150977,
-		"y": 21.985737706210955,
-		"zoom": 0.5314478371792766
+		"x": 527,
+		"y": 53,
+		"zoom": 1
 	}
 }
