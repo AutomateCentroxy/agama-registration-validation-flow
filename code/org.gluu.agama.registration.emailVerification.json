@@ -161,7 +161,7 @@
 			"id": "finishNode-a3375c3a-48b8-4483-bc2b-cb25e4703332",
 			"type": "finishNode",
 			"position": {
-				"x": 1280,
+				"x": 1530,
 				"y": 30
 			},
 			"data": {
@@ -171,7 +171,7 @@
 					"x": 1280,
 					"y": 30
 				},
-				"previousNodeId": "repeatNode-86854c10-1921-4d62-a40d-0ee5f7fe233a",
+				"previousNodeId": "assignmentNode-362b8342-b3a0-4739-a089-cff13832c6e4",
 				"agamaData": {
 					"nodeColor": "",
 					"titleColor": "",
@@ -180,17 +180,16 @@
 					"hasComment": true,
 					"comment": "Finish flow when user exceeds maximum number of flows allowed",
 					"flowfilename": "",
-					"returnVariable": "obj.error",
-					"finishMode": "withVariable",
+					"returnVariable": "[\"success\": false, \"error\": \"You have exceeded the number of attempts allowed\"]",
+					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
-				},
-				"branching": "continue"
+				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-b904a8bb-ab87-48ce-b75b-c425e631337d",
@@ -233,7 +232,7 @@
 				"width": 109,
 				"height": 58
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -329,12 +328,13 @@
 				"color": "#ffffff",
 				"fillOpacity": 0.7
 			},
-			"id": "xy-edge__repeatNode-86854c10-1921-4d62-a40d-0ee5f7fe233asource_repeatNode-86854c10-1921-4d62-a40d-0ee5f7fe233a_continue-finishNode-a3375c3a-48b8-4483-bc2b-cb25e4703332target_finishNode-a3375c3a-48b8-4483-bc2b-cb25e4703332"
+			"id": "xy-edge__repeatNode-86854c10-1921-4d62-a40d-0ee5f7fe233asource_repeatNode-86854c10-1921-4d62-a40d-0ee5f7fe233a_continue-finishNode-a3375c3a-48b8-4483-bc2b-cb25e4703332target_finishNode-a3375c3a-48b8-4483-bc2b-cb25e4703332",
+			"selected": false
 		}
 	],
 	"viewport": {
-		"x": -499,
-		"y": 183,
+		"x": -506,
+		"y": 128,
 		"zoom": 1
 	}
 }
