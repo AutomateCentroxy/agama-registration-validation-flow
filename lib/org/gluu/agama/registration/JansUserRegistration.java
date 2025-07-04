@@ -24,8 +24,9 @@ import java.util.stream.Collectors;
 import static org.gluu.agama.registration.jans.Attrs.*;
 
 public class JansUserRegistration extends UserRegistration {
-    
+
     private static final Logger logger = LoggerFactory.getLogger(JansUserRegistration.class);
+
     private static final String MAIL = "mail";
     private static final String UID = "uid";
     private static final String DISPLAY_NAME = "displayName";
@@ -84,7 +85,7 @@ public class JansUserRegistration extends UserRegistration {
         String textBody = String.format(MSG_TEMPLATE_TEXT, otp);
         ContextData context = new ContextData();
         context.setDevice("Unknown");
-        context.setTimeZone("Unknown");
+        context.setZone("Unknown");
         context.setLocation("Unknown");
         String htmlBody = EmailTemplate.get(otp, context);
 
@@ -100,15 +101,33 @@ public class JansUserRegistration extends UserRegistration {
     }
 
     public String addNewUser(Map<String, String> profile) throws Exception {
-        Set<String> attributes = Set.of("uid", "mail", "displayName", "givenName", "sn", "userPassword", COUNTRY, REFERRAL);
+        // Set<String> attributes = Set.of("uid", "mail", "displayName", "givenName", "sn", "userPassword", COUNTRY, REFERRAL);
         User user = new User();
 
-        attributes.forEach(attr -> {
-            String val = profile.get(attr);
-            if (StringHelper.isNotEmpty(val)) {
-                user.setAttribute(attr, val);
-            }
-        });
+        // Required
+        String uid = profile.get("uid");
+        String mail = profile.get("mail");
+        String password = profile.get("userPassword");
+
+        // Derived fields
+        String givenName = uid;
+        String displayName = uid;
+        String sn = uid;
+
+        user.setAttribute("uid", uid);
+        user.setAttribute("mail", mail);
+        user.setAttribute("userPassword", password);
+        user.setAttribute("givenName", givenName);
+        user.setAttribute("displayName", displayName);
+        user.setAttribute("sn", sn);
+
+        // Optional
+        if (StringHelper.isNotEmpty(profile.get("residenceCountry"))) {
+            user.setAttribute("residenceCountry", profile.get("residenceCountry"));
+        }
+        if (StringHelper.isNotEmpty(profile.get("referralCode"))) {
+            user.setAttribute("referralCode", profile.get("referralCode"));
+        }
 
         UserService userService = CdiUtil.bean(UserService.class);
         user = userService.addUser(user, true);
