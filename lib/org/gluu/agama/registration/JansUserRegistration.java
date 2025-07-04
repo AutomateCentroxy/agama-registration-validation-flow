@@ -34,7 +34,7 @@ public class JansUserRegistration extends UserRegistration {
     private static final String PASSWORD = "userPassword";
     private static final String INUM_ATTR = "inum";
     private static final String USER_STATUS = "jansStatus";
-    private static final String COUNTRY = "residenceCountry";
+    private static final String COUNTRY = "country";
     private static final String REFERRAL = "referralCode";
     private static final String EXT_ATTR = "jansExtUid";
     private static final int OTP_LENGTH = 6;
@@ -122,8 +122,8 @@ public class JansUserRegistration extends UserRegistration {
         user.setAttribute("sn", sn);
 
         // Optional
-        if (StringHelper.isNotEmpty(profile.get("residenceCountry"))) {
-            user.setAttribute("residenceCountry", profile.get("residenceCountry"));
+        if (StringHelper.isNotEmpty(profile.get("country"))) {
+            user.setAttribute("country", profile.get("country"));
         }
         if (StringHelper.isNotEmpty(profile.get("referralCode"))) {
             user.setAttribute("referralCode", profile.get("referralCode"));
