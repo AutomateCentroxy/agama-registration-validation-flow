@@ -79,7 +79,12 @@ public class JansUserRegistration extends UserRegistration {
         String from = smtpConfiguration.getFromEmailAddress();
         String subject = String.format(SUBJECT_TEMPLATE, otp);
         String textBody = String.format(MSG_TEMPLATE_TEXT, otp);
-         ContextData context = new ContextData();
+        ContextData context = new ContextData();
+        context.setEmail(to);
+        context.setDevice("Unknown");
+        context.setZone("Unknown");
+        context.setLocation("Unknown");
+        context.setUid("unknownUser");
         String htmlBody = EmailTemplate.get(otp, context);
 
         MailService mailService = CdiUtil.bean(MailService.class);
