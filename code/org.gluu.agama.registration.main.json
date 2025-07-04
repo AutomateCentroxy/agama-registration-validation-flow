@@ -1297,7 +1297,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1340,44 +1340,6 @@
 			"dragging": false
 		},
 		{
-			"id": "assignmentNode-acf151b6-0435-4711-9d6a-db6a857d100e",
-			"type": "assignmentNode",
-			"position": {
-				"x": 2231.057748962963,
-				"y": 693.5778454187802
-			},
-			"data": {
-				"id": "assignmentNode-acf151b6-0435-4711-9d6a-db6a857d100e",
-				"type": "assignmentNode",
-				"position": {
-					"x": 2731.057748962963,
-					"y": 693.5778454187802
-				},
-				"previousNodeId": "triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
-				"agamaData": {
-					"assignments": [
-						{
-							"variableTypeCheck": true,
-							"assignmentExpression": "\"\"",
-							"assignedVariableName": "emailObj.errorMessage"
-						}
-					],
-					"nodeIcon": "material-symbols:equal",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "",
-					"hasComment": true,
-					"comment": "Reset error message to empty after email verification"
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 124
-			},
-			"selected": false
-		},
-		{
 			"id": "whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11",
 			"type": "whenNode",
 			"position": {
@@ -1391,7 +1353,7 @@
 					"x": 2981.057748962963,
 					"y": 693.5778454187802
 				},
-				"previousNodeId": "assignmentNode-acf151b6-0435-4711-9d6a-db6a857d100e",
+				"previousNodeId": "triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
 				"agamaData": {
 					"variableField": "",
 					"valueField": "",
@@ -2063,44 +2025,6 @@
 			"sourceHandle": "source_whenNode-f6e375d5-6064-4609-89e8-b0943c226c08_success"
 		},
 		{
-			"id": "triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20-assignmentNode-acf151b6-0435-4711-9d6a-db6a857d100e",
-			"type": "default",
-			"source": "triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
-			"target": "assignmentNode-acf151b6-0435-4711-9d6a-db6a857d100e",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20"
-		},
-		{
-			"id": "assignmentNode-acf151b6-0435-4711-9d6a-db6a857d100e-whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11",
-			"type": "default",
-			"source": "assignmentNode-acf151b6-0435-4711-9d6a-db6a857d100e",
-			"target": "whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_assignmentNode-acf151b6-0435-4711-9d6a-db6a857d100e"
-		},
-		{
 			"id": "whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11-whenNode-278aef44-2646-40c2-947c-3406b384519c",
 			"type": "default",
 			"source": "whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11",
@@ -2246,11 +2170,29 @@
 				"fillOpacity": 0.7
 			},
 			"id": "xy-edge__callNode-1e9e2090-3521-421c-b1a9-e8bafc4b306csource_callNode-1e9e2090-3521-421c-b1a9-e8bafc4b306c-whenNode-c1ae3675-fb2f-40f2-8290-c5190571a966target_whenNode-c1ae3675-fb2f-40f2-8290-c5190571a966"
+		},
+		{
+			"source": "triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
+			"sourceHandle": "source_triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
+			"target": "whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11",
+			"targetHandle": "target_whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"id": "xy-edge__triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20source_triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20-whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11target_whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11"
 		}
 	],
 	"viewport": {
-		"x": -1355.638974323926,
-		"y": -455.92989696476,
-		"zoom": 0.9999999999999997
+		"x": -1116.803635236281,
+		"y": -249.88773059019888,
+		"zoom": 0.7536674547791902
 	}
 }
