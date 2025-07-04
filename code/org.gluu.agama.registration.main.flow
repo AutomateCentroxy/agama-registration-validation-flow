@@ -82,5 +82,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_xtcib = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_xtcib
+it_jjmvw = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_jjmvw
