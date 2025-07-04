@@ -84,7 +84,6 @@ public class JansUserRegistration extends UserRegistration {
         context.setDevice("Unknown");
         context.setZone("Unknown");
         context.setLocation("Unknown");
-        context.setUid("unknownUser");
         String htmlBody = EmailTemplate.get(otp, context);
 
         MailService mailService = CdiUtil.bean(MailService.class);
