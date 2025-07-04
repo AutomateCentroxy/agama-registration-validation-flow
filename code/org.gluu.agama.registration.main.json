@@ -1282,7 +1282,7 @@
 				"previousNodeId": "whenNode-f6e375d5-6064-4609-89e8-b0943c226c08",
 				"branching": "success",
 				"agamaData": {
-					"logMessage": "\"userWithUid value: userWithUid\"",
+					"logMessage": "\"Send-Email-page-trigger\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -1297,7 +1297,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1336,7 +1336,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2249,8 +2249,8 @@
 		}
 	],
 	"viewport": {
-		"x": -541.6022300087243,
-		"y": -177.58368006018623,
-		"zoom": 0.7536674547791904
+		"x": -1355.638974323926,
+		"y": -455.92989696476,
+		"zoom": 0.9999999999999997
 	}
 }
