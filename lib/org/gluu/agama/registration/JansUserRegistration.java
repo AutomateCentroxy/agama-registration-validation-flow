@@ -81,7 +81,7 @@ public class JansUserRegistration extends UserRegistration {
         String textBody = String.format(MSG_TEMPLATE_TEXT, otp);
         ContextData context = new ContextData();
         context.setDevice("Unknown");
-        context.setZone("Unknown");
+        context.setTimeZone("Unknown");
         context.setLocation("Unknown");
         String htmlBody = EmailTemplate.get(otp, context);
 
