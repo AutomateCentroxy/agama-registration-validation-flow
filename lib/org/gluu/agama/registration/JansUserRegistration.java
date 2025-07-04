@@ -10,6 +10,8 @@ import io.jans.service.cdi.util.CdiUtil;
 import io.jans.util.StringHelper;
 import io.jans.agama.engine.script.LogUtils;
 import org.gluu.agama.smtp.jans.model.ContextData;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import org.gluu.agama.smtp.EmailTemplate;
 import org.gluu.agama.user.UserRegistration;
@@ -22,7 +24,8 @@ import java.util.stream.Collectors;
 import static org.gluu.agama.registration.jans.Attrs.*;
 
 public class JansUserRegistration extends UserRegistration {
-
+    
+    private static final Logger logger = LoggerFactory.getLogger(JansUserRegistration.class);
     private static final String MAIL = "mail";
     private static final String UID = "uid";
     private static final String DISPLAY_NAME = "displayName";
