@@ -16,16 +16,26 @@
     <div class="header">
       <i class="fas fa-lock"></i> Set Your Password
     </div>
-    <form onsubmit="return validatePasswords();">
+
+    <!-- Show server-side error if any -->
+    [#if errorMessage?has_content]
+      <div role="alert" align="center" class="alert alert-danger error-message">
+        <p>${errorMessage}</p>
+      </div>
+    [/#if]
+
+    <form method="post" onsubmit="return validatePasswords();">
       <div class="form-group">
         <label class="form-label" for="password">Password:</label>
-        <input type="password" id="password" name="password" required="" class="form-control" placeholder="Enter your password">
+        <input type="password" id="password" name="userPassword" required="" class="form-control" placeholder="Enter your password">
       </div>
+
       <div class="form-group">
         <label class="form-label" for="confirmPassword">Confirm Password:</label>
         <input type="password" id="confirmPassword" name="confirmPassword" required="" class="form-control" placeholder="Re-enter your password">
-        <div id="error-message" class="error-message"></div>
+        <div id="js-error" class="error-message"></div>
       </div>
+
       <button type="submit" class="btn">Continue</button>
     </form>
   </div>
@@ -56,7 +66,10 @@
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 20px;
-      color: #28a745;
+      background-color: #28a745;
+      color: white;
+      padding: 15px;
+      border-radius: 5px 5px 0 0;
     }
     .form-group {
       margin-bottom: 20px;
@@ -86,17 +99,17 @@
     .btn:hover {
       background-color: #0056b3;
     }
-    .error-message {
+    .error-message, .alert-danger {
       color: red;
       font-size: 13px;
-      margin-top: 5px;
+      margin-top: 10px;
     }
   </style>
 <script>
     function validatePasswords() {
       const pass = document.getElementById("password").value;
       const confirm = document.getElementById("confirmPassword").value;
-      const error = document.getElementById("error-message");
+      const error = document.getElementById("js-error");
 
       if (pass.length < 6) {
         error.textContent = "Password must be at least 6 characters long.";
