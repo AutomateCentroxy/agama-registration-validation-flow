@@ -46,7 +46,7 @@ Repeat 6 times max
                                    Log "@info E-mail verification passed, initiating user provisioning flow"
                                    // Combine both user Input and password Inpute
                                    combinedInput = "userInput + passwordInput"
-                                   inum | E = Call userRegistrationService addNewUser userInput
+                                   inum | E = Call userRegistrationService addNewUser combinedInput
                                    // If user registration success
                                    When inum is not null
                                         // Show user creation log
@@ -87,5 +87,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_nhhcr = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_nhhcr
+it_ixmry = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_ixmry
