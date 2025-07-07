@@ -955,7 +955,7 @@
 					"exceptionVariableField": "E",
 					"callType": "Call method on instance",
 					"arguments": [
-						"userInput"
+						"combinedInput"
 					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
@@ -971,7 +971,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1603,7 +1603,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -2355,8 +2355,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4869.40518822644,
-		"y": -1155.240308662956,
-		"zoom": 1.4559340352219416
+		"x": -2994.3508169452853,
+		"y": -619.4912145075164,
+		"zoom": 1
 	}
 }
