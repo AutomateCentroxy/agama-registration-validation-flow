@@ -1291,6 +1291,46 @@
 				"width": 170,
 				"height": 123
 			},
+			"selected": false
+		},
+		{
+			"id": "callNode-811eeb9e-40d0-4269-89e1-83bfc8f780aa",
+			"type": "callNode",
+			"position": {
+				"x": 2176.808139811449,
+				"y": 754.869032810997
+			},
+			"data": {
+				"id": "callNode-811eeb9e-40d0-4269-89e1-83bfc8f780aa",
+				"type": "callNode",
+				"position": {
+					"x": 2176.808139811449,
+					"y": 754.869032810997
+				},
+				"previousNodeId": "assignmentNode-e322b00d-0435-42ca-bd58-266c8de21c32",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "passwordPolicyMatch",
+					"javaVariableName": "userRegistrationService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"userPassword"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Password policy check",
+					"asssignedVariableName": "isPasswordPolicyMatch"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 123
+			},
 			"selected": true
 		}
 	],
@@ -1870,11 +1910,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_rrfNode-8d38e330-acf8-4ba5-8246-283db43f0d14"
+		},
+		{
+			"id": "assignmentNode-e322b00d-0435-42ca-bd58-266c8de21c32-callNode-811eeb9e-40d0-4269-89e1-83bfc8f780aa",
+			"type": "default",
+			"source": "assignmentNode-e322b00d-0435-42ca-bd58-266c8de21c32",
+			"target": "callNode-811eeb9e-40d0-4269-89e1-83bfc8f780aa",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_assignmentNode-e322b00d-0435-42ca-bd58-266c8de21c32"
 		}
 	],
 	"viewport": {
-		"x": -2059.9416074892097,
-		"y": -626.7831949129018,
+		"x": -2512.941607489209,
+		"y": -556.7831949129018,
 		"zoom": 1.3491025343396987
 	}
 }
