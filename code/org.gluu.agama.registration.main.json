@@ -1380,8 +1380,8 @@
 			"id": "assignmentNode-41b703bd-93ff-4610-b937-806cdd50311b",
 			"type": "assignmentNode",
 			"position": {
-				"x": 2653.5625117262985,
-				"y": 492.8157441742525
+				"x": 2489.7499071430852,
+				"y": 388.30181998315254
 			},
 			"data": {
 				"id": "assignmentNode-41b703bd-93ff-4610-b937-806cdd50311b",
@@ -1413,7 +1413,8 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": false
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "whenNode-73d94606-3a2b-4465-b1d2-37bfd32b4374",
@@ -1455,6 +1456,41 @@
 			"measured": {
 				"width": 110,
 				"height": 60
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "logNode-adb3e554-342c-4092-b92f-5533c7dc1989",
+			"type": "logNode",
+			"position": {
+				"x": 2727.148937559761,
+				"y": 499.3537993949826
+			},
+			"data": {
+				"id": "logNode-adb3e554-342c-4092-b92f-5533c7dc1989",
+				"type": "logNode",
+				"position": {
+					"x": 2854.641100402805,
+					"y": 593.4904545174626
+				},
+				"previousNodeId": "whenNode-73d94606-3a2b-4465-b1d2-37bfd32b4374",
+				"branching": "otherwise",
+				"agamaData": {
+					"logMessage": "\"Password and Confirm password doesn't match\"",
+					"logLevel": "trace",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Password and Confirm password doesn't match"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 123
 			},
 			"selected": true,
 			"dragging": false
@@ -2112,11 +2148,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-165a4333-6b13-4797-a735-4764470fe426_success"
+		},
+		{
+			"id": "whenNode-73d94606-3a2b-4465-b1d2-37bfd32b4374-logNode-adb3e554-342c-4092-b92f-5533c7dc1989",
+			"type": "default",
+			"source": "whenNode-73d94606-3a2b-4465-b1d2-37bfd32b4374",
+			"target": "logNode-adb3e554-342c-4092-b92f-5533c7dc1989",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "otherwise",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-73d94606-3a2b-4465-b1d2-37bfd32b4374_otherwise"
 		}
 	],
 	"viewport": {
-		"x": -2873.0762655893436,
-		"y": -599.9937577418948,
+		"x": -3213.0762655893436,
+		"y": -428.9937577418948,
 		"zoom": 1.3491025343396987
 	}
 }
