@@ -31,6 +31,13 @@ Repeat 6 times max
                     passwordInput = RRF "password.ftlh" uiFeedback
                     // Assign  password  to a variable
                     userPassword = passwordInput.userPassword
+                    // Password policy check
+                    isPasswordPolicyMatch = Call userRegistrationService passwordPolicyMatch userPassword
+                    // if password policy match
+                    When isPasswordPolicyMatch is true
+                    Otherwise
+                         // password policy
+                         uiFeedback.errorMessage = "Password must be at least 6 characters long and contain at least one special character"
                Otherwise
                     // User already registered with UID
                     Log "@info User already registered with uid: %" userName
@@ -47,5 +54,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_wpbdz = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_wpbdz
+it_yjonr = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_yjonr
