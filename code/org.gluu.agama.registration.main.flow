@@ -40,6 +40,8 @@ Repeat 6 times max
                          Otherwise
                               // Password and Confirm password doesn't match
                               Log "@trace Password and Confirm password doesn't match"
+                              // Error variable assignment
+                              uiFeedback.errorMessage = "Password and confirm password not matching"
                     Otherwise
                          // password policy
                          uiFeedback.errorMessage = "Password must be at least 6 characters long and contain at least one special character"
@@ -59,5 +61,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_cczfw = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_cczfw
+it_niksv = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_niksv
