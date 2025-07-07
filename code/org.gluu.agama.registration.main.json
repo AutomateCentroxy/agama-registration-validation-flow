@@ -1583,20 +1583,27 @@
 				},
 				"previousNodeId": "logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d",
 				"agamaData": {
-					"assignments": [],
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"userInput + passwordInput\"",
+							"assignedVariableName": "combinedInput"
+						}
+					],
 					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "Combine both user Input and password Inpute"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 123
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
