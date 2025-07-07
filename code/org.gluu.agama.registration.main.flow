@@ -13,7 +13,6 @@ Repeat 6 times max
      // Assign userName, email and password  to a variable
      email = userInput.mail
      userName = userInput.uid
-     userPassword = userInput.userPassword
      referralCode = userInput.referralCode
      country = userInput.country
      // Check user name policy
@@ -68,5 +67,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_opqpz = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_opqpz
+it_tjgzd = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_tjgzd
