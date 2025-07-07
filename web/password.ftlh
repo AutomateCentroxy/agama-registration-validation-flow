@@ -1,7 +1,7 @@
 [#ftl output_format="HTML"]
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Enter Password</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Set Password</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></head>
 <body>
 
 
@@ -14,12 +14,16 @@
 
   <div class="container">
     <div class="header">
-      <i class="fas fa-lock"></i> Enter Password
+      <i class="fas fa-lock"></i> Set Your Password
     </div>
-    <form onsubmit="return validatePassword();">
+    <form onsubmit="return validatePasswords();">
       <div class="form-group">
         <label class="form-label" for="password">Password:</label>
         <input type="password" id="password" name="password" required="" class="form-control" placeholder="Enter your password">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required="" class="form-control" placeholder="Re-enter your password">
         <div id="error-message" class="error-message"></div>
       </div>
       <button type="submit" class="btn">Continue</button>
@@ -89,12 +93,18 @@
     }
   </style>
 <script>
-    function validatePassword() {
-      const password = document.getElementById("password").value;
+    function validatePasswords() {
+      const pass = document.getElementById("password").value;
+      const confirm = document.getElementById("confirmPassword").value;
       const error = document.getElementById("error-message");
 
-      if (password.length < 6) {
-        error.textContent = "Password must be at least 6 characters.";
+      if (pass.length < 6) {
+        error.textContent = "Password must be at least 6 characters long.";
+        return false;
+      }
+
+      if (pass !== confirm) {
+        error.textContent = "Passwords do not match!";
         return false;
       }
 
