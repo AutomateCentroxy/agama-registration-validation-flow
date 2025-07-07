@@ -29,6 +29,8 @@ Repeat 6 times max
                When userWithUid.empty is true
                     // Retrieve user password from UI
                     passwordInput = RRF "password.ftlh" uiFeedback
+                    // Assign  password  to a variable
+                    userPassword = passwordInput.userPassword
                Otherwise
                     // User already registered with UID
                     Log "@info User already registered with uid: %" userName
@@ -45,5 +47,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_odbbw = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_odbbw
+it_wpbdz = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_wpbdz
