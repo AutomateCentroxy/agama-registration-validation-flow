@@ -74,7 +74,7 @@ Repeat 6 times max
                     // Error variable assignment
                     uiFeedback.errorMessage = "Password and confirm password not matching"
           Otherwise
-               // password policy
+               // password policy not match
                uiFeedback.errorMessage = "Password must be at least 6 characters long and contain at least one special character"
      Otherwise
           // Name should contain only alphabets
@@ -82,5 +82,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_hkfgn = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_hkfgn
+it_sjyno = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_sjyno
