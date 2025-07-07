@@ -44,7 +44,7 @@ Repeat 6 times max
                               When emailVerificationResult.success is true
                                    // E-mail verification passed, initiating user provisioning flow
                                    Log "@info E-mail verification passed, initiating user provisioning flow"
-                                   inum | E = Call userRegistrationService addNewUser userInput passwordInput
+                                   inum | E = Call userRegistrationService addNewUser userInput userPassword
                                    // If user registration success
                                    When inum is not null
                                         // Show user creation log
@@ -85,5 +85,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_fxesh = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_fxesh
+it_lyumf = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_lyumf
