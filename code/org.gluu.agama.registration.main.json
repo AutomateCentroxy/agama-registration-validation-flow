@@ -249,11 +249,6 @@
 						},
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "userInput.userPassword",
-							"assignedVariableName": "userPassword"
-						},
-						{
-							"variableTypeCheck": true,
 							"assignmentExpression": "userInput.referralCode",
 							"assignedVariableName": "referralCode"
 						},
@@ -276,7 +271,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -817,7 +812,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1835,8 +1830,8 @@
 		}
 	],
 	"viewport": {
-		"x": 176.29875794023508,
-		"y": 186.59023474420678,
-		"zoom": 1.161508731925722
+		"x": 600,
+		"y": 190,
+		"zoom": 1
 	}
 }
