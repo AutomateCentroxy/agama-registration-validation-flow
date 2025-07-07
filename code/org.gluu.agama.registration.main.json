@@ -989,7 +989,7 @@
 					"x": 2481.057748962963,
 					"y": 693.5778454187802
 				},
-				"previousNodeId": "logNode-a180ecaa-75ce-405b-9a7b-b4a37268c370",
+				"previousNodeId": "logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
 				"agamaData": {
 					"nodeIcon": "fluent-mdl2:trigger-approval",
 					"flowFileName": "org.gluu.agama.registration.emailVerification",
@@ -1531,7 +1531,42 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true
+			"selected": false
+		},
+		{
+			"id": "logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
+			"type": "logNode",
+			"position": {
+				"x": 2807.9433895940156,
+				"y": 845.5811087087842
+			},
+			"data": {
+				"id": "logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
+				"type": "logNode",
+				"position": {
+					"x": 2854.641100402805,
+					"y": 1043.4904545174627
+				},
+				"previousNodeId": "whenNode-73d94606-3a2b-4465-b1d2-37bfd32b4374",
+				"branching": "success",
+				"agamaData": {
+					"logMessage": "\"Send-Email-page-trigger\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 123
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -2224,11 +2259,48 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-adb3e554-342c-4092-b92f-5533c7dc1989"
+		},
+		{
+			"id": "whenNode-73d94606-3a2b-4465-b1d2-37bfd32b4374-logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
+			"type": "default",
+			"source": "whenNode-73d94606-3a2b-4465-b1d2-37bfd32b4374",
+			"target": "logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-73d94606-3a2b-4465-b1d2-37bfd32b4374_success"
+		},
+		{
+			"source": "logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
+			"sourceHandle": "source_logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
+			"target": "triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
+			"targetHandle": "target_triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"id": "xy-edge__logNode-03a587ef-b76f-4d16-a191-ab20a6be711dsource_logNode-03a587ef-b76f-4d16-a191-ab20a6be711d-triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20target_triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20"
 		}
 	],
 	"viewport": {
-		"x": -3213.0762655893436,
-		"y": -428.9937577418948,
+		"x": -3347.076265589343,
+		"y": -573.9937577418948,
 		"zoom": 1.3491025343396987
 	}
 }
