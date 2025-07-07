@@ -1413,7 +1413,51 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true
+			"selected": false
+		},
+		{
+			"id": "whenNode-73d94606-3a2b-4465-b1d2-37bfd32b4374",
+			"type": "whenNode",
+			"position": {
+				"x": 2604.641100402805,
+				"y": 843.4904545174626
+			},
+			"data": {
+				"id": "whenNode-73d94606-3a2b-4465-b1d2-37bfd32b4374",
+				"type": "whenNode",
+				"position": {
+					"x": 2653.5625117262985,
+					"y": 942.8157441742525
+				},
+				"previousNodeId": "whenNode-165a4333-6b13-4797-a735-4764470fe426",
+				"branching": "success",
+				"agamaData": {
+					"variableField": "",
+					"valueField": "",
+					"conditionInputField": "",
+					"conditions": [
+						{
+							"variable": "passwordInput.userPassword",
+							"operator": "is",
+							"dataValue": "passwordInput.confirmPassword",
+							"combinator": "none"
+						}
+					],
+					"nodeIcon": "ph:swap",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Matching password "
+				}
+			},
+			"measured": {
+				"width": 110,
+				"height": 60
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -2049,11 +2093,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-165a4333-6b13-4797-a735-4764470fe426_otherwise"
+		},
+		{
+			"id": "whenNode-165a4333-6b13-4797-a735-4764470fe426-whenNode-73d94606-3a2b-4465-b1d2-37bfd32b4374",
+			"type": "default",
+			"source": "whenNode-165a4333-6b13-4797-a735-4764470fe426",
+			"target": "whenNode-73d94606-3a2b-4465-b1d2-37bfd32b4374",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-165a4333-6b13-4797-a735-4764470fe426_success"
 		}
 	],
 	"viewport": {
-		"x": -2278.8079377757813,
-		"y": -440.0192582472505,
-		"zoom": 1.161508731925722
+		"x": -2873.0762655893436,
+		"y": -599.9937577418948,
+		"zoom": 1.3491025343396987
 	}
 }
