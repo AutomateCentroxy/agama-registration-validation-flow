@@ -1492,8 +1492,46 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "assignmentNode-00951840-b0c2-46b5-af9a-33e1cc86c775",
+			"type": "assignmentNode",
+			"position": {
+				"x": 2977.148937559761,
+				"y": 499.3537993949826
+			},
+			"data": {
+				"id": "assignmentNode-00951840-b0c2-46b5-af9a-33e1cc86c775",
+				"type": "assignmentNode",
+				"position": {
+					"x": 2977.148937559761,
+					"y": 499.3537993949826
+				},
+				"previousNodeId": "logNode-adb3e554-342c-4092-b92f-5533c7dc1989",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"Password and confirm password not matching\"",
+							"assignedVariableName": "uiFeedback.errorMessage"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Error variable assignment"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 123
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -2167,6 +2205,25 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-73d94606-3a2b-4465-b1d2-37bfd32b4374_otherwise"
+		},
+		{
+			"id": "logNode-adb3e554-342c-4092-b92f-5533c7dc1989-assignmentNode-00951840-b0c2-46b5-af9a-33e1cc86c775",
+			"type": "default",
+			"source": "logNode-adb3e554-342c-4092-b92f-5533c7dc1989",
+			"target": "assignmentNode-00951840-b0c2-46b5-af9a-33e1cc86c775",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-adb3e554-342c-4092-b92f-5533c7dc1989"
 		}
 	],
 	"viewport": {
