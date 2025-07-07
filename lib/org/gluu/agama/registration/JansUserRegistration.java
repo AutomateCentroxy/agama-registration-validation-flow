@@ -9,8 +9,10 @@ import io.jans.service.MailService;
 import io.jans.service.cdi.util.CdiUtil;
 import io.jans.util.StringHelper;
 import io.jans.agama.engine.script.LogUtils;
+import org.gluu.agama.smtp.jans.model.ContextData;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import org.gluu.agama.registration.jans.model.ContextData;
 import org.gluu.agama.smtp.EmailTemplate;
 import org.gluu.agama.user.UserRegistration;
 
@@ -23,6 +25,8 @@ import static org.gluu.agama.registration.jans.Attrs.*;
 
 public class JansUserRegistration extends UserRegistration {
 
+    private static final Logger logger = LoggerFactory.getLogger(JansUserRegistration.class);
+
     private static final String MAIL = "mail";
     private static final String UID = "uid";
     private static final String DISPLAY_NAME = "displayName";
@@ -30,12 +34,14 @@ public class JansUserRegistration extends UserRegistration {
     private static final String PASSWORD = "userPassword";
     private static final String INUM_ATTR = "inum";
     private static final String USER_STATUS = "jansStatus";
-    private static final String COUNTRY = "residenceCountry";
+    private static final String COUNTRY = "country";
     private static final String REFERRAL = "referralCode";
     private static final String EXT_ATTR = "jansExtUid";
     private static final int OTP_LENGTH = 6;
-
+    private static final String SUBJECT_TEMPLATE = "Here's your verification code: %s";
+    private static final String MSG_TEMPLATE_TEXT = "%s is the code to complete your verification";
     private static final SecureRandom RAND = new SecureRandom();
+
     private static JansUserRegistration INSTANCE = null;
 
     private final Map<String, String> emailOtpStore = new HashMap<>();
@@ -64,54 +70,70 @@ public class JansUserRegistration extends UserRegistration {
         return pwd1 != null && pwd1.equals(pwd2);
     }
 
-    public boolean sendEmailOtp(String email) {
-        try {
-            ContextData context = new ContextData();
-            String otp = generateOtpCode(OTP_LENGTH);
-            SmtpConfiguration smtpConfiguration = getSmtpConfiguration();
+    public String sendEmail(String to) {
 
-            String from = smtpConfiguration.getFromEmailAddress();
-            String subject = String.format("Here's your verification code: %s", otp);
-            String textBody = String.format("%s is the code to complete your verification", otp);
-            String htmlBody = EmailTemplate.get(otp, context);
+        SmtpConfiguration smtpConfiguration = getSmtpConfiguration();
 
-            MailService mailService = CdiUtil.bean(MailService.class);
-            boolean sent = mailService.sendMailSigned(from, from, email, null, subject, textBody, htmlBody);
-
-            if (sent) {
-                emailOtpStore.put(email, otp);
-                return true;
-            }
-
-            return false;
-        } catch (Exception e) {
-            LogUtils.log("Error sending email OTP to %: %", email, e.getMessage());
-            return false;
+        StringBuilder otpBuilder = new StringBuilder();
+        for (int i = 0; i < OTP_LENGTH; i++) {
+            otpBuilder.append(RAND.nextInt(10));  // Generates 0–9
         }
+        String otp = otpBuilder.toString();
+
+        String from = smtpConfiguration.getFromEmailAddress();
+        String subject = String.format(SUBJECT_TEMPLATE, otp);
+        String textBody = String.format(MSG_TEMPLATE_TEXT, otp);
+        ContextData context = new ContextData();
+        context.setDevice("Unknown");
+        context.setTimeZone("Unknown");
+        context.setLocation("Unknown");
+        String htmlBody = EmailTemplate.get(otp, context);
+
+        MailService mailService = CdiUtil.bean(MailService.class);
+
+        if (mailService.sendMailSigned(from, from, to, null, subject, textBody, htmlBody)) {
+            logger.debug("E-mail has been delivered to {} with code {}", to, otp);
+            return otp;
+        }
+        logger.debug("E-mail delivery failed, check jans-auth logs");
+        return null;
+
     }
 
-    public boolean validateEmailOtp(String email, String otp) {
-        String sentOtp = emailOtpStore.get(email);
-        return otp != null && otp.equals(sentOtp);
-    }
-
-    public String addNewUser(Map<String, String> profile, Map<String, String> passwordInput) throws Exception {
-        // Merge both maps
+    public String addNewUser(Map<String, String> profile , Map<String, String> passwordInput) throws Exception {
+        
+        // Merge both maps into one
         Map<String, String> combined = new HashMap<>(profile);
         if (passwordInput != null) {
             combined.putAll(passwordInput);
         }
-
-        // Define attributes to be added to the user
-        Set<String> attributes = Set.of("uid", "mail", "displayName", "givenName", "sn", "userPassword", COUNTRY, REFERRAL);
+        
         User user = new User();
 
-        attributes.forEach(attr -> {
-            String val = profile.get(attr);
-            if (StringHelper.isNotEmpty(val)) {
-                user.setAttribute(attr, val);
-            }
-        });
+        // Required
+        String uid = profile.get("uid");
+        String mail = profile.get("mail");
+        String password = profile.get("userPassword");
+
+        // Derived fields
+        String givenName = uid;
+        String displayName = uid;
+        String sn = uid;
+
+        user.setAttribute("uid", uid);
+        user.setAttribute("mail", mail);
+        user.setAttribute("userPassword", password);
+        user.setAttribute("givenName", givenName);
+        user.setAttribute("displayName", displayName);
+        user.setAttribute("sn", sn);
+
+        // Optional
+        if (StringHelper.isNotEmpty(profile.get("country"))) {
+            user.setAttribute("country", profile.get("country"));
+        }
+        if (StringHelper.isNotEmpty(profile.get("referralCode"))) {
+            user.setAttribute("referralCode", profile.get("referralCode"));
+        }
 
         UserService userService = CdiUtil.bean(UserService.class);
         user = userService.addUser(user, true);
