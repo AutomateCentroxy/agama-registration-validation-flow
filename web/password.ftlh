@@ -2,47 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Set Password</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></head>
-<body>
-
-
-  
-  
-  
-  
-  
-
-
-  <div class="container">
-    <div class="header">
-      <i class="fas fa-lock"></i> Set Your Password
-    </div>
-
-    <!-- Show server-side error if any -->
+<body><div class="container"><div class="header"><i class="fas fa-lock"></i> Set Your Password
+    </div><!-- Show server-side error if any -->
     [#if errorMessage?has_content]
-      <div role="alert" align="center" class="alert alert-danger error-message">
-        <p>${errorMessage}</p>
-      </div>
+      <div role="alert" align="center" class="alert alert-danger error-message"><p>${errorMessage}</p></div>
     [/#if]
 
-    <form method="post" onsubmit="return validatePasswords();">
-      <div class="form-group">
-        <label class="form-label" for="password">Password:</label>
-        <input type="password" id="password" name="userPassword" required="" class="form-control" placeholder="Enter your password">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required="" class="form-control" placeholder="Re-enter your password">
-        <div id="js-error" class="error-message"></div>
-      </div>
-
-      <button type="submit" class="btn">Continue</button>
-    </form>
-  </div>
-
-  
-
-</body>
+    <form method="post"><div class="form-group"><label for="password" class="form-label">Password:</label><input type="password" id="password" name="userPassword" required="" placeholder="Enter your password" class="form-control"></div><div class="form-group"><label for="confirmPassword" class="form-label">Confirm Password:</label><input type="password" id="confirmPassword" name="confirmPassword" required="" placeholder="Re-enter your password" class="form-control"><div id="js-error" class="error-message"></div></div><button type="submit" class="btn">Continue</button></form></div></body>
 <style>
     body {
       font-family: Arial, sans-serif;
