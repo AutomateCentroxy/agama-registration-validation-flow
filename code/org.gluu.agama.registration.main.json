@@ -947,7 +947,7 @@
 					"x": 2523.928202747176,
 					"y": 961.721858870189
 				},
-				"previousNodeId": "assignmentNode-fa063f79-6e4d-4692-b591-8681eab8e49e",
+				"previousNodeId": "assignmentNode-5258fe76-0686-4ac0-be82-b2a6ab1146f3",
 				"agamaData": {
 					"javaClassName": "",
 					"javaMethodName": "addNewUser",
@@ -1131,41 +1131,6 @@
 					"displayName": "",
 					"hasComment": true,
 					"comment": "Error variable assignment. "
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 123
-			},
-			"selected": false,
-			"dragging": false
-		},
-		{
-			"id": "logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7",
-			"type": "logNode",
-			"position": {
-				"x": 3611.338718473629,
-				"y": 934.903802161327
-			},
-			"data": {
-				"id": "logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7",
-				"type": "logNode",
-				"position": {
-					"x": 3231.057748962963,
-					"y": 893.5778454187802
-				},
-				"previousNodeId": "whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11",
-				"branching": "success",
-				"agamaData": {
-					"logMessage": "\"E-mail verification passed, initiating user provisioning flow\"",
-					"logLevel": "info",
-					"nodeIcon": "octicon:log-16",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "",
-					"hasComment": true,
-					"comment": "E-mail verification passed, initiating user provisioning flow"
 				}
 			},
 			"measured": {
@@ -1533,39 +1498,6 @@
 			"selected": false
 		},
 		{
-			"id": "assignmentNode-fa063f79-6e4d-4692-b591-8681eab8e49e",
-			"type": "assignmentNode",
-			"position": {
-				"x": 3864.7729399967475,
-				"y": 1140.2702492438148
-			},
-			"data": {
-				"id": "assignmentNode-fa063f79-6e4d-4692-b591-8681eab8e49e",
-				"type": "assignmentNode",
-				"position": {
-					"x": 3861.338718473629,
-					"y": 934.903802161327
-				},
-				"previousNodeId": "logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7",
-				"agamaData": {
-					"assignments": [],
-					"nodeIcon": "material-symbols:equal",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "",
-					"hasComment": true,
-					"comment": ""
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 123
-			},
-			"selected": false,
-			"dragging": false
-		},
-		{
 			"id": "logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
 			"type": "logNode",
 			"position": {
@@ -1599,6 +1531,72 @@
 			},
 			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d",
+			"type": "logNode",
+			"position": {
+				"x": 3557.4597144892687,
+				"y": 964.5625150909478
+			},
+			"data": {
+				"id": "logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d",
+				"type": "logNode",
+				"position": {
+					"x": 3748.4024311746584,
+					"y": 976.9257125741746
+				},
+				"previousNodeId": "whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11",
+				"branching": "success",
+				"agamaData": {
+					"logMessage": "\"E-mail verification passed, initiating user provisioning flow\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "E-mail verification passed, initiating user provisioning flow"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 123
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "assignmentNode-5258fe76-0686-4ac0-be82-b2a6ab1146f3",
+			"type": "assignmentNode",
+			"position": {
+				"x": 3807.4597144892687,
+				"y": 964.5625150909478
+			},
+			"data": {
+				"id": "assignmentNode-5258fe76-0686-4ac0-be82-b2a6ab1146f3",
+				"type": "assignmentNode",
+				"position": {
+					"x": 3807.4597144892687,
+					"y": 964.5625150909478
+				},
+				"previousNodeId": "logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d",
+				"agamaData": {
+					"assignments": [],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 123
+			}
 		}
 	],
 	"edges": [
@@ -1977,44 +1975,6 @@
 			"sourceHandle": "source_whenNode-278aef44-2646-40c2-947c-3406b384519c_success"
 		},
 		{
-			"id": "whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11-logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7",
-			"type": "default",
-			"source": "whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11",
-			"target": "logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "Condition met",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11_success"
-		},
-		{
-			"source": "logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7",
-			"sourceHandle": "source_logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7",
-			"target": "callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891ff",
-			"targetHandle": "target_callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891ff",
-			"label": "",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"id": "xy-edge__logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7source_logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7-callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891fftarget_callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891ff",
-			"selected": false
-		},
-		{
 			"source": "assignmentNode-8d132c39-d12f-4d76-9064-d40a74250b0b",
 			"sourceHandle": "source_assignmentNode-8d132c39-d12f-4d76-9064-d40a74250b0b",
 			"target": "callNode-dd90aa5b-fe63-4265-b610-0c8b30fa1ce4",
@@ -2331,10 +2291,29 @@
 			"id": "xy-edge__logNode-03a587ef-b76f-4d16-a191-ab20a6be711dsource_logNode-03a587ef-b76f-4d16-a191-ab20a6be711d-triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20target_triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20"
 		},
 		{
-			"id": "logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7-assignmentNode-fa063f79-6e4d-4692-b591-8681eab8e49e",
+			"id": "whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11-logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d",
 			"type": "default",
-			"source": "logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7",
-			"target": "assignmentNode-fa063f79-6e4d-4692-b591-8681eab8e49e",
+			"source": "whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11",
+			"target": "logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11_success"
+		},
+		{
+			"id": "logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d-assignmentNode-5258fe76-0686-4ac0-be82-b2a6ab1146f3",
+			"type": "default",
+			"source": "logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d",
+			"target": "assignmentNode-5258fe76-0686-4ac0-be82-b2a6ab1146f3",
 			"labelBgPadding": [
 				8,
 				4
@@ -2347,13 +2326,13 @@
 				"fillOpacity": 0.7
 			},
 			"labelShowBg": true,
-			"sourceHandle": "source_logNode-1f6d5459-c5ef-45c1-9e6c-df6fddf0f8e7"
+			"sourceHandle": "source_logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d"
 		},
 		{
-			"id": "assignmentNode-fa063f79-6e4d-4692-b591-8681eab8e49e-callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891ff",
-			"type": "default",
-			"source": "assignmentNode-fa063f79-6e4d-4692-b591-8681eab8e49e",
+			"source": "assignmentNode-5258fe76-0686-4ac0-be82-b2a6ab1146f3",
+			"sourceHandle": "source_assignmentNode-5258fe76-0686-4ac0-be82-b2a6ab1146f3",
 			"target": "callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891ff",
+			"targetHandle": "target_callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891ff",
 			"label": "",
 			"labelBgPadding": [
 				8,
@@ -2365,13 +2344,12 @@
 				"color": "#ffffff",
 				"fillOpacity": 0.7
 			},
-			"sourceHandle": "source_assignmentNode-fa063f79-6e4d-4692-b591-8681eab8e49e",
-			"targetHandle": "target_callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891ff"
+			"id": "xy-edge__assignmentNode-5258fe76-0686-4ac0-be82-b2a6ab1146f3source_assignmentNode-5258fe76-0686-4ac0-be82-b2a6ab1146f3-callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891fftarget_callNode-0dee2ce9-5659-4a3a-ade1-d1d517a891ff"
 		}
 	],
 	"viewport": {
-		"x": -5037.40518822644,
-		"y": -954.2403086629561,
+		"x": -4869.40518822644,
+		"y": -1155.240308662956,
 		"zoom": 1.4559340352219416
 	}
 }
