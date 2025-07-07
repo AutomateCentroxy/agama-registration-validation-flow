@@ -20,53 +20,53 @@ Repeat 6 times max
      isUsernamePolicyMatch = Call userRegistrationService usernamePolicyMatch userName
      // if username policy match
      When isUsernamePolicyMatch is true
+          // Check user already exist or not with mail
+          user = Call userRegistrationService getUserEntityByMail email
+          // If user not found
+          When user.empty is true
+               // Check user already exist or not with username
+               userWithUid = Call userRegistrationService getUserEntityByUsername userName
+               // user not found
+               When userWithUid.empty is true
+                    Log "@info Send-Email-page-trigger"
+                    // Trigger sub-routine to verify email
+                    emailVerificationResult = Trigger org.gluu.agama.registration.emailVerification email
+                    // If email data is valid
+                    When emailVerificationResult.success is true
+                         // E-mail verification passed, initiating user provisioning flow
+                         Log "@info E-mail verification passed, initiating user provisioning flow"
+                         inum | E = Call userRegistrationService addNewUser userInput
+                         // If user registration success
+                         When inum is not null
+                              // Show user creation log
+                              Log "@info User % has been created" inum
+                              // Show acknowledgement UI page for successful registration
+                              acknowledgementInput = RRF "acknowledgement.ftlh" 
+                              // Finish the flow successfully
+                              Log "@info Finish the flow successfully"
+                              // Finish the flow successfully
+                              Finish userName
+                         // Registration failed log
+                         Log "@info User registration failed. Error : %" E
+                    // When email verification is invalid
+                    When emailVerificationResult.success is false
+                         // Error variable assignment. 
+                         emailObj.errorMessage = "Error sending email. Check email address and SMTP configuration."
+               Otherwise
+                    // User already registered with UID
+                    Log "@info User already registered with uid: %" userName
+                    // User already registered with UID
+                    uiFeedback.errorMessage = "User already registered with this UserName"
+          Otherwise
+               // User already registered with mail
+               Log "@info User already registered with mail: %" email
+               // User already Registered
+               uiFeedback.errorMessage = "User already Registered with this mail"
      Otherwise
           // Name should contain only alphabets
           uiFeedback.errorMessage = "Name should contain only alphabets"
-     // Check user already exist or not with mail
-     user = Call userRegistrationService getUserEntityByMail email
-     // If user not found
-     When user.empty is true
-          // Check user already exist or not with username
-          userWithUid = Call userRegistrationService getUserEntityByUsername userName
-          // user not found
-          When userWithUid.empty is true
-               Log "@info Send-Email-page-trigger"
-               // Trigger sub-routine to verify email
-               emailVerificationResult = Trigger org.gluu.agama.registration.emailVerification email
-               // If email data is valid
-               When emailVerificationResult.success is true
-                    // E-mail verification passed, initiating user provisioning flow
-                    Log "@info E-mail verification passed, initiating user provisioning flow"
-                    inum | E = Call userRegistrationService addNewUser userInput
-                    // If user registration success
-                    When inum is not null
-                         // Show user creation log
-                         Log "@info User % has been created" inum
-                         // Show acknowledgement UI page for successful registration
-                         acknowledgementInput = RRF "acknowledgement.ftlh" 
-                         // Finish the flow successfully
-                         Log "@info Finish the flow successfully"
-                         // Finish the flow successfully
-                         Finish userName
-                    // Registration failed log
-                    Log "@info User registration failed. Error : %" E
-               // When email verification is invalid
-               When emailVerificationResult.success is false
-                    // Error variable assignment. 
-                    emailObj.errorMessage = "Error sending email. Check email address and SMTP configuration."
-          Otherwise
-               // User already registered with UID
-               Log "@info User already registered with uid: %" userName
-               // User already registered with UID
-               uiFeedback.errorMessage = "User already registered with this UserName"
-     Otherwise
-          // User already registered with mail
-          Log "@info User already registered with mail: %" email
-          // User already Registered
-          uiFeedback.errorMessage = "User already Registered with this mail"
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_oimof = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_oimof
+it_jrmmj = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_jrmmj
