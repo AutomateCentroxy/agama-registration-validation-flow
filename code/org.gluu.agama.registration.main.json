@@ -399,7 +399,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1403,7 +1403,7 @@
 					"conditionInputField": "",
 					"conditions": [
 						{
-							"variable": "uiFeedback",
+							"variable": "passwordInput.userPassword",
 							"operator": "is",
 							"dataValue": "passwordInput.confirmPassword",
 							"combinator": "none"
@@ -1422,7 +1422,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2300,8 +2300,8 @@
 		}
 	],
 	"viewport": {
-		"x": -320,
-		"y": -100,
+		"x": -1292,
+		"y": -332,
 		"zoom": 1
 	}
 }
