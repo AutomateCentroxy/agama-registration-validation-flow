@@ -76,7 +76,7 @@ public class JansUserRegistration extends UserRegistration {
 
         StringBuilder otpBuilder = new StringBuilder();
         for (int i = 0; i < OTP_LENGTH; i++) {
-            otpBuilder.append(RAND.nextInt(10));  // Generates 0–9
+            otpBuilder.append(RAND.nextInt(10)); // Generates 0–9
         }
         String otp = otpBuilder.toString();
 
@@ -100,20 +100,35 @@ public class JansUserRegistration extends UserRegistration {
 
     }
 
-    public String addNewUser(Map<String, String> profile , Map<String, String> passwordInput) throws Exception {
-        
-        // Merge both maps into one
+    public String addNewUser(Map<String, String> profile, Map<String, String> passwordInput) throws Exception {
+
+        Logger logger = LoggerFactory.getLogger(JansUserRegistration.class);
+
+        logger.info("➡️ Starting user registration process...");
+
         Map<String, String> combined = new HashMap<>(profile);
         if (passwordInput != null) {
             combined.putAll(passwordInput);
+            logger.debug("✅ Password input merged into profile data.");
+        } else {
+            logger.warn("⚠️ Password input map is null!");
         }
-        
+
         User user = new User();
 
         // Required
         String uid = combined.get("uid");
         String mail = combined.get("mail");
         String password = combined.get("userPassword");
+
+        logger.debug("📌 UID: {}", uid);
+        logger.debug("📧 Mail: {}", mail);
+        logger.debug("🔐 Password received: {}", (password != null ? "YES" : "NO"));
+
+        if (StringHelper.isEmpty(password)) {
+            logger.error("❌ No password provided. Cannot proceed.");
+            throw new IllegalArgumentException("Password cannot be null or empty.");
+        }
 
         // Derived fields
         String givenName = uid;
@@ -125,24 +140,41 @@ public class JansUserRegistration extends UserRegistration {
         user.setAttribute("givenName", givenName);
         user.setAttribute("displayName", displayName);
         user.setAttribute("sn", sn);
+        logger.debug("✅ Basic attributes set on user object.");
 
         // Optional
         if (StringHelper.isNotEmpty(combined.get("country"))) {
             user.setAttribute("country", combined.get("country"));
+            logger.debug("🌍 Country set: {}", combined.get("country"));
         }
         if (StringHelper.isNotEmpty(combined.get("referralCode"))) {
             user.setAttribute("referralCode", combined.get("referralCode"));
+            logger.debug("📨 Referral code set: {}", combined.get("referralCode"));
         }
 
         UserService userService = CdiUtil.bean(UserService.class);
-        
-        // Set the password using proper hashing
-        userService.setPassword(user, password);
+
+        // Step 1: Add user to DB without password
+        logger.info("📥 Creating user...");
         user = userService.addUser(user, true);
 
-        if (user == null) throw new EntryNotFoundException("User creation failed");
+        if (user == null) {
+            logger.error("❌ User creation failed. addUser() returned null.");
+            throw new EntryNotFoundException("User creation failed");
+        }
+        logger.info("✅ User created successfully with UID: {}", uid);
 
-        return getSingleValuedAttr(user, INUM_ATTR);
+        // Step 2: Set the password
+        logger.info("🔐 Setting password using userService.setPassword()...");
+        userService.setPassword(user, password);
+        logger.debug("✅ Password set. Now updating user...");
+
+        userService.updateUser(user);
+        logger.info("✅ User updated with password successfully.");
+
+        String inum = getSingleValuedAttr(user, INUM_ATTR);
+        logger.info("🎉 Registration complete. User INUM: {}", inum);
+        return inum;
     }
 
     public Map<String, String> getUserEntityByMail(String email) {
@@ -155,7 +187,8 @@ public class JansUserRegistration extends UserRegistration {
 
     private Map<String, String> extractUserInfo(User user, String fallbackEmail) {
         Map<String, String> userMap = new HashMap<>();
-        if (user == null) return userMap;
+        if (user == null)
+            return userMap;
 
         userMap.put(UID, getSingleValuedAttr(user, UID));
         userMap.put(INUM_ATTR, getSingleValuedAttr(user, INUM_ATTR));
@@ -170,8 +203,10 @@ public class JansUserRegistration extends UserRegistration {
     }
 
     private String getSingleValuedAttr(User user, String attribute) {
-        if (user == null) return null;
-        return attribute.equals(UID) ? user.getUserId() : Objects.toString(user.getAttribute(attribute, true, false), null);
+        if (user == null)
+            return null;
+        return attribute.equals(UID) ? user.getUserId()
+                : Objects.toString(user.getAttribute(attribute, true, false), null);
     }
 
     private String generateOtpCode(int length) {
