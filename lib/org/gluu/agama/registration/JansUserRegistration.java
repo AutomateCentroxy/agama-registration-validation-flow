@@ -10,6 +10,7 @@ import io.jans.service.cdi.util.CdiUtil;
 import io.jans.util.StringHelper;
 import io.jans.agama.engine.script.LogUtils;
 import io.jans.as.common.service.common.EncryptionService;
+import io.jans.util.security.StringEncrypter;
 import org.gluu.agama.smtp.jans.model.ContextData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
