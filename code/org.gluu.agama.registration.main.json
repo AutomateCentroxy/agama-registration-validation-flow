@@ -956,7 +956,7 @@
 					"callType": "Call method on instance",
 					"arguments": [
 						"userInput",
-						"userPassword"
+						"passwordInput"
 					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
@@ -1403,7 +1403,7 @@
 					"conditionInputField": "",
 					"conditions": [
 						{
-							"variable": "passwordInput.userPassword",
+							"variable": "uiFeedback",
 							"operator": "is",
 							"dataValue": "passwordInput.confirmPassword",
 							"combinator": "none"
@@ -1464,8 +1464,8 @@
 			"id": "assignmentNode-00951840-b0c2-46b5-af9a-33e1cc86c775",
 			"type": "assignmentNode",
 			"position": {
-				"x": 2977.148937559761,
-				"y": 499.3537993949826
+				"x": 2972.0314664143166,
+				"y": 412.3567899224222
 			},
 			"data": {
 				"id": "assignmentNode-00951840-b0c2-46b5-af9a-33e1cc86c775",
@@ -1496,7 +1496,8 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": false
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
@@ -2299,8 +2300,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2890,
-		"y": -608,
-		"zoom": 1
+		"x": -3283.612375183231,
+		"y": -294.8793614761596,
+		"zoom": 0.9770450790818244
 	}
 }
