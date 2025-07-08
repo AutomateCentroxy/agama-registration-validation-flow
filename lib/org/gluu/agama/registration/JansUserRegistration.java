@@ -111,9 +111,9 @@ public class JansUserRegistration extends UserRegistration {
         User user = new User();
 
         // Required
-        String uid = profile.get("uid");
-        String mail = profile.get("mail");
-        String password = profile.get("userPassword");
+        String uid = combined.get("uid");
+        String mail = combined.get("mail");
+        String password = combined.get("userPassword");
 
         // Derived fields
         String givenName = uid;
@@ -127,14 +127,15 @@ public class JansUserRegistration extends UserRegistration {
         user.setAttribute("sn", sn);
 
         // Optional
-        if (StringHelper.isNotEmpty(profile.get("country"))) {
-            user.setAttribute("country", profile.get("country"));
+        if (StringHelper.isNotEmpty(combined.get("country"))) {
+            user.setAttribute("country", combined.get("country"));
         }
-        if (StringHelper.isNotEmpty(profile.get("referralCode"))) {
-            user.setAttribute("referralCode", profile.get("referralCode"));
+        if (StringHelper.isNotEmpty(combined.get("referralCode"))) {
+            user.setAttribute("referralCode", combined.get("referralCode"));
         }
 
         UserService userService = CdiUtil.bean(UserService.class);
+        
         // Set the password using proper hashing
         userService.setPassword(user, password);
         user = userService.addUser(user, true);
