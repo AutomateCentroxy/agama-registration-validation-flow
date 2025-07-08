@@ -36,7 +36,7 @@ Repeat 6 times max
                     // if password policy match
                     When isPasswordPolicyMatch is true
                          // Matching password 
-                         When passwordInput.userPassword is passwordInput.confirmPassword
+                         When uiFeedback is passwordInput.confirmPassword
                               Log "@info Send-Email-page-trigger"
                               // Trigger sub-routine to verify email
                               emailVerificationResult = Trigger org.gluu.agama.registration.emailVerification email
@@ -44,7 +44,7 @@ Repeat 6 times max
                               When emailVerificationResult.success is true
                                    // E-mail verification passed, initiating user provisioning flow
                                    Log "@info E-mail verification passed, initiating user provisioning flow"
-                                   inum | E = Call userRegistrationService addNewUser userInput userPassword
+                                   inum | E = Call userRegistrationService addNewUser userInput passwordInput
                                    // If user registration success
                                    When inum is not null
                                         // Show user creation log
@@ -85,5 +85,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_qrtzg = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_qrtzg
+it_nrfmg = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_nrfmg
