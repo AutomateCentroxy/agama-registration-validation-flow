@@ -37,7 +37,7 @@ Repeat 6 times max
                     // if password policy match
                     When isPasswordPolicyMatch is true
                          // Matching password 
-                         When passwordInput.userPassword is passwordInput.confirmPassword
+                         When userPassword is confirmPassword
                               Log "@info Send-Email-page-trigger"
                               // Trigger sub-routine to verify email
                               emailVerificationResult = Trigger org.gluu.agama.registration.emailVerification email
@@ -86,5 +86,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_elaka = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_elaka
+it_dydyb = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_dydyb
