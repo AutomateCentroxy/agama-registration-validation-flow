@@ -1241,6 +1241,11 @@
 							"variableTypeCheck": true,
 							"assignmentExpression": "passwordInput.userPassword",
 							"assignedVariableName": "userPassword"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "passwordInput.confirmPassword",
+							"assignedVariableName": "confirmPassword"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -1256,7 +1261,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "callNode-811eeb9e-40d0-4269-89e1-83bfc8f780aa",
@@ -1422,7 +1427,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2300,8 +2305,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1723,
-		"y": -440,
+		"x": -1522,
+		"y": -358,
 		"zoom": 1
 	}
 }
