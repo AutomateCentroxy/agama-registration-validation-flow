@@ -13,27 +13,31 @@ Repeat 6 times max
      // Assign userName, email and password  to a variable
      email = userInput.mail
      userName = userInput.uid
-     userPassword = userInput.userPassword
      referralCode = userInput.referralCode
      country = userInput.country
      // Check user name policy
      isUsernamePolicyMatch = Call userRegistrationService usernamePolicyMatch userName
      // if username policy match
      When isUsernamePolicyMatch is true
-          // Password policy check
-          isPasswordPolicyMatch = Call userRegistrationService passwordPolicyMatch userPassword
-          // if password policy match
-          When isPasswordPolicyMatch is true
-               // Matching password 
-               When userInput.userPassword is userInput.confirmPassword
-                    // Check user already exist or not with mail
-                    user = Call userRegistrationService getUserEntityByMail email
-                    // If user not found
-                    When user.empty is true
-                         // Check user already exist or not with username
-                         userWithUid = Call userRegistrationService getUserEntityByUsername userName
-                         // user not found
-                         When userWithUid.empty is true
+          // Check user already exist or not with mail
+          user = Call userRegistrationService getUserEntityByMail email
+          // If user not found
+          When user.empty is true
+               // Check user already exist or not with username
+               userWithUid = Call userRegistrationService getUserEntityByUsername userName
+               // user not found
+               When userWithUid.empty is true
+                    // Retrieve user password from UI
+                    passwordInput = RRF "password.ftlh" uiFeedback
+                    // Assign  password  to a variable
+                    userPassword = passwordInput.userPassword
+                    confirmPassword = passwordInput.confirmPassword
+                    // Password policy check
+                    isPasswordPolicyMatch = Call userRegistrationService passwordPolicyMatch userPassword
+                    // if password policy match
+                    When isPasswordPolicyMatch is true
+                         // Matching password 
+                         When userPassword is confirmPassword
                               Log "@info Send-Email-page-trigger"
                               // Trigger sub-routine to verify email
                               emailVerificationResult = Trigger org.gluu.agama.registration.emailVerification email
@@ -41,7 +45,7 @@ Repeat 6 times max
                               When emailVerificationResult.success is true
                                    // E-mail verification passed, initiating user provisioning flow
                                    Log "@info E-mail verification passed, initiating user provisioning flow"
-                                   inum | E = Call userRegistrationService addNewUser userInput
+                                   inum | E = Call userRegistrationService addNewUser userInput passwordInput
                                    // If user registration success
                                    When inum is not null
                                         // Show user creation log
@@ -59,28 +63,28 @@ Repeat 6 times max
                                    // Error variable assignment. 
                                    emailObj.errorMessage = "Error sending email. Check email address and SMTP configuration."
                          Otherwise
-                              // User already registered with UID
-                              Log "@info User already registered with uid: %" userName
-                              // User already registered with UID
-                              uiFeedback.errorMessage = "User already registered with this UserName"
+                              // Password and Confirm password doesn't match
+                              Log "@trace Password and Confirm password doesn't match"
+                              // Error variable assignment
+                              uiFeedback.errorMessage = "Password and confirm password not matching"
                     Otherwise
-                         // User already registered with mail
-                         Log "@info User already registered with mail: %" email
-                         // User already Registered
-                         uiFeedback.errorMessage = "User already Registered with this mail"
+                         // password policy
+                         uiFeedback.errorMessage = "Password must be at least 6 characters long and contain at least one special character"
                Otherwise
-                    // Password and Confirm password doesn't match
-                    Log "@trace Password and Confirm password doesn't match"
-                    // Error variable assignment
-                    uiFeedback.errorMessage = "Password and confirm password not matching"
+                    // User already registered with UID
+                    Log "@info User already registered with uid: %" userName
+                    // User already registered with UID
+                    uiFeedback.errorMessage = "User already registered with this UserName"
           Otherwise
-               // password policy
-               uiFeedback.errorMessage = "Password must be at least 6 characters long and contain at least one special character"
+               // User already registered with mail
+               Log "@info User already registered with mail: %" email
+               // User already Registered
+               uiFeedback.errorMessage = "User already Registered with this mail"
      Otherwise
           // Name should contain only alphabets
           uiFeedback.errorMessage = "Name should contain only alphabets"
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_hkfgn = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_hkfgn
+it_dydyb = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_dydyb

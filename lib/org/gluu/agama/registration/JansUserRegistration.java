@@ -100,8 +100,14 @@ public class JansUserRegistration extends UserRegistration {
 
     }
 
-    public String addNewUser(Map<String, String> profile) throws Exception {
-        // Set<String> attributes = Set.of("uid", "mail", "displayName", "givenName", "sn", "userPassword", COUNTRY, REFERRAL);
+    public String addNewUser(Map<String, String> profile , Map<String, String> passwordInput) throws Exception {
+        
+        // Merge both maps into one
+        Map<String, String> combined = new HashMap<>(profile);
+        if (passwordInput != null) {
+            combined.putAll(passwordInput);
+        }
+        
         User user = new User();
 
         // Required

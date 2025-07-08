@@ -3,75 +3,15 @@
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>User Registration
 	</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></head>
-<body>
-
-  
-	
-	
-	
-	
-  
-  
-	<div class="registration-container">
-	  <div align="center" class="flex">
-		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
-	  </div>
-	  <div class="header">
-		<i class="fas fa-user-plus">
+<body><div class="registration-container"><div align="center" class="flex"><img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m"></div><div class="header"><i class="fas fa-user-plus">
 		</i> User Registration
-	  </div>
-	  <!-- Error Message Block -->
+	  </div><!-- Error Message Block -->
 	  [#if errorMessage?has_content]
-	  <div role="alert" align="center" class="alert alert-danger mt-3 error">
-		<p>${errorMessage} 
-		</p>
-	  </div>
+	  <div role="alert" align="center" class="alert alert-danger mt-3 error"><p>${errorMessage} 
+		</p></div>
 	  [/#if]
-	  <div class="content">
-		<p class="text-center">To create an account, please enter your details below.
-		</p>
-		<form method="post" enctype="application/x-www-form-urlencoded" id="registerForm">
-		  <div class="form-group">
-			<label class="form-label">Username: <span class="required">*</span></label>
-			<input type="text" id="uid" name="uid" pattern="[A-Za-z]+" title="Name should contain only alphabets" required="" placeholder="Choose a username" class="form-control">
-		  </div>
-		  <div class="form-group">
-			<label class="form-label">Email: <span class="required">*</span></label>
-			<input type="email" id="mail" name="mail" required="" placeholder="Enter your email" class="form-control">
-		  </div>
-		  <div class="form-group">
-			<label class="form-label">Country: <span class="required">*</span></label>
-			<input type="text" id="jansCountry" name="jansCountry" required="" placeholder="Enter your country" class="form-control">
-		  </div>
-		  <div class="form-group">
-			<label class="form-label">Referral Code:</label>
-			<input type="text" id="referralCode" name="referralCode" placeholder="Optional referral code" class="form-control">
-		  </div>
-		  <div class="form-group">
-			<label class="form-label">Password: <span class="required">*</span></label>
-			<input type="password" id="userPassword" name="userPassword" minlength="6" pattern="^(?=.*[!@#$%^&amp;*])(?=.*[A-Za-z0-9]).{6,}$" required="" placeholder="Choose a strong password" title="Password must be at least 6 characters long and contain at least one special character (!@#$%^&amp;*)" class="form-control">
-		  </div>
-		  <div class="form-group">
-			<label class="form-label">Repeat Password: <span class="required">*</span></label>
-			<input type="password" id="confirmPassword" name="confirmPassword" required="" placeholder="Confirm your password" class="form-control">
-			<div id="error-message" class="error-message">
-			</div>
-		  </div>
-		  <div class="buttons">
-			<button type="submit" class="btn btn-primary">Register</button>
-			<button type="reset" id="cancel" name="cancel" value="cancel" class="btn btn-primary">Reset</button>
-		  </div>
-		  <!-- Hidden fields for context auto-fill -->
-			<input type="hidden" id="location" name="location" value="Unknown">
-			<input type="hidden" id="zone" name="zone" value="">
-			<input type="hidden" id="device" name="device" value="">
-		</form>
-	  </div>
-	</div>
-  
-  
-  
-</body>
+	  <div class="content"><p class="text-center">To create an account, please enter your details below.
+		</p><form method="post" enctype="application/x-www-form-urlencoded" id="registerForm"><div class="form-group"><label class="form-label">Username: <span class="required">*</span></label><input type="text" id="uid" name="uid" pattern="[A-Za-z]+" title="Name should contain only alphabets" required="" placeholder="Choose a username" class="form-control"></div><div class="form-group"><label class="form-label">Email: <span class="required">*</span></label><input type="email" id="mail" name="mail" required="" placeholder="Enter your email" class="form-control"></div><div class="form-group"><label class="form-label">Country: <span class="required">*</span></label><input type="text" id="jansCountry" name="jansCountry" required="" placeholder="Enter your country" class="form-control"></div><div class="form-group"><label class="form-label">Referral Code:</label><input type="text" id="referralCode" name="referralCode" placeholder="Optional referral code" class="form-control"></div><div class="buttons"><button type="submit" class="btn btn-primary">Register</button><button type="reset" id="cancel" name="cancel" value="cancel" class="btn btn-primary">Reset</button></div><!-- Hidden fields for context auto-fill --><input type="hidden" id="location" name="location" value="Unknown"><input type="hidden" id="zone" name="zone" value=""><input type="hidden" id="device" name="device" value=""></form></div></div></body>
 <style>
 	body {
 	  font-family: Arial, sans-serif;
@@ -188,22 +128,19 @@
 	  return true;
 	}
 	// Auto-fill time zone
-  document.getElementById("zone").value = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
-  // Auto-fill device info
-  const userAgent = navigator.userAgent;
-  let device = "Unknown";
-  if (userAgent.includes("Firefox")) device = "Firefox";
-  else if (userAgent.includes("Chrome")) device = "Chrome";
-  else if (userAgent.includes("Safari")) device = "Safari";
-  else if (userAgent.includes("Edge")) device = "Edge";
-  else if (userAgent.includes("Windows")) device = "Windows";
-  else if (userAgent.includes("Linux")) device = "Linux";
-  else if (userAgent.includes("Mac")) device = "Mac";
-
-  document.getElementById("device").value = device;
-
-  // Optional: location default as "Unknown"
-  document.getElementById("location").value = "Web";
+	document.getElementById("zone").value = Intl.DateTimeFormat().resolvedOptions().timeZone;
+	// Auto-fill device info
+	const userAgent = navigator.userAgent;
+	let device = "Unknown";
+	if (userAgent.includes("Firefox")) device = "Firefox";
+	else if (userAgent.includes("Chrome")) device = "Chrome";
+	else if (userAgent.includes("Safari")) device = "Safari";
+	else if (userAgent.includes("Edge")) device = "Edge";
+	else if (userAgent.includes("Windows")) device = "Windows";
+	else if (userAgent.includes("Linux")) device = "Linux";
+	else if (userAgent.includes("Mac")) device = "Mac";
+	document.getElementById("device").value = device;
+	// Optional: location default as "Unknown"
+	document.getElementById("location").value = "Web";
   </script>
 </html>
