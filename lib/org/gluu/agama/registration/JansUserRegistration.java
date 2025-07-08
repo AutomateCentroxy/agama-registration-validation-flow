@@ -122,7 +122,6 @@ public class JansUserRegistration extends UserRegistration {
 
         user.setAttribute("uid", uid);
         user.setAttribute("mail", mail);
-        user.setAttribute("userPassword", password);
         user.setAttribute("givenName", givenName);
         user.setAttribute("displayName", displayName);
         user.setAttribute("sn", sn);
@@ -136,6 +135,8 @@ public class JansUserRegistration extends UserRegistration {
         }
 
         UserService userService = CdiUtil.bean(UserService.class);
+        // Set the password using proper hashing
+        userService.setPassword(user, password);
         user = userService.addUser(user, true);
 
         if (user == null) throw new EntryNotFoundException("User creation failed");
