@@ -105,81 +105,47 @@ public class JansUserRegistration extends UserRegistration {
     public String addNewUser(Map<String, String> profile, Map<String, String> passwordInput) throws Exception {
 
         Logger logger = LoggerFactory.getLogger(JansUserRegistration.class);
-        logger.info("➡️ Starting user registration process...");
+        logger.info("➡️ Starting user registration...");
 
         Map<String, String> combined = new HashMap<>(profile);
         if (passwordInput != null) {
             combined.putAll(passwordInput);
-            logger.debug("✅ Password input merged into profile data.");
-        } else {
-            logger.warn("⚠️ Password input map is null!");
         }
 
-        User user = new User();
-
-        // Required
         String uid = combined.get("uid");
         String mail = combined.get("mail");
         String password = combined.get("userPassword");
 
-        logger.debug("📌 UID: {}", uid);
-        logger.debug("📧 Mail: {}", mail);
-        logger.debug("🔐 Password received: {}", (password != null ? "YES" : "NO"));
-
-        if (StringHelper.isEmpty(password)) {
-            logger.error("❌ No password provided. Cannot proceed.");
-            throw new IllegalArgumentException("Password cannot be null or empty.");
+        if (StringHelper.isEmpty(uid) || StringHelper.isEmpty(password)) {
+            throw new IllegalArgumentException("UID and password are required.");
         }
 
-        // Derived fields
-        String givenName = uid;
-        String displayName = uid;
-        String sn = uid;
-
+        User user = new User();
         user.setAttribute("uid", uid);
         user.setAttribute("mail", mail);
-        user.setAttribute("givenName", givenName);
-        user.setAttribute("displayName", displayName);
-        user.setAttribute("sn", sn);
-        logger.debug("✅ Basic attributes set on user object.");
+        user.setAttribute("displayName", uid);
+        user.setAttribute("givenName", uid);
+        user.setAttribute("sn", uid);
+        user.setAttribute("userPassword", password); // let Jans hash it
 
-        // Optional
         if (StringHelper.isNotEmpty(combined.get("country"))) {
             user.setAttribute("country", combined.get("country"));
-            logger.debug("🌍 Country set: {}", combined.get("country"));
         }
+
         if (StringHelper.isNotEmpty(combined.get("referralCode"))) {
             user.setAttribute("referralCode", combined.get("referralCode"));
-            logger.debug("📨 Referral code set: {}", combined.get("referralCode"));
         }
-
-        // Encrypt password manually using EncryptionService
-        logger.info("🔐 Hashing password using EncryptionService...");
-        StringEncrypter stringEncrypter = CdiUtil.bean(StringEncrypter.class);
-        String hashedPassword = stringEncrypter.hash(password);
-
-        if (StringHelper.isEmpty(hashedPassword)) {
-            logger.error("❌ Password hashing failed.");
-            throw new IllegalStateException("Failed to hash the password.");
-        }
-
-        logger.debug("✅ Password hashed successfully.");
-        user.setAttribute("userPassword", hashedPassword);
 
         UserService userService = CdiUtil.bean(UserService.class);
-        logger.info("📥 Creating user...");
-        user = userService.addUser(user, true);
+        user = userService.addUser(user, true); // status: active
 
         if (user == null) {
-            logger.error("❌ User creation failed. addUser() returned null.");
+            logger.error("❌ Failed to create user.");
             throw new EntryNotFoundException("User creation failed");
         }
 
-        logger.info("✅ User created successfully with UID: {}", uid);
-
-        String inum = getSingleValuedAttr(user, INUM_ATTR);
-        logger.info("🎉 Registration complete. User INUM: {}", inum);
-        return inum;
+        logger.info("✅ User created with UID: {}", uid);
+        return getSingleValuedAttr(user, INUM_ATTR);
     }
 
     public Map<String, String> getUserEntityByMail(String email) {
