@@ -22,6 +22,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import static org.gluu.agama.registration.jans.Attrs.*;
+import io.jans.as.common.service.common.EncryptionService;
 
 public class JansUserRegistration extends UserRegistration {
 
@@ -103,7 +104,6 @@ public class JansUserRegistration extends UserRegistration {
     public String addNewUser(Map<String, String> profile, Map<String, String> passwordInput) throws Exception {
 
         Logger logger = LoggerFactory.getLogger(JansUserRegistration.class);
-
         logger.info("➡️ Starting user registration process...");
 
         Map<String, String> combined = new HashMap<>(profile);
@@ -152,9 +152,17 @@ public class JansUserRegistration extends UserRegistration {
             logger.debug("📨 Referral code set: {}", combined.get("referralCode"));
         }
 
-        UserService userService = CdiUtil.bean(UserService.class);
+        // Encrypt password using Janssen's EncryptionService
+        EncryptionService encryptionService = CdiUtil.bean(EncryptionService.class);
+        String hashedPassword = encryptionService.encrypt(password);
+        logger.debug("🔐 Password hashed successfully: {}", hashedPassword != null ? "YES" : "NO");
 
-        // Step 1: Add user to DB without password
+        // Set encrypted password
+        user.setAttribute("userPassword", hashedPassword);
+        logger.debug("✅ Encrypted password set on user object.");
+
+        // Add user to DB
+        UserService userService = CdiUtil.bean(UserService.class);
         logger.info("📥 Creating user...");
         user = userService.addUser(user, true);
 
@@ -162,15 +170,8 @@ public class JansUserRegistration extends UserRegistration {
             logger.error("❌ User creation failed. addUser() returned null.");
             throw new EntryNotFoundException("User creation failed");
         }
+
         logger.info("✅ User created successfully with UID: {}", uid);
-
-        // Step 2: Set the password
-        logger.info("🔐 Setting password using userService.setPassword()...");
-        userService.setPassword(user, password);
-        logger.debug("✅ Password set. Now updating user...");
-
-        userService.updateUser(user);
-        logger.info("✅ User updated with password successfully.");
 
         String inum = getSingleValuedAttr(user, INUM_ATTR);
         logger.info("🎉 Registration complete. User INUM: {}", inum);
