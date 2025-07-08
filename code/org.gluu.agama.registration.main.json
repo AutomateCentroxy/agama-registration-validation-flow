@@ -1261,7 +1261,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "callNode-811eeb9e-40d0-4269-89e1-83bfc8f780aa",
@@ -1408,9 +1408,9 @@
 					"conditionInputField": "",
 					"conditions": [
 						{
-							"variable": "passwordInput.userPassword",
+							"variable": "userPassword",
 							"operator": "is",
-							"dataValue": "passwordInput.confirmPassword",
+							"dataValue": "confirmPassword",
 							"combinator": "none"
 						}
 					],
@@ -1427,7 +1427,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2305,8 +2305,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1522,
-		"y": -358,
+		"x": -1826,
+		"y": -491,
 		"zoom": 1
 	}
 }
