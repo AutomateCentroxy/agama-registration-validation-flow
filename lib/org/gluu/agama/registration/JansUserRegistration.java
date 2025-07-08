@@ -9,6 +9,7 @@ import io.jans.service.MailService;
 import io.jans.service.cdi.util.CdiUtil;
 import io.jans.util.StringHelper;
 import io.jans.agama.engine.script.LogUtils;
+import io.jans.as.common.service.common.EncryptionService;
 import org.gluu.agama.smtp.jans.model.ContextData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +23,6 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import static org.gluu.agama.registration.jans.Attrs.*;
-import io.jans.as.common.service.common.EncryptionService;
 
 public class JansUserRegistration extends UserRegistration {
 
@@ -152,16 +152,19 @@ public class JansUserRegistration extends UserRegistration {
             logger.debug("📨 Referral code set: {}", combined.get("referralCode"));
         }
 
-        // Encrypt password using Janssen's EncryptionService
+        // Encrypt password manually using EncryptionService
+        logger.info("🔐 Hashing password using EncryptionService...");
         EncryptionService encryptionService = CdiUtil.bean(EncryptionService.class);
         String hashedPassword = encryptionService.encrypt(password);
-        logger.debug("🔐 Password hashed successfully: {}", hashedPassword != null ? "YES" : "NO");
 
-        // Set encrypted password
+        if (StringHelper.isEmpty(hashedPassword)) {
+            logger.error("❌ Password hashing failed.");
+            throw new IllegalStateException("Failed to hash the password.");
+        }
+
+        logger.debug("✅ Password hashed successfully.");
         user.setAttribute("userPassword", hashedPassword);
-        logger.debug("✅ Encrypted password set on user object.");
 
-        // Add user to DB
         UserService userService = CdiUtil.bean(UserService.class);
         logger.info("📥 Creating user...");
         user = userService.addUser(user, true);
