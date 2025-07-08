@@ -154,8 +154,8 @@ public class JansUserRegistration extends UserRegistration {
 
         // Encrypt password manually using EncryptionService
         logger.info("🔐 Hashing password using EncryptionService...");
-        EncryptionService encryptionService = CdiUtil.bean(EncryptionService.class);
-        String hashedPassword = encryptionService.encrypt(password);
+        StringEncrypter stringEncrypter = CdiUtil.bean(StringEncrypter.class);
+        String hashedPassword = stringEncrypter.hash(password);
 
         if (StringHelper.isEmpty(hashedPassword)) {
             logger.error("❌ Password hashing failed.");
