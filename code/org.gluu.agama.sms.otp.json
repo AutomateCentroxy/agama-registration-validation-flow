@@ -120,7 +120,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "repeatNode-f2142043-29df-47cf-8a75-8432a33a6174",
@@ -468,7 +468,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "The provided code is not valid.",
+							"assignmentExpression": "\"The provided code is not valid.\"",
 							"assignedVariableName": "otpUiFeedback.errorMessage"
 						}
 					],
@@ -484,7 +484,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "logNode-57cec502-4729-46fd-a37c-b1b93efbcd6f",
@@ -1220,8 +1221,8 @@
 		}
 	],
 	"viewport": {
-		"x": 170.44813947281182,
-		"y": 168.44141757989252,
+		"x": -1433.5518605271882,
+		"y": -139.55858242010748,
 		"zoom": 0.860949188338904
 	}
 }
