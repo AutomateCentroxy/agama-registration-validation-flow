@@ -20,7 +20,8 @@
         "org.gluu.agama.registration.main": {},
         "": {},
         "org.gluu.agama.registration.emailVerification.flow": {},
-        "org.gluu.agama.registration.emailVerification": {}
+        "org.gluu.agama.registration.emailVerification": {},
+        "org.gluu.agama.sms.otp": {}
     },
     "name": "agama-registration"
 }
