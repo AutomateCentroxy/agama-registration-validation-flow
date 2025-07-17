@@ -35,7 +35,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "logNode-83f07ce8-99cf-47ae-b640-ca016e1cda89",
@@ -67,7 +68,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-78acbcc0-76fb-4c4e-bae8-a82a47800cff",
@@ -190,7 +192,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "logNode-05b8923b-64d8-492e-bb3d-63aef75c2dba",
@@ -263,7 +266,8 @@
 			"measured": {
 				"width": 109,
 				"height": 58
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "callNode-ff4b92e1-6425-44a6-b03e-11e59652e9c9",
@@ -305,7 +309,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "logNode-9c35bf8c-3cce-4623-ab2f-3fc7762f9b46",
@@ -337,7 +342,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "whenNode-d8f00b8f-cdee-4c58-b99b-a44814f8b585",
@@ -413,7 +419,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "logNode-2ae0a059-eb60-4739-9704-119d3a48a2a8",
@@ -447,7 +454,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-b891c945-3289-42a2-8543-ec8e072372fb",
@@ -519,7 +527,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "callNode-1d5aaf8c-6678-4d5f-8643-eecbb41b4927",
@@ -558,7 +567,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "whenNode-86415afe-26f1-43b3-98a7-5a46e09ecd33",
@@ -599,7 +609,8 @@
 			"measured": {
 				"width": 109,
 				"height": 58
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "logNode-f760e3eb-b926-4902-acbb-e1ce0b53ba64",
@@ -748,7 +759,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1221,8 +1232,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1474.7238112056384,
-		"y": 30.54872270974579,
-		"zoom": 0.860949188338904
+		"x": -1410,
+		"y": -236,
+		"zoom": 1
 	}
 }
