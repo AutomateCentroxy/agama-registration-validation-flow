@@ -485,7 +485,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-57cec502-4729-46fd-a37c-b1b93efbcd6f",
@@ -656,7 +656,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "Error occurs while sending new code to you. Please contact site administrator.",
+							"assignmentExpression": "\"Error occurs while sending new code to you. Please contact site administrator.\"",
 							"assignedVariableName": "otpUiFeedback.infoMessage"
 						}
 					],
@@ -673,7 +673,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
