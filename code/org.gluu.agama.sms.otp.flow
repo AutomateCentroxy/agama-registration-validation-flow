@@ -8,7 +8,7 @@ Log "@info Information received from the caller: " username maskedPhone
 otpUiFeedback = {}
 otpUiFeedback.maskedPhone = maskedPhone
 otpUiFeedback.username = username
-otpUiFeedback.infoMessage = An OTP code has been send to you on your mobile phone.
+otpUiFeedback.infoMessage = "An OTP code has been send to you on your mobile phone."
 //  Try collecting the OTP code from the UI for maximum x(3) times.
 Repeat 3 times max
      //  Show UI to collect OTP code from user.
