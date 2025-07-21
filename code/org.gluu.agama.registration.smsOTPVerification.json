@@ -209,7 +209,7 @@
 					"hasComment": true,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "otpUiFeedback",
+					"returnVariable": "otpValidationResult",
 					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
@@ -218,7 +218,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "rrfNode-f8e0b553-8e20-4be9-8124-25db5056bb32",
@@ -329,7 +329,7 @@
 				"width": 109,
 				"height": 58
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-06c5dca4-78ee-4f07-9998-bc4861db9f56",
@@ -1228,8 +1228,8 @@
 		}
 	],
 	"viewport": {
-		"x": -613.761074460831,
-		"y": -135.49616675134962,
-		"zoom": 0.7834971869493407
+		"x": -1.7654662077604826,
+		"y": -21.640289299485403,
+		"zoom": 0.860949188338904
 	}
 }
