@@ -10,7 +10,8 @@ otpUiFeedback.phone = phone
 otpUiFeedback.infoMessage = "An OTP code has been send to you on your mobile phone."
 //  Try collecting the OTP code from the UI for maximum x(3) times.
 Repeat 3 times max
-     RRF "__________" 
+     //  Show UI to collect OTP code from user.
+     otpCreds = RRF "smsOtp.ftlh" otpUiFeedback
      Log "@ " __________
      When 
 //   Maximum attempts reached. OTP validation failed!
