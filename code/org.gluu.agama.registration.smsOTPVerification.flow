@@ -12,7 +12,8 @@ otpUiFeedback.infoMessage = "An OTP code has been send to you on your mobile pho
 Repeat 3 times max
      //  Show UI to collect OTP code from user.
      otpCreds = RRF "smsOtp.ftlh" otpUiFeedback
-     Log "@ " __________
+     //  Add log entry with collected code in log file.
+     Log "@info Information provided by the user is : " otpCreds
      When 
 //   Maximum attempts reached. OTP validation failed!
 Log "@error Maximum attempts reached. OTP validation failed!"
