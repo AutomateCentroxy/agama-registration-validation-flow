@@ -10,7 +10,7 @@ Repeat 6 times max
      // Retrieve user profile  from UI
      userInput = RRF "profile.ftlh" uiFeedback
      // create an instance of Registration service
-     userRegistrationService = Call org.gluu.agama.user.UserRegistration#getInstance 
+     userRegistrationService = Call org.gluu.agama.user.UserRegistration#getInstance conf
      // Assign userName, email and password  to a variable
      email = userInput.mail
      userName = userInput.uid
@@ -24,5 +24,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_rlelb = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_rlelb
+it_bvfar = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_bvfar
