@@ -14,7 +14,7 @@ Repeat 3 times max
      otpCreds = RRF "smsOtp.ftlh" otpUiFeedback
      //  Add log entry with collected code in log file.
      Log "@info Information provided by the user is : " otpCreds
-     When 
+     When otpCreds.hasRequestedNewCode is not "yes"
           //  Validate the OTP code provided by the user.
           otpValidationResult = Call userRegistrationService validateOTPCode otpCreds.code phone
           //  Add log entry withvalidation result in log file.
