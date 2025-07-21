@@ -779,7 +779,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "finishNode-34e15b35-29f7-4a4e-8b1f-436be0d5a3e2",
@@ -801,19 +801,20 @@
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "END BLOCK",
 					"hasComment": true,
-					"comment": "",
+					"comment": " OTP flow completed successfully.",
 					"flowfilename": "",
-					"returnVariable": "",
-					"nodeIcon": "material-symbols:line-end-square-rounded"
+					"returnVariable": "otpValidationResult",
+					"nodeIcon": "material-symbols:line-end-square-rounded",
+					"finishMode": "withVariable"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		}
 	],
