@@ -26,7 +26,7 @@ Repeat 3 times max
      Log "@info User has requested a new code."
      //  Resend OTP code to user
      resendHasSucceed = Call userRegistrationService sendOTPCode phone
-     When 
+     When resendHasSucceed is null
           Log "@ " __________
      Log "@ " __________
 //   Maximum attempts reached. OTP validation failed!
