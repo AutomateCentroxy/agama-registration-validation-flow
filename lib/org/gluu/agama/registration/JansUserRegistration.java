@@ -39,7 +39,9 @@ public class JansUserRegistration extends UserRegistration {
     private static final String COUNTRY = "country";
     private static final String REFERRAL = "referralCode";
     private static final String EXT_ATTR = "jansExtUid";
+    private HashMap<String, String> userCodes = new HashMap<>();
     private static final int OTP_LENGTH = 6;
+    public static final int OTP_CODE_LENGTH = 6;
     private static final String SUBJECT_TEMPLATE = "Here's your verification code: %s";
     private static final String MSG_TEMPLATE_TEXT = "%s is the code to complete your verification";
     private static final SecureRandom RAND = new SecureRandom();
@@ -100,6 +102,40 @@ public class JansUserRegistration extends UserRegistration {
         logger.debug("E-mail delivery failed, check jans-auth logs");
         return null;
 
+    }
+
+
+    public String sendOTPCode(String phone) {
+    try {
+        logger.info("Sending OTP Code via SMS to phone: {}", phone);
+        String otpCode = generateOTpCode(OTP_CODE_LENGTH);
+        logger.info("Generated OTP code: {}", otpCode);
+        String message = "Welcome to AgamaLab. This is your OTP Code: " + otpCode;
+        // Store OTP mapped to phone (not username)
+        userCodes.put(phone, otpCode);
+        // You can pass `null` or "anonymous" instead of username
+        sendTwilioSms("anonymous", phone, message);
+        return phone; // Return phone if successful
+    } catch (Exception ex) {
+        logger.error("Failed to send OTP to phone: {}. Error: {}", phone, ex.getMessage(), ex);
+        return null;
+    }
+    }
+
+
+    public boolean validateOTPCode(String phone, String code) {
+    try {
+        logger.info("Validating OTP code {} for phone {}", code, phone);
+        String storedCode = userCodes.getOrDefault(phone, "NULL");
+        if (storedCode.equalsIgnoreCase(code)) {
+            userCodes.remove(phone); // Remove after successful validation
+            return true;
+        }
+        return false;
+    } catch (Exception ex) {
+        logger.error("Error validating OTP code {} for phone {}. Error: {}", code, phone, ex.getMessage(), ex);
+        return false;
+    }
     }
 
     public String addNewUser(Map<String, String> profile, Map<String, String> passwordInput) throws Exception {
