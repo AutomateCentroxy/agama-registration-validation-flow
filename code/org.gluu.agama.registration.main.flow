@@ -19,5 +19,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_yxlwi = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_yxlwi
+it_gikwx = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_gikwx
