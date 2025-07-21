@@ -1,36 +1,48 @@
 {
-  "nodes": [
-    {
-      "id": "startNode-121edf6d-4e56-4f4a-bb35-8270d1714165",
-      "type": "startNode",
-      "sourcePosition": "right",
-      "position": {
-        "x": 30,
-        "y": 30
-      },
-      "deletable": false,
-      "data": {
-        "id": "startNode-121edf6d-4e56-4f4a-bb35-8270d1714165",
-        "type": "startNode",
-        "position": {
-          "x": 30,
-          "y": 40
-        },
-        "agamaData": {
-          "isTopLevelFlow": true,
-          "basepath": "",
-          "configParams": "{}",
-          "nodeIcon": "material-symbols:line-start-square",
-          "timeout": "",
-          "inputs": "",
-          "configs": "",
-          "flowname": "org.gluu.agama.registration.smsOTPVerification",
-          "displayName": "smsVerification",
-          "creationDate": "21/07/2025",
-          "hasComment": true,
-          "comment": ""
-        }
-      }
-    }
-  ]
+	"nodes": [
+		{
+			"id": "startNode-121edf6d-4e56-4f4a-bb35-8270d1714165",
+			"type": "startNode",
+			"sourcePosition": "right",
+			"position": {
+				"x": 14,
+				"y": 196
+			},
+			"deletable": false,
+			"data": {
+				"id": "startNode-121edf6d-4e56-4f4a-bb35-8270d1714165",
+				"type": "startNode",
+				"position": {
+					"x": 30,
+					"y": 40
+				},
+				"agamaData": {
+					"isTopLevelFlow": true,
+					"basepath": "",
+					"configParams": "{}",
+					"nodeIcon": "material-symbols:line-start-square",
+					"timeout": "",
+					"inputs": "userRegistrationService phone",
+					"configs": "",
+					"flowname": "org.gluu.agama.registration.smsOTPVerification",
+					"displayName": "smsVerification",
+					"creationDate": "21/07/2025",
+					"hasComment": true,
+					"comment": " Start subflow for user otp code validation"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true,
+			"dragging": false
+		}
+	],
+	"edges": [],
+	"viewport": {
+		"x": 69.60547870473152,
+		"y": 6.833184110933757,
+		"zoom": 1.3491025343396987
+	}
 }
