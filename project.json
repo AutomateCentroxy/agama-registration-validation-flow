@@ -25,7 +25,8 @@
         "": {},
         "org.gluu.agama.registration.emailVerification.flow": {},
         "org.gluu.agama.registration.emailVerification": {},
-        "org.gluu.agama.sms.otp": {}
+        "org.gluu.agama.sms.otp": {},
+        "org.gluu.agama.registration.smsVerification": {}
     },
     "name": "agama-registration"
 }
