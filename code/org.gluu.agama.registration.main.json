@@ -1696,7 +1696,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1792,21 +1792,27 @@
 				},
 				"previousNodeId": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c",
 				"agamaData": {
-					"assignments": [],
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{ success: status.success }",
+							"assignedVariableName": "otpFeedBack"
+						}
+					],
 					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "Extract OTP Success",
 					"hasComment": true,
-					"comment": ""
+					"comment": " This creates a new serializable map otpFeedBack, only containing the success boolean value."
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
