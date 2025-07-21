@@ -129,7 +129,7 @@ public class JansUserRegistration extends UserRegistration {
             // Store OTP mapped to phone (not username)
             associateGeneratedCodeToPhone(phone, otpCode);
             // You can pass `null` or "anonymous" instead of username
-            sendTwilioSms("anonymous", phone, message);
+            sendTwilioSms(phone, message);
             return phone; // Return phone if successful
         } catch (Exception ex) {
             logger.error("Failed to send OTP to phone: {}. Error: {}", phone);
