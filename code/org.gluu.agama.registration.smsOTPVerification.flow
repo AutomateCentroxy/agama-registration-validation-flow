@@ -4,3 +4,7 @@ Flow org.gluu.agama.registration.smsOTPVerification
      Inputs userRegistrationService phone
 //  Log flow imputs provided by the flow caller.
 Log "@info Information received from the caller: " phone
+//  Declare a variable for UI feedback messages.
+otpUiFeedback = {}
+otpUiFeedback.phone = phone
+otpUiFeedback.infoMessage = "An OTP code has been send to you on your mobile phone."
