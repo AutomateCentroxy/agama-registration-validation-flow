@@ -22,7 +22,7 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
-					"inputs": "otpService username maskedPhone",
+					"inputs": "userRegistrationService phone",
 					"configs": "",
 					"displayName": "Generated Node",
 					"hasComment": true,
@@ -36,7 +36,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "logNode-83f07ce8-99cf-47ae-b640-ca016e1cda89",
@@ -117,7 +117,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "repeatNode-f2142043-29df-47cf-8a75-8432a33a6174",
@@ -1230,8 +1230,8 @@
 		}
 	],
 	"viewport": {
-		"x": -482.3223689916324,
-		"y": 54.42961227705777,
-		"zoom": 1.161508731925722
+		"x": 281,
+		"y": 69,
+		"zoom": 1
 	}
 }
