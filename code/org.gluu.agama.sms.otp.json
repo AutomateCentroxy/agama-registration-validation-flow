@@ -69,7 +69,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-78acbcc0-76fb-4c4e-bae8-a82a47800cff",
@@ -154,7 +154,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "rrfNode-8e1ba408-c848-4db2-ae74-c162159cd678",
@@ -175,7 +176,7 @@
 				"agamaData": {
 					"assignments": [],
 					"nodeIcon": "ph:globe-simple",
-					"templatePath": "otp.ftlh",
+					"templatePath": "smsOtp.ftlh",
 					"asssignedVariableName": "otpCreds",
 					"nodeColor": "",
 					"titleColor": "",
@@ -193,7 +194,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "logNode-05b8923b-64d8-492e-bb3d-63aef75c2dba",
@@ -794,7 +795,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "finishNode-b984167f-9957-4d9b-a5f0-6f210e444f6f",
@@ -827,7 +829,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false
 		}
 	],
 	"edges": [
@@ -1232,8 +1235,8 @@
 		}
 	],
 	"viewport": {
-		"x": -141.3223689916324,
-		"y": 140.42961227705774,
+		"x": -482.3223689916324,
+		"y": 54.42961227705777,
 		"zoom": 1.161508731925722
 	}
 }
