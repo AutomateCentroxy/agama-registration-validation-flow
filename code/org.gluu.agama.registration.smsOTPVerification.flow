@@ -29,6 +29,8 @@ Repeat 3 times max
      resendHasSucceed = Call userRegistrationService sendOTPCode phone
      When resendHasSucceed is null
           Log "@info Fail to resend new code to user. " resendHasSucceed
+          //  Provide feedback about the otp resend error to user.
+          otpUiFeedback.infoMessage = "Error occurs while sending new code to you. Please contact site administrator."
      Log "@info New OTP code send successfully!" resendHasSucceed
      //  Provide feedback about the error message to user.
      otpUiFeedback.infoMessage = "A new OTP code has been send to you on your mobile phone."
