@@ -1663,8 +1663,8 @@
 			"id": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c",
 			"type": "triggerNode",
 			"position": {
-				"x": -302.95661388769133,
-				"y": 502.9418235509514
+				"x": -359.95661388769133,
+				"y": 505.9418235509514
 			},
 			"data": {
 				"id": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c",
@@ -1703,8 +1703,8 @@
 			"id": "logNode-f094691b-3ac3-494b-a933-439e38af60c3",
 			"type": "logNode",
 			"position": {
-				"x": -61.91212489985094,
-				"y": 438.3296420717354
+				"x": 84.08787510014906,
+				"y": 344.3296420717354
 			},
 			"data": {
 				"id": "logNode-f094691b-3ac3-494b-a933-439e38af60c3",
@@ -1713,7 +1713,7 @@
 					"x": 12.087875100149063,
 					"y": 678.3296420717354
 				},
-				"previousNodeId": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c",
+				"previousNodeId": "assignmentNode-428e1c3e-24fe-433b-b278-a83fe4154680",
 				"agamaData": {
 					"logMessage": "\"OTP Code validation completed with status: \" otpFeedBack",
 					"logLevel": "info",
@@ -1777,6 +1777,39 @@
 			"dragging": false
 		},
 		{
+			"id": "assignmentNode-428e1c3e-24fe-433b-b278-a83fe4154680",
+			"type": "assignmentNode",
+			"position": {
+				"x": -139.95661388769133,
+				"y": 483.9418235509514
+			},
+			"data": {
+				"id": "assignmentNode-428e1c3e-24fe-433b-b278-a83fe4154680",
+				"type": "assignmentNode",
+				"position": {
+					"x": -109.95661388769133,
+					"y": 505.9418235509514
+				},
+				"previousNodeId": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c",
+				"agamaData": {
+					"assignments": [],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true,
+			"dragging": false
+		},
+		{
 			"id": "finishNode-f4065dd1-6357-4010-9b81-2809f8038d3d",
 			"type": "finishNode",
 			"position": {
@@ -1809,7 +1842,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -2579,25 +2612,6 @@
 			"targetHandle": "target_triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c"
 		},
 		{
-			"id": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c-logNode-f094691b-3ac3-494b-a933-439e38af60c3",
-			"type": "default",
-			"source": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c",
-			"target": "logNode-f094691b-3ac3-494b-a933-439e38af60c3",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c"
-		},
-		{
 			"id": "logNode-f094691b-3ac3-494b-a933-439e38af60c3-whenNode-10ce6d32-1edc-42fd-8414-fdfbbdfdb610",
 			"type": "default",
 			"source": "logNode-f094691b-3ac3-494b-a933-439e38af60c3",
@@ -2652,11 +2666,49 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-10ce6d32-1edc-42fd-8414-fdfbbdfdb610_otherwise"
+		},
+		{
+			"id": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c-assignmentNode-428e1c3e-24fe-433b-b278-a83fe4154680",
+			"type": "default",
+			"source": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c",
+			"target": "assignmentNode-428e1c3e-24fe-433b-b278-a83fe4154680",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c"
+		},
+		{
+			"id": "assignmentNode-428e1c3e-24fe-433b-b278-a83fe4154680-logNode-f094691b-3ac3-494b-a933-439e38af60c3",
+			"type": "default",
+			"source": "assignmentNode-428e1c3e-24fe-433b-b278-a83fe4154680",
+			"target": "logNode-f094691b-3ac3-494b-a933-439e38af60c3",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_assignmentNode-428e1c3e-24fe-433b-b278-a83fe4154680",
+			"targetHandle": "target_logNode-f094691b-3ac3-494b-a933-439e38af60c3"
 		}
 	],
 	"viewport": {
-		"x": 84.8108549806094,
-		"y": 312.9726372801513,
-		"zoom": 1.161508731925722
+		"x": 761,
+		"y": 6,
+		"zoom": 1
 	}
 }
