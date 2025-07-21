@@ -16,7 +16,7 @@ Repeat 3 times max
      Log "@info Information provided by the user is : " otpCreds
      When otpCreds.hasRequestedNewCode is not "yes"
           //  Validate the OTP code provided by the user.
-          otpValidationResult = Call otpService validateOTPCode username otpCreds.code
+          otpValidationResult = Call userRegistrationService validateOTPCode otpCreds.code phone
           //  Add log entry withvalidation result in log file.
           Log "@info OTP validation result is:" otpValidationResult
           //  If otp validation was successful
