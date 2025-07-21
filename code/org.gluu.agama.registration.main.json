@@ -1800,7 +1800,7 @@
 					"hasComment": true,
 					"comment": "Closing the main flow with error.",
 					"flowfilename": "",
-					"returnVariable": "Your error message here",
+					"returnVariable": "{success: false, error: \"Registration flow exceeded maximum attempts\" }",
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
@@ -2655,8 +2655,8 @@
 		}
 	],
 	"viewport": {
-		"x": 300.64297434283867,
-		"y": 221.82083750612924,
-		"zoom": 0.860949188338904
+		"x": 84.8108549806094,
+		"y": 312.9726372801513,
+		"zoom": 1.161508731925722
 	}
 }
