@@ -40,4 +40,4 @@ Repeat 3 times max
      otpUiFeedback.infoMessage = "A new OTP code has been send to you on your mobile phone."
 //   Maximum attempts reached. OTP validation failed!
 Log "@error Maximum attempts reached. OTP validation failed!"
-Finish otpUiFeedback
+Finish otpValidationResult
