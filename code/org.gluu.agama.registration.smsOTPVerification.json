@@ -667,7 +667,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -686,20 +686,27 @@
 				},
 				"previousNodeId": "logNode-9379f3a1-bebd-409c-a4c4-aa7d4e759e0e",
 				"agamaData": {
-					"assignments": [],
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"Error occurs while sending new code to you. Please contact site administrator.\"",
+							"assignedVariableName": "otpUiFeedback.infoMessage"
+						}
+					],
 					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "ASSIGNMENT",
 					"hasComment": true,
-					"comment": ""
+					"comment": " Provide feedback about the otp resend error to user."
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "logNode-b4449f74-cdb6-4b0d-8063-92042a4bc1c1",
