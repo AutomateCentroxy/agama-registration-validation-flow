@@ -896,7 +896,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1677,7 +1677,10 @@
 				"agamaData": {
 					"nodeIcon": "fluent-mdl2:trigger-approval",
 					"flowFileName": "org.gluu.agama.sms.otp",
-					"arguments": "",
+					"arguments": [
+						"phone",
+						"userRegistrationService"
+					],
 					"asssignedVariableName": "otpFeedBack",
 					"exceptionVariableField": "",
 					"nodeColor": "",
@@ -1693,7 +1696,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		}
 	],
@@ -2465,8 +2468,8 @@
 		}
 	],
 	"viewport": {
-		"x": 1091.441108939228,
-		"y": 182.39136599492684,
+		"x": 586.4411089392279,
+		"y": -92.60863400507321,
 		"zoom": 0.860949188338904
 	}
 }
