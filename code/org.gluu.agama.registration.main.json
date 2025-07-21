@@ -1663,7 +1663,7 @@
 			"id": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c",
 			"type": "triggerNode",
 			"position": {
-				"x": -359.95661388769133,
+				"x": -358.38961951379264,
 				"y": 505.9418235509514
 			},
 			"data": {
@@ -1676,7 +1676,7 @@
 				"previousNodeId": "logNode-8071e7fc-fc0b-45d2-8b18-cbde3fed6306",
 				"agamaData": {
 					"nodeIcon": "fluent-mdl2:trigger-approval",
-					"flowFileName": "org.gluu.agama.sms.otp",
+					"flowFileName": "org.gluu.agama.registration.smsOTPVerification",
 					"arguments": [
 						"phone"
 					],
@@ -2712,8 +2712,8 @@
 		}
 	],
 	"viewport": {
-		"x": 474.9201372696864,
-		"y": -30.830779108478907,
-		"zoom": 1
+		"x": 590.5129056111696,
+		"y": 171.42357934141256,
+		"zoom": 0.6381643844144765
 	}
 }
