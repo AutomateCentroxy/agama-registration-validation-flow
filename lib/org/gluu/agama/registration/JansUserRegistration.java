@@ -15,10 +15,16 @@ import org.gluu.agama.smtp.jans.model.ContextData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
+import com.twilio.Twilio;
+import com.twilio.rest.api.v2010.account.Message;
+import com.twilio.type.PhoneNumber;
+
 import org.gluu.agama.smtp.EmailTemplate;
 import org.gluu.agama.user.UserRegistration;
 
 import java.security.SecureRandom;
+// Utility
 import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -40,6 +46,7 @@ public class JansUserRegistration extends UserRegistration {
     private static final String REFERRAL = "referralCode";
     private static final String EXT_ATTR = "jansExtUid";
     private HashMap<String, String> userCodes = new HashMap<>();
+    private HashMap<String, String> flowConfig;
     private static final int OTP_LENGTH = 6;
     public static final int OTP_CODE_LENGTH = 6;
     private static final String SUBJECT_TEMPLATE = "Here's your verification code: %s";
@@ -50,11 +57,19 @@ public class JansUserRegistration extends UserRegistration {
 
     private final Map<String, String> emailOtpStore = new HashMap<>();
 
+
+    public JansUserRegistration(HashMap config) {
+        flowConfig = config;
+        logger.debug("Flow config provided is  {}.", config);
+    }
+
     public static synchronized JansUserRegistration getInstance() {
         if (INSTANCE == null)
             INSTANCE = new JansUserRegistration();
         return INSTANCE;
     }
+
+
 
     public boolean passwordPolicyMatch(String userPassword) {
         String regex = '''^(?=.*[!@#$^&*])[A-Za-z0-9!@#$^&*]{6,}$''';
@@ -108,19 +123,39 @@ public class JansUserRegistration extends UserRegistration {
     public String sendOTPCode(String phone) {
     try {
         logger.info("Sending OTP Code via SMS to phone: {}", phone);
-        String otpCode = generateOTpCode(OTP_CODE_LENGTH);
+        String otpCode = generateSMSOTpCode(OTP_CODE_LENGTH);
         logger.info("Generated OTP code: {}", otpCode);
         String message = "Welcome to AgamaLab. This is your OTP Code: " + otpCode;
         // Store OTP mapped to phone (not username)
-        userCodes.put(phone, otpCode);
+        associateGeneratedCodeToPhone(phone, otpCode);
         // You can pass `null` or "anonymous" instead of username
         sendTwilioSms("anonymous", phone, message);
         return phone; // Return phone if successful
     } catch (Exception ex) {
-        logger.error("Failed to send OTP to phone: {}. Error: {}", phone, ex.getMessage(), ex);
+        logger.error("Failed to send OTP to phone: {}. Error: {}", phone);
         return null;
     }
+
     }
+        private String generateSMSOTpCode(int codeLength) {
+        String numbers = "0123456789";
+        SecureRandom random = new SecureRandom();
+        char[] otp = new char[codeLength];
+        for (int i = 0; i < codeLength; i++) {
+            otp[i] = numbers.charAt(random.nextInt(numbers.length()));
+        }
+        return new String(otp);
+    }   
+
+    private boolean associateGeneratedCodeToPhone(String phone, String code) {
+    try {
+        userCodes.put(phone, code);
+        return true;
+    } catch (Exception e) {
+        logger.error("Error associating OTP code to phone {}. Error: {}", phone, e.getMessage(), e);
+        return false;
+    }
+}
 
 
     public boolean validateOTPCode(String phone, String code) {
@@ -227,4 +262,20 @@ public class JansUserRegistration extends UserRegistration {
         return smtpConfiguration;
 
     }
+
+        private boolean sendTwilioSms(String phone, String message) {
+        try {
+            PhoneNumber FROM_NUMBER = new com.twilio.type.PhoneNumber(flowConfig.get("FROM_NUMBER"));
+            PhoneNumber TO_NUMBER = new com.twilio.type.PhoneNumber(phone);
+            Twilio.init(flowConfig.get("ACCOUNT_SID"), flowConfig.get("AUTH_TOKEN"));
+            Message.creator(TO_NUMBER, FROM_NUMBER, message).create();
+            logger.info("OTP code has been successfully send to {} on phone number {} .", phone);
+            return true;
+        } catch (Exception exception) {
+            logger.error("Error sending OTP code to user {} on pone number {} : error {} .", phone, exception.getMessage(), exception);
+            return false;
+        }
+    }
+
 }
+
