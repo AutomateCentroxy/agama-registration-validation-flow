@@ -124,7 +124,7 @@ public class JansUserRegistration extends UserRegistration {
         try {
             logger.info("Sending OTP Code via SMS to phone: {}", phone);
             String otpCode = generateSMSOTpCode(OTP_CODE_LENGTH);
-            logger.info("Generated OTP code: {}", otpCode);
+            logger.info("Generated OTP code: {}", otpCode, phone);
             String message = "Welcome to AgamaLab. This is your OTP Code: " + otpCode;
             // Store OTP mapped to phone (not username)
             associateGeneratedCodeToPhone(phone, otpCode);
