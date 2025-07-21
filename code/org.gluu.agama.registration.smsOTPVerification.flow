@@ -2,3 +2,5 @@
 Flow org.gluu.agama.registration.smsOTPVerification
      Basepath ""
      Inputs userRegistrationService phone
+//  Log flow imputs provided by the flow caller.
+Log "@info Information received from the caller: " phone
