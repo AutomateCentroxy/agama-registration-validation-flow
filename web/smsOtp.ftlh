@@ -1,14 +1,18 @@
+[#ftl output_format="HTML"]
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>OTP SMS
-	</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" type="text/css">
-  </head>
-  <body>
+<head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>OTP SMS
+	</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" type="text/css"></head>
+<body>
+
+  
+	
+	
+	
+	
+	
+  
+  
 	<div class="h-screen bg-gray-500 py-20 px-3">
 	  <div class="container mx-auto">
 		<div class="max-w-sm mx-auto md:max-w-lg">
@@ -20,8 +24,8 @@
 				<div class="flex flex-col mt-4">
 				  [#if username??]
 				  <div role="alert" class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400">
-					<span class="font-medium"></span>Welcome back ${username}!
-					[#if maskedPhone??]
+					<span class="font-medium"></span>Welcome!
+					[#if phone??]
 					<span class="font-medium">${infoMessage}</span> 
 					[#else]
 					<span class="font-medium">It looks like there is no phone number associated to your account.</span> 
@@ -35,9 +39,9 @@
 					<span class="font-medium"></span>${errorMessage}
 				  </div>
 				  [/#if]
-				  [#if maskedPhone??]
+				  [#if phone??]
 				  <span>Enter the OTP you received at</span>
-				  <span class="font-bold">${maskedPhone}</span>
+				  <span class="font-bold">${phone}</span>
 				  [/#if]
 				</div>
 				<div id="otp" class="flex flex-row justify-center text-center px-2 mt-5">
@@ -68,8 +72,11 @@
 		</div>
 	  </div>
 	</div>
-  </body>
-  <script>
+  
+  
+</body>
+
+<script>
 	window.onload = function () {
 	  var form = document.querySelector("form");
 	  form.onsubmit = handleFormValidation;
