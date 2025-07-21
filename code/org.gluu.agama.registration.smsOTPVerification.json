@@ -69,6 +69,54 @@
 				"width": 170,
 				"height": 122
 			},
+			"selected": false
+		},
+		{
+			"id": "assignmentNode-e12c52df-b4f8-45f7-af6f-41b0e352da8d",
+			"type": "assignmentNode",
+			"position": {
+				"x": 514,
+				"y": 196
+			},
+			"data": {
+				"id": "assignmentNode-e12c52df-b4f8-45f7-af6f-41b0e352da8d",
+				"type": "assignmentNode",
+				"position": {
+					"x": 514,
+					"y": 196
+				},
+				"previousNodeId": "logNode-0ebaf7cb-9515-4dde-8a67-553b74219b4b",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{}",
+							"assignedVariableName": "otpUiFeedback"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "phone",
+							"assignedVariableName": "otpUiFeedback.phone"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"An OTP code has been send to you on your mobile phone.\"",
+							"assignedVariableName": "otpUiFeedback.infoMessage"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "ASSIGNMENT",
+					"hasComment": true,
+					"comment": " Declare a variable for UI feedback messages."
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
 			"selected": true
 		}
 	],
@@ -91,11 +139,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_startNode-121edf6d-4e56-4f4a-bb35-8270d1714165"
+		},
+		{
+			"id": "logNode-0ebaf7cb-9515-4dde-8a67-553b74219b4b-assignmentNode-e12c52df-b4f8-45f7-af6f-41b0e352da8d",
+			"type": "default",
+			"source": "logNode-0ebaf7cb-9515-4dde-8a67-553b74219b4b",
+			"target": "assignmentNode-e12c52df-b4f8-45f7-af6f-41b0e352da8d",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-0ebaf7cb-9515-4dde-8a67-553b74219b4b"
 		}
 	],
 	"viewport": {
-		"x": -50.17007607304805,
-		"y": 99.8580561177817,
+		"x": -50.170076073047994,
+		"y": 101.85805611778164,
 		"zoom": 1.161508731925722
 	}
 }
