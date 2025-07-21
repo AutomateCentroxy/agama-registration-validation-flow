@@ -17,7 +17,7 @@ Repeat 6 times max
      country = userInput.country
      phone = userInput.phone
      Call __________#__________ 
-     Log "@ " __________
+     Log "@info otp send"
      // check user name policy
      isUsernamePolicyMatch = Call userRegistrationService usernamePolicyMatch userName
      // if username policy match
@@ -89,5 +89,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_vvjhk = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_vvjhk
+it_jngqz = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_jngqz
