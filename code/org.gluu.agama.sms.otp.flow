@@ -1,7 +1,7 @@
 //  Start subflow for user otp code validation
 Flow org.gluu.agama.sms.otp
      Basepath ""
-     Inputs otpService username maskedPhone
+     Inputs userRegistrationService phone
 //  Log flow imputs provided by the flow caller.
 Log "@info Information received from the caller: " phone
 //  Declare a variable for UI feedback messages.
