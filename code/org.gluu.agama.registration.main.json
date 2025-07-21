@@ -1737,8 +1737,8 @@
 			"id": "logNode-f094691b-3ac3-494b-a933-439e38af60c3",
 			"type": "logNode",
 			"position": {
-				"x": 12.087875100149063,
-				"y": 678.3296420717354
+				"x": -61.91212489985094,
+				"y": 438.3296420717354
 			},
 			"data": {
 				"id": "logNode-f094691b-3ac3-494b-a933-439e38af60c3",
@@ -1763,6 +1763,49 @@
 			"measured": {
 				"width": 170,
 				"height": 122
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "whenNode-10ce6d32-1edc-42fd-8414-fdfbbdfdb610",
+			"type": "whenNode",
+			"position": {
+				"x": 188.08787510014906,
+				"y": 438.3296420717354
+			},
+			"data": {
+				"id": "whenNode-10ce6d32-1edc-42fd-8414-fdfbbdfdb610",
+				"type": "whenNode",
+				"position": {
+					"x": 188.08787510014906,
+					"y": 438.3296420717354
+				},
+				"previousNodeId": "logNode-f094691b-3ac3-494b-a933-439e38af60c3",
+				"agamaData": {
+					"variableField": "",
+					"valueField": "",
+					"conditionInputField": "",
+					"conditions": [
+						{
+							"variable": "otpFeedBack.success",
+							"operator": "is",
+							"dataValue": "true",
+							"combinator": "none"
+						}
+					],
+					"nodeIcon": "ph:swap",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Check if OTP validation vas okay"
+				}
+			},
+			"measured": {
+				"width": 109,
+				"height": 58
 			},
 			"selected": true
 		}
@@ -2570,11 +2613,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c"
+		},
+		{
+			"id": "logNode-f094691b-3ac3-494b-a933-439e38af60c3-whenNode-10ce6d32-1edc-42fd-8414-fdfbbdfdb610",
+			"type": "default",
+			"source": "logNode-f094691b-3ac3-494b-a933-439e38af60c3",
+			"target": "whenNode-10ce6d32-1edc-42fd-8414-fdfbbdfdb610",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-f094691b-3ac3-494b-a933-439e38af60c3"
 		}
 	],
 	"viewport": {
-		"x": 843.0278586083587,
-		"y": -117.72331563607827,
+		"x": 487.02785860835866,
+		"y": -88.72331563607827,
 		"zoom": 1
 	}
 }
