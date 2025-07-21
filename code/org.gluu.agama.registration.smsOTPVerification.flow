@@ -13,5 +13,6 @@ Repeat 3 times max
      RRF "__________" 
      Log "@ " __________
      When 
-Log "@ " __________
+//   Maximum attempts reached. OTP validation failed!
+Log "@error Maximum attempts reached. OTP validation failed!"
 Finish __________
