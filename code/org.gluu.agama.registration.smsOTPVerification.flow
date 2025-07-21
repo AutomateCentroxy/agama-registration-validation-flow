@@ -15,7 +15,8 @@ Repeat 3 times max
      //  Add log entry with collected code in log file.
      Log "@info Information provided by the user is : " otpCreds
      When 
-          Call __________#__________ 
+          //  Validate the OTP code provided by the user.
+          otpValidationResult = Call userRegistrationService validateOTPCode otpCreds.code phone
           Log "@ " __________
      //  Log new code request
      Log "@info User has requested a new code."
