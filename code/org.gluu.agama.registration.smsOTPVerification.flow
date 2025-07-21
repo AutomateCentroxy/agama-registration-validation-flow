@@ -17,7 +17,8 @@ Repeat 3 times max
      When 
           Call __________#__________ 
           Log "@ " __________
-     Log "@ " __________
+     //  Log new code request
+     Log "@info User has requested a new code."
      Call __________#__________ 
 //   Maximum attempts reached. OTP validation failed!
 Log "@error Maximum attempts reached. OTP validation failed!"
