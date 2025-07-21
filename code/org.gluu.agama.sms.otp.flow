@@ -12,7 +12,7 @@ otpUiFeedback.infoMessage = "An OTP code has been send to you on your mobile pho
 //  Try collecting the OTP code from the UI for maximum x(3) times.
 Repeat 3 times max
      //  Show UI to collect OTP code from user.
-     otpCreds = RRF "otp.ftlh" otpUiFeedback
+     otpCreds = RRF "smsOtp.ftlh" otpUiFeedback
      //  Add log entry with collected code in log file.
      Log "@info Information provided by the user is : " otpCreds
      When otpCreds.hasRequestedNewCode is not "yes"
