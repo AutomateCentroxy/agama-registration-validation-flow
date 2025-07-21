@@ -115,8 +115,8 @@
 			"id": "rrfNode-8fae6a8f-1113-41a1-b159-caf0fdeb26d6",
 			"type": "rrfNode",
 			"position": {
-				"x": -475.81838551449675,
-				"y": 180.23547700708048
+				"x": -673.8183855144968,
+				"y": 149.23547700708048
 			},
 			"data": {
 				"id": "rrfNode-8fae6a8f-1113-41a1-b159-caf0fdeb26d6",
@@ -224,8 +224,8 @@
 			"id": "assignmentNode-8d132c39-d12f-4d76-9064-d40a74250b0b",
 			"type": "assignmentNode",
 			"position": {
-				"x": -356.7245661843655,
-				"y": 502.31823309512833
+				"x": -462.7245661843655,
+				"y": 399.31823309512833
 			},
 			"data": {
 				"id": "assignmentNode-8d132c39-d12f-4d76-9064-d40a74250b0b",
@@ -276,7 +276,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -793,7 +793,7 @@
 					"x": 903.2633410039799,
 					"y": 314.2487871814564
 				},
-				"previousNodeId": "logNode-af24f40a-46b6-4c7f-8b7d-be85776e0d99",
+				"previousNodeId": "callNode-ecf9a455-142b-4553-b027-6ab66fc09230",
 				"agamaData": {
 					"javaClassName": "",
 					"javaMethodName": "usernamePolicyMatch",
@@ -903,8 +903,8 @@
 			"id": "callNode-10bd705b-7d64-4d18-bde1-aa3069aea8d1",
 			"type": "callNode",
 			"position": {
-				"x": -253.89761842873372,
-				"y": 184.0644633135674
+				"x": -446.8976184287337,
+				"y": 148.0644633135674
 			},
 			"data": {
 				"id": "callNode-10bd705b-7d64-4d18-bde1-aa3069aea8d1",
@@ -2312,8 +2312,8 @@
 		}
 	],
 	"viewport": {
-		"x": 518.4002289222731,
-		"y": 73.52540583054792,
-		"zoom": 0.860949188338904
+		"x": 787,
+		"y": 161,
+		"zoom": 1
 	}
 }
