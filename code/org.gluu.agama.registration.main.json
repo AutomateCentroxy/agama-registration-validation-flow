@@ -35,7 +35,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -256,6 +256,11 @@
 							"variableTypeCheck": true,
 							"assignmentExpression": "userInput.country",
 							"assignedVariableName": "country"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "userInput.phone",
+							"assignedVariableName": "phone"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -271,7 +276,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2305,8 +2310,8 @@
 		}
 	],
 	"viewport": {
-		"x": 1417.4223564401536,
-		"y": 444.3695882613685,
-		"zoom": 1
+		"x": 560.0731779375606,
+		"y": 108.03087221214538,
+		"zoom": 1.161508731925722
 	}
 }
