@@ -19,7 +19,8 @@ Repeat 3 times max
           Log "@ " __________
      //  Log new code request
      Log "@info User has requested a new code."
-     Call __________#__________ 
+     //  Resend OTP code to user
+     resendHasSucceed = Call userRegistrationService sendOTPCode phone
 //   Maximum attempts reached. OTP validation failed!
 Log "@error Maximum attempts reached. OTP validation failed!"
 Finish otpUiFeedback
