@@ -150,7 +150,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-7a108c15-4b80-49af-ad88-bc2b6b642764",
@@ -169,21 +169,22 @@
 				"previousNodeId": "repeatNode-09c22177-b14a-40bd-af8b-787d7074d6e9",
 				"branching": "continue",
 				"agamaData": {
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "\"Maximum attempts reached. OTP validation failed!\"",
+					"logLevel": "error",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "LOG",
 					"hasComment": true,
-					"comment": ""
+					"comment": "  Maximum attempts reached. OTP validation failed!"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "finishNode-a726c00a-c244-440a-9e2e-3bd2b272548e",
@@ -279,8 +280,8 @@
 				}
 			},
 			"measured": {
-				"width": 170,
-				"height": 122
+				"width": 168,
+				"height": 120
 			}
 		},
 		{
