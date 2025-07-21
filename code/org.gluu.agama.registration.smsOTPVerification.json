@@ -396,7 +396,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -417,25 +417,29 @@
 				"branching": "success",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "",
-					"javaVariableName": "",
+					"javaMethodName": "validateOTPCode",
+					"javaVariableName": "userRegistrationService",
 					"exceptionVariableField": "",
-					"callType": "Call static method",
-					"arguments": [],
+					"callType": "Call method on instance",
+					"arguments": [
+						"otpCreds.code",
+						"phone"
+					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": " Validate the OTP code provided by the user.",
+					"asssignedVariableName": "otpValidationResult"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
