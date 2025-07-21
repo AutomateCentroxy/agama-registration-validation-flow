@@ -15,6 +15,10 @@ Repeat 3 times max
      //  Add log entry with collected code in log file.
      Log "@info Information provided by the user is : " otpCreds
      When 
+          Call __________#__________ 
+          Log "@ " __________
+     Log "@ " __________
+     Call __________#__________ 
 //   Maximum attempts reached. OTP validation failed!
 Log "@error Maximum attempts reached. OTP validation failed!"
 Finish otpUiFeedback
