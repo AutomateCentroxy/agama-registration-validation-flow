@@ -8,7 +8,8 @@ Log "@info Information received from the caller: " phone
 otpUiFeedback = {}
 otpUiFeedback.phone = phone
 otpUiFeedback.infoMessage = "An OTP code has been send to you on your mobile phone."
-Repeat __________ times max
+//  Try collecting the OTP code from the UI for maximum x(3) times.
+Repeat 3 times max
      RRF "__________" 
      Log "@ " __________
      When 
