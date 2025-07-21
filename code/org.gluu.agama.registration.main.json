@@ -1690,7 +1690,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1732,6 +1732,39 @@
 			},
 			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "logNode-f094691b-3ac3-494b-a933-439e38af60c3",
+			"type": "logNode",
+			"position": {
+				"x": 12.087875100149063,
+				"y": 678.3296420717354
+			},
+			"data": {
+				"id": "logNode-f094691b-3ac3-494b-a933-439e38af60c3",
+				"type": "logNode",
+				"position": {
+					"x": 12.087875100149063,
+					"y": 678.3296420717354
+				},
+				"previousNodeId": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c",
+				"agamaData": {
+					"logMessage": "\"OTP Code validation completed with status: \" otpFeedBack",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Log SMS OTP result",
+					"hasComment": true,
+					"comment": "OTP Code validation is completed."
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -2518,11 +2551,30 @@
 			},
 			"sourceHandle": "source_logNode-8071e7fc-fc0b-45d2-8b18-cbde3fed6306",
 			"targetHandle": "target_triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c"
+		},
+		{
+			"id": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c-logNode-f094691b-3ac3-494b-a933-439e38af60c3",
+			"type": "default",
+			"source": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c",
+			"target": "logNode-f094691b-3ac3-494b-a933-439e38af60c3",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c"
 		}
 	],
 	"viewport": {
-		"x": 1014.0801061568167,
-		"y": -197.56287438956724,
+		"x": 843.0278586083587,
+		"y": -117.72331563607827,
 		"zoom": 1
 	}
 }
