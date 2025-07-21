@@ -20,6 +20,8 @@ Repeat 3 times max
           //  Add log entry withvalidation result in log file.
           Log "@info OTP validation result is:" otpValidationResult
           When 
+               Finish __________
+          Log "@ " __________
      //  Log new code request
      Log "@info User has requested a new code."
      //  Resend OTP code to user
