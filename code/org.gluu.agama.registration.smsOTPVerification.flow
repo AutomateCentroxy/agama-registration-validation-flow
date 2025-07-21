@@ -15,4 +15,4 @@ Repeat 3 times max
      When 
 //   Maximum attempts reached. OTP validation failed!
 Log "@error Maximum attempts reached. OTP validation failed!"
-Finish __________
+Finish otpUiFeedback
