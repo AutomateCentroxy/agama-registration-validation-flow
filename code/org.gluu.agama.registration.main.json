@@ -35,15 +35,15 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
 			"id": "assignmentNode-ee389e10-0b06-40fe-b87b-6985eece6351",
 			"type": "assignmentNode",
 			"position": {
-				"x": -1067.3235869394805,
-				"y": -103.08595596857717
+				"x": -1038.2858686413374,
+				"y": -98.43992104087427
 			},
 			"data": {
 				"id": "assignmentNode-ee389e10-0b06-40fe-b87b-6985eece6351",
@@ -879,7 +879,9 @@
 					"javaVariableName": "",
 					"exceptionVariableField": "",
 					"callType": "Call static method",
-					"arguments": [],
+					"arguments": [
+						"conf"
+					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
@@ -894,7 +896,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2463,8 +2465,8 @@
 		}
 	],
 	"viewport": {
-		"x": 1046.5224494519598,
-		"y": 186.48362358146062,
-		"zoom": 0.7412335049014176
+		"x": 1091.441108939228,
+		"y": 182.39136599492684,
+		"zoom": 0.860949188338904
 	}
 }
