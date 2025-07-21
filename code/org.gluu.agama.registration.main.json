@@ -1522,25 +1522,28 @@
 				"previousNodeId": "assignmentNode-8d132c39-d12f-4d76-9064-d40a74250b0b",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "",
-					"javaVariableName": "",
+					"javaMethodName": "sendOTPCode",
+					"javaVariableName": "userRegistrationService",
 					"exceptionVariableField": "",
-					"callType": "Call static method",
-					"arguments": [],
+					"callType": "Call method on instance",
+					"arguments": [
+						"phone"
+					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "sent sms otp",
 					"hasComment": true,
-					"comment": ""
+					"comment": "sent sms otp",
+					"asssignedVariableName": "smsOtpSend"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1609,7 +1612,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2422,8 +2425,8 @@
 		}
 	],
 	"viewport": {
-		"x": 341.01727484461753,
-		"y": 94.812522037348,
+		"x": 620.0172748446175,
+		"y": 29.812522037347946,
 		"zoom": 0.7412335049014176
 	}
 }
