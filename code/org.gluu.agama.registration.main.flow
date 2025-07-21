@@ -15,6 +15,7 @@ Repeat 6 times max
      userName = userInput.uid
      referralCode = userInput.referralCode
      country = userInput.country
+     phone = userInput.phone
      // Check user name policy
      isUsernamePolicyMatch = Call userRegistrationService usernamePolicyMatch userName
      // if username policy match
@@ -86,5 +87,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_deyto = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_deyto
+it_ewffv = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_ewffv
