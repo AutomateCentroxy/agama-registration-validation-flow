@@ -17,7 +17,11 @@
         "org.gluu.agama.registration.emailVerification.flow"
     ],
     "configs": {
-        "org.gluu.agama.registration.main": {},
+        "org.gluu.agama.registration.main": {
+            "ACCOUNT_SID": "PUT_YOUR_TWILIO_ACCOUNT_SID_HERE",
+            "AUTH_TOKEN": "PUT_YOUR_TWILIO_AUTH_TOKEN_HERE",
+            "FROM_NUMBER": "PUT_YOUR_TWILIO_FROM_NUMBER_HERE"
+        },
         "": {},
         "org.gluu.agama.registration.emailVerification.flow": {},
         "org.gluu.agama.registration.emailVerification": {},
