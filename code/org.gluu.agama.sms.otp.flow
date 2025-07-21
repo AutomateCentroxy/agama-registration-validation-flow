@@ -30,7 +30,7 @@ Repeat 3 times max
      //  Log new code request
      Log "@info User has requested a new code."
      //  Resend OTP code to user
-     resendHasSucceed = Call otpService sendOTPCode username
+     resendHasSucceed = Call userRegistrationService sendOTPCode phone
      When resendHasSucceed is null
           Log "@info Fail to resend new code to user. " resendHasSucceed
           //  Provide feedback about the otp resend error to user.
