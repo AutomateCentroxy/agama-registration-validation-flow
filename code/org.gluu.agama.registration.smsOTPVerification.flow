@@ -24,6 +24,8 @@ Repeat 3 times max
                Finish __________
           //  The maximum number of attempt has been reached.
           Log "@error Invalid code provided. Number of attempt(s): " idx[0]
+          //  Provide feedback to user.
+          otpUiFeedback.errorMessage = "The provided code is not valid."
      //  Log new code request
      Log "@info User has requested a new code."
      //  Resend OTP code to user
