@@ -136,20 +136,21 @@
 				"previousNodeId": "assignmentNode-e12c52df-b4f8-45f7-af6f-41b0e352da8d",
 				"agamaData": {
 					"nodeIcon": "material-symbols:event-repeat-outline-rounded",
-					"maxIteration": "",
+					"maxIteration": "3",
 					"maxIterationVariableName": "",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "REPEAT",
 					"hasComment": true,
-					"comment": ""
+					"comment": " Try collecting the OTP code from the UI for maximum x(3) times."
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "logNode-7a108c15-4b80-49af-ad88-bc2b6b642764",
@@ -472,8 +473,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1135.170076073048,
-		"y": -161.14194388221858,
+		"x": -595.1700760730482,
+		"y": -143.14194388221858,
 		"zoom": 1.161508731925722
 	}
 }
