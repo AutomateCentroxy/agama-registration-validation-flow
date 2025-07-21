@@ -16,7 +16,7 @@ Repeat 6 times max
      userName = userInput.uid
      referralCode = userInput.referralCode
      country = userInput.country
-     phone = userInput.phone
+     phone = userInput.phoneNumber
      // sent sms otp
      smsOtpSend = Call userRegistrationService sendOTPCode phone
      // Trigger OTP subflow
@@ -24,5 +24,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_gojba = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_gojba
+it_bpmct = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_bpmct
