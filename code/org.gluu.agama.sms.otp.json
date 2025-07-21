@@ -453,7 +453,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -567,7 +567,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-86415afe-26f1-43b3-98a7-5a46e09ecd33",
@@ -1233,8 +1233,8 @@
 		}
 	],
 	"viewport": {
-		"x": -912.8727055986296,
-		"y": -38.6921917707092,
-		"zoom": 0.7012496253212007
+		"x": -995,
+		"y": 43,
+		"zoom": 1
 	}
 }
