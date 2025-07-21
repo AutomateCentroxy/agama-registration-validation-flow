@@ -15,6 +15,8 @@ import org.gluu.agama.smtp.jans.model.ContextData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.HashMap;
+
 
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
@@ -33,7 +35,7 @@ import static org.gluu.agama.registration.jans.Attrs.*;
 
 public class JansUserRegistration extends UserRegistration {
 
-    private static final Logger logger = LoggerFactory.getLogger(JansUserRegistration.class);
+    private static final java.util.logging.Logger logger = LoggerFactory.getLogger(JansUserRegistration.class);
 
     private static final String MAIL = "mail";
     private static final String UID = "uid";
@@ -121,20 +123,23 @@ public class JansUserRegistration extends UserRegistration {
 
 
     public String sendOTPCode(String phone) {
-        try {
-            logger.info("Sending OTP Code via SMS to phone: {}", phone);
-            String otpCode = generateSMSOTpCode(OTP_CODE_LENGTH);
-            logger.info("Generated OTP code: {}", otpCode, phone);
-            String message = "Welcome to AgamaLab. This is your OTP Code: " + otpCode;
-            // Store OTP mapped to phone (not username)
-            associateGeneratedCodeToPhone(phone, otpCode);
-            // You can pass `null` or "anonymous" instead of username
-            sendTwilioSms(phone, message);
-            return phone; // Return phone if successful
-        } catch (Exception ex) {
-            logger.error("Failed to send OTP to phone: {}. Error: {}", phone);
-            return null;
-        }
+    try {
+        logger.info("Sending OTP Code via SMS to phone: {}", phone);
+
+        String otpCode = generateSMSOTpCode(OTP_CODE_LENGTH);
+
+        logger.info("Generated OTP {} for phone {}", otpCode, phone);
+
+        String message = "Welcome to AgamaLab. This is your OTP Code: " + otpCode;
+        // Store OTP mapped to phone (not username)
+        associateGeneratedCodeToPhone(phone, otpCode);
+        // You can pass `null` or "anonymous" instead of username
+        sendTwilioSms(phone, message);
+        return phone; // Return phone if successful
+    } catch (Exception ex) {
+        logger.error("Failed to send OTP to phone: {}. Error: {}", phone);
+        return null;
+    }
 
     }
         private String generateSMSOTpCode(int codeLength) {
@@ -148,29 +153,29 @@ public class JansUserRegistration extends UserRegistration {
     }   
 
     private boolean associateGeneratedCodeToPhone(String phone, String code) {
-        try {
-            userCodes.put(phone, code);
-            return true;
-        } catch (Exception e) {
-            logger.error("Error associating OTP code to phone {}. Error: {}", phone, e.getMessage(), e);
-            return false;
-        }
+    try {
+        userCodes.put(phone, code);
+        return true;
+    } catch (Exception e) {
+        logger.error("Error associating OTP code to phone {}. Error: {}", phone, e.getMessage(), e);
+        return false;
     }
+}
 
 
     public boolean validateOTPCode(String phone, String code) {
-        try {
-            logger.info("Validating OTP code {} for phone {}", code, phone);
-            String storedCode = userCodes.getOrDefault(phone, "NULL");
-            if (storedCode.equalsIgnoreCase(code)) {
-                userCodes.remove(phone); // Remove after successful validation
-                return true;
-            }
-            return false;
-        } catch (Exception ex) {
-            logger.error("Error validating OTP code {} for phone {}. Error: {}", code, phone, ex.getMessage(), ex);
-            return false;
+    try {
+        logger.info("Validating OTP code {} for phone {}", code, phone);
+        String storedCode = userCodes.getOrDefault(phone, "NULL");
+        if (storedCode.equalsIgnoreCase(code)) {
+            userCodes.remove(phone); // Remove after successful validation
+            return true;
         }
+        return false;
+    } catch (Exception ex) {
+        logger.error("Error validating OTP code {} for phone {}. Error: {}", code, phone, ex.getMessage(), ex);
+        return false;
+    }
     }
 
     public String addNewUser(Map<String, String> profile, Map<String, String> passwordInput) throws Exception {
@@ -265,11 +270,23 @@ public class JansUserRegistration extends UserRegistration {
 
         private boolean sendTwilioSms(String phone, String message) {
         try {
+
             PhoneNumber FROM_NUMBER = new com.twilio.type.PhoneNumber(flowConfig.get("FROM_NUMBER"));
+
+            logger.info("FROM_NUMBER", FROM_NUMBER);
+
             PhoneNumber TO_NUMBER = new com.twilio.type.PhoneNumber(phone);
+
+            logger.info("TO_NUMBER", TO_NUMBER);
+
             Twilio.init(flowConfig.get("ACCOUNT_SID"), flowConfig.get("AUTH_TOKEN"));
+
+            logger.info(null, flowConfig.get("ACCOUNT_SID"), flowConfig.get("AUTH_TOKEN"));
+
             Message.creator(TO_NUMBER, FROM_NUMBER, message).create();
+
             logger.info("OTP code has been successfully send to {} on phone number {} .", phone);
+            
             return true;
         } catch (Exception exception) {
             logger.error("Error sending OTP code to user {} on pone number {} : error {} .", phone, exception.getMessage(), exception);
