@@ -2,6 +2,7 @@
 Flow org.gluu.agama.registration.main
      Basepath ""
      Timeout 360 seconds
+     Configs conf
 // Create  variable for UI feedback
 uiFeedback = {}
 // Iterate x times max
@@ -23,5 +24,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_mmhco = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_mmhco
+it_tubae = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_tubae
