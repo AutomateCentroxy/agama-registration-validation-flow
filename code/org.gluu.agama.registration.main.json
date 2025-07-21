@@ -1678,8 +1678,7 @@
 					"nodeIcon": "fluent-mdl2:trigger-approval",
 					"flowFileName": "org.gluu.agama.sms.otp",
 					"arguments": [
-						"phone",
-						"userRegistrationService"
+						"phone"
 					],
 					"asssignedVariableName": "status",
 					"exceptionVariableField": "",
@@ -1696,7 +1695,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1812,7 +1811,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2713,8 +2712,8 @@
 		}
 	],
 	"viewport": {
-		"x": 761,
-		"y": 6,
+		"x": 464,
+		"y": -35,
 		"zoom": 1
 	}
 }
