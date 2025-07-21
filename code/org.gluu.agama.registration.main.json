@@ -224,8 +224,8 @@
 			"id": "assignmentNode-8d132c39-d12f-4d76-9064-d40a74250b0b",
 			"type": "assignmentNode",
 			"position": {
-				"x": -613.8240500304119,
-				"y": 402.0164381638077
+				"x": -770.3199440138169,
+				"y": 512.642845979663
 			},
 			"data": {
 				"id": "assignmentNode-8d132c39-d12f-4d76-9064-d40a74250b0b",
@@ -1509,8 +1509,8 @@
 			"id": "callNode-83d9c559-e3e7-4175-9cc6-c4a8786dbb57",
 			"type": "callNode",
 			"position": {
-				"x": -357.3689233134268,
-				"y": 400.22528958568114
+				"x": -517.9121248998509,
+				"y": 694.3296420717354
 			},
 			"data": {
 				"id": "callNode-83d9c559-e3e7-4175-9cc6-c4a8786dbb57",
@@ -1543,7 +1543,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1585,8 +1585,8 @@
 			"id": "logNode-d24dc599-60b6-44f0-9698-75f6fb22fd30",
 			"type": "logNode",
 			"position": {
-				"x": 405.29003973565875,
-				"y": 123.6592700460429
+				"x": 399.8936295983,
+				"y": 122.31016751170321
 			},
 			"data": {
 				"id": "logNode-d24dc599-60b6-44f0-9698-75f6fb22fd30",
@@ -1595,7 +1595,7 @@
 					"x": -107.36892331342682,
 					"y": 400.22528958568114
 				},
-				"previousNodeId": "callNode-83d9c559-e3e7-4175-9cc6-c4a8786dbb57",
+				"previousNodeId": "whenNode-e1ed9346-dee0-4eda-884d-9b63835307bb",
 				"agamaData": {
 					"logMessage": "\"otp send\"",
 					"logLevel": "info",
@@ -1606,7 +1606,8 @@
 					"displayName": "",
 					"hasComment": true,
 					"comment": ""
-				}
+				},
+				"branching": "continue"
 			},
 			"measured": {
 				"width": 170,
@@ -1654,6 +1655,43 @@
 				"height": 122
 			},
 			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c",
+			"type": "triggerNode",
+			"position": {
+				"x": -267.91212489985094,
+				"y": 694.3296420717354
+			},
+			"data": {
+				"id": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c",
+				"type": "triggerNode",
+				"position": {
+					"x": -267.91212489985094,
+					"y": 694.3296420717354
+				},
+				"previousNodeId": "callNode-83d9c559-e3e7-4175-9cc6-c4a8786dbb57",
+				"agamaData": {
+					"nodeIcon": "fluent-mdl2:trigger-approval",
+					"flowFileName": "org.gluu.agama.sms.otp",
+					"arguments": "",
+					"asssignedVariableName": "otpFeedBack",
+					"exceptionVariableField": "",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Launch OTP Subflow",
+					"hasComment": true,
+					"comment": "Trigger OTP subflow",
+					"overrides": []
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true,
 			"dragging": false
 		}
 	],
@@ -2368,25 +2406,6 @@
 			"sourceHandle": "source_assignmentNode-8d132c39-d12f-4d76-9064-d40a74250b0b"
 		},
 		{
-			"id": "callNode-83d9c559-e3e7-4175-9cc6-c4a8786dbb57-logNode-d24dc599-60b6-44f0-9698-75f6fb22fd30",
-			"type": "default",
-			"source": "callNode-83d9c559-e3e7-4175-9cc6-c4a8786dbb57",
-			"target": "logNode-d24dc599-60b6-44f0-9698-75f6fb22fd30",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_callNode-83d9c559-e3e7-4175-9cc6-c4a8786dbb57"
-		},
-		{
 			"id": "logNode-d24dc599-60b6-44f0-9698-75f6fb22fd30-callNode-247e483d-3c2f-4399-b739-a95767257b73",
 			"type": "default",
 			"source": "logNode-d24dc599-60b6-44f0-9698-75f6fb22fd30",
@@ -2422,11 +2441,30 @@
 				"fillOpacity": 0.7
 			},
 			"id": "xy-edge__callNode-247e483d-3c2f-4399-b739-a95767257b73source_callNode-247e483d-3c2f-4399-b739-a95767257b73-whenNode-0428b3a3-d006-476d-a53f-f4e0216b0a57target_whenNode-0428b3a3-d006-476d-a53f-f4e0216b0a57"
+		},
+		{
+			"id": "callNode-83d9c559-e3e7-4175-9cc6-c4a8786dbb57-triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c",
+			"type": "default",
+			"source": "callNode-83d9c559-e3e7-4175-9cc6-c4a8786dbb57",
+			"target": "triggerNode-2d086177-ed04-4c96-8f27-3532e6bce27c",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-83d9c559-e3e7-4175-9cc6-c4a8786dbb57"
 		}
 	],
 	"viewport": {
-		"x": 620.0172748446175,
-		"y": 29.812522037347946,
+		"x": 468.5224494519597,
+		"y": -27.51637641853938,
 		"zoom": 0.7412335049014176
 	}
 }
