@@ -1582,8 +1582,8 @@
 			"id": "logNode-d24dc599-60b6-44f0-9698-75f6fb22fd30",
 			"type": "logNode",
 			"position": {
-				"x": 406.63914226999844,
-				"y": 115.56465484000469
+				"x": 405.29003973565875,
+				"y": 123.6592700460429
 			},
 			"data": {
 				"id": "logNode-d24dc599-60b6-44f0-9698-75f6fb22fd30",
@@ -1594,8 +1594,8 @@
 				},
 				"previousNodeId": "callNode-83d9c559-e3e7-4175-9cc6-c4a8786dbb57",
 				"agamaData": {
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "\"otp send\"",
+					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
@@ -1609,7 +1609,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1650,7 +1650,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
