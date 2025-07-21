@@ -19,10 +19,12 @@ Repeat 6 times max
      phone = userInput.phoneNumber
      // sent sms otp
      smsOtpSend = Call userRegistrationService sendOTPCode phone
+     // The OTP Code has been send to user.
+     Log "@info OTP generated and send to: " phone
      // Trigger OTP subflow
      otpFeedBack = Trigger org.gluu.agama.sms.otp phone userRegistrationService
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_bpmct = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_bpmct
+it_yevuj = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_yevuj
