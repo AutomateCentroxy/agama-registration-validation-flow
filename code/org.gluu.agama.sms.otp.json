@@ -95,13 +95,8 @@
 						},
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "maskedPhone",
-							"assignedVariableName": "otpUiFeedback.maskedPhone"
-						},
-						{
-							"variableTypeCheck": false,
-							"assignmentExpression": "username",
-							"assignedVariableName": "otpUiFeedback.username"
+							"assignmentExpression": "phone",
+							"assignedVariableName": "otpUiFeedback.phone"
 						},
 						{
 							"variableTypeCheck": false,
@@ -122,7 +117,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "repeatNode-f2142043-29df-47cf-8a75-8432a33a6174",
@@ -194,7 +189,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-05b8923b-64d8-492e-bb3d-63aef75c2dba",
