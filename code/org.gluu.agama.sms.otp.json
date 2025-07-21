@@ -54,7 +54,7 @@
 				},
 				"previousNodeId": "startNode-b94b74dd-272a-48a3-abdd-6fbcfdc47ce6",
 				"agamaData": {
-					"logMessage": "\"Information received from the caller: \" username maskedPhone",
+					"logMessage": "\"Information received from the caller: \" phone",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -69,7 +69,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-78acbcc0-76fb-4c4e-bae8-a82a47800cff",
@@ -420,7 +420,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-2ae0a059-eb60-4739-9704-119d3a48a2a8",
@@ -1232,8 +1232,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1410,
-		"y": -236,
-		"zoom": 1
+		"x": -141.3223689916324,
+		"y": 140.42961227705774,
+		"zoom": 1.161508731925722
 	}
 }
