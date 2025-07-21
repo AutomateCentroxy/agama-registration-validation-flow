@@ -5,8 +5,8 @@
 			"type": "startNode",
 			"sourcePosition": "right",
 			"position": {
-				"x": -1023.0623214217786,
-				"y": -102.90496330714765
+				"x": -1298.279238427077,
+				"y": -90.76304049809036
 			},
 			"deletable": false,
 			"data": {
@@ -23,7 +23,7 @@
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "360",
 					"inputs": "",
-					"configs": "",
+					"configs": "conf",
 					"flowname": "org.gluu.agama.registration.main",
 					"displayName": "org.gluu.agama.registration.main",
 					"creationDate": "07/02/2025",
@@ -35,14 +35,14 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
 			"id": "assignmentNode-ee389e10-0b06-40fe-b87b-6985eece6351",
 			"type": "assignmentNode",
 			"position": {
-				"x": -802.8994902088995,
+				"x": -1067.3235869394805,
 				"y": -103.08595596857717
 			},
 			"data": {
@@ -1691,7 +1691,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
@@ -2463,8 +2463,8 @@
 		}
 	],
 	"viewport": {
-		"x": 468.5224494519597,
-		"y": -27.51637641853938,
+		"x": 1310.5224494519598,
+		"y": 286.4836235814606,
 		"zoom": 0.7412335049014176
 	}
 }
