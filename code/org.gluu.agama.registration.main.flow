@@ -16,7 +16,8 @@ Repeat 6 times max
      referralCode = userInput.referralCode
      country = userInput.country
      phone = userInput.phone
-     Call __________#__________ 
+     // sent sms otp
+     smsOtpSend = Call userRegistrationService sendOTPCode phone
      Log "@info otp send"
      // check user name policy
      isUsernamePolicyMatch = Call userRegistrationService usernamePolicyMatch userName
@@ -89,5 +90,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_jngqz = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_jngqz
+it_pmhqx = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_pmhqx
