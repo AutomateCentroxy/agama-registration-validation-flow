@@ -32,17 +32,70 @@
 				}
 			},
 			"measured": {
+				"width": 168,
+				"height": 120
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "logNode-0ebaf7cb-9515-4dde-8a67-553b74219b4b",
+			"type": "logNode",
+			"position": {
+				"x": 264,
+				"y": 196
+			},
+			"data": {
+				"id": "logNode-0ebaf7cb-9515-4dde-8a67-553b74219b4b",
+				"type": "logNode",
+				"position": {
+					"x": 264,
+					"y": 196
+				},
+				"previousNodeId": "startNode-121edf6d-4e56-4f4a-bb35-8270d1714165",
+				"agamaData": {
+					"logMessage": "\"Information received from the caller: \" phone",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "LOG",
+					"hasComment": true,
+					"comment": " Log flow imputs provided by the flow caller."
+				}
+			},
+			"measured": {
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
-			"dragging": false
+			"selected": true
 		}
 	],
-	"edges": [],
+	"edges": [
+		{
+			"id": "startNode-121edf6d-4e56-4f4a-bb35-8270d1714165-logNode-0ebaf7cb-9515-4dde-8a67-553b74219b4b",
+			"type": "default",
+			"source": "startNode-121edf6d-4e56-4f4a-bb35-8270d1714165",
+			"target": "logNode-0ebaf7cb-9515-4dde-8a67-553b74219b4b",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_startNode-121edf6d-4e56-4f4a-bb35-8270d1714165"
+		}
+	],
 	"viewport": {
-		"x": 69.60547870473152,
-		"y": 6.833184110933757,
-		"zoom": 1.3491025343396987
+		"x": -50.17007607304805,
+		"y": 99.8580561177817,
+		"zoom": 1.161508731925722
 	}
 }
