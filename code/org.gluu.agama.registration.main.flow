@@ -22,7 +22,7 @@ Repeat 6 times max
      // The OTP Code has been send to user.
      Log "@info OTP generated and send to: " phone
      // Trigger OTP subflow
-     status = Trigger org.gluu.agama.sms.otp phone
+     status = Trigger org.gluu.agama.registration.smsOTPVerification phone
      //  This creates a new serializable map otpFeedBack, only containing the success boolean value.
      otpFeedBack = { success: status.success }
      // OTP Code validation is completed.
@@ -99,10 +99,10 @@ Repeat 6 times max
                uiFeedback.errorMessage = "Name should contain only alphabets"
      Otherwise
           // Closing the main flow with error.
-          it_vjmsa = {success:false, error: "Registration flow exceeded maximum attempts"}
-          Finish it_vjmsa
+          it_cfzst = {success:false, error: "Registration flow exceeded maximum attempts"}
+          Finish it_cfzst
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_piyll = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_piyll
+it_qpqfo = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_qpqfo
