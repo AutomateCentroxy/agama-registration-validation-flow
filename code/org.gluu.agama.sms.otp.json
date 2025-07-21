@@ -36,7 +36,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-83f07ce8-99cf-47ae-b640-ca016e1cda89",
@@ -221,7 +221,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "whenNode-9de38f4c-3c1f-466e-adf8-017a367fcd28",
@@ -544,11 +545,11 @@
 				"agamaData": {
 					"javaClassName": "",
 					"javaMethodName": "sendOTPCode",
-					"javaVariableName": "otpService",
+					"javaVariableName": "userRegistrationService",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
 					"arguments": [
-						"username"
+						"phone"
 					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
@@ -564,7 +565,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-86415afe-26f1-43b3-98a7-5a46e09ecd33",
@@ -1230,8 +1231,8 @@
 		}
 	],
 	"viewport": {
-		"x": 281,
-		"y": 69,
+		"x": -1115,
+		"y": -69,
 		"zoom": 1
 	}
 }
