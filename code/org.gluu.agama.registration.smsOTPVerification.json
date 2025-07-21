@@ -308,7 +308,14 @@
 					"variableField": "",
 					"valueField": "",
 					"conditionInputField": "",
-					"conditions": [],
+					"conditions": [
+						{
+							"variable": "otpCreds.hasRequestedNewCode",
+							"operator": "is not",
+							"dataValue": "\"yes\"",
+							"combinator": "none"
+						}
+					],
 					"nodeIcon": "ph:swap",
 					"nodeColor": "",
 					"titleColor": "",
@@ -321,7 +328,8 @@
 			"measured": {
 				"width": 109,
 				"height": 58
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "logNode-06c5dca4-78ee-4f07-9998-bc4861db9f56",
@@ -814,7 +822,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
@@ -1220,8 +1228,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1019.9349123886504,
-		"y": -90.73826504233637,
-		"zoom": 0.6381643844144765
+		"x": -613.761074460831,
+		"y": -135.49616675134962,
+		"zoom": 0.7834971869493407
 	}
 }
