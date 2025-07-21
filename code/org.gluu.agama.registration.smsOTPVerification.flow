@@ -19,7 +19,8 @@ Repeat 3 times max
           otpValidationResult = Call userRegistrationService validateOTPCode otpCreds.code phone
           //  Add log entry withvalidation result in log file.
           Log "@info OTP validation result is:" otpValidationResult
-          When 
+          //  If otp validation was successful
+          When otpValidationResult is true
                Finish __________
           Log "@ " __________
      //  Log new code request
