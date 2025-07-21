@@ -6,8 +6,7 @@ Flow org.gluu.agama.sms.otp
 Log "@info Information received from the caller: " phone
 //  Declare a variable for UI feedback messages.
 otpUiFeedback = {}
-otpUiFeedback.maskedPhone = maskedPhone
-otpUiFeedback.username = username
+otpUiFeedback.phone = phone
 otpUiFeedback.infoMessage = "An OTP code has been send to you on your mobile phone."
 //  Try collecting the OTP code from the UI for maximum x(3) times.
 Repeat 3 times max
