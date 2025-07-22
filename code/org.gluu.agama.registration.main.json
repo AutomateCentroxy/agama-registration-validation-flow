@@ -1880,7 +1880,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1914,7 +1914,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
@@ -2799,8 +2799,8 @@
 		}
 	],
 	"viewport": {
-		"x": 428.47238846248024,
-		"y": -318.0066372552701,
+		"x": 175.47238846248013,
+		"y": -244.00663725527016,
 		"zoom": 1.161508731925722
 	}
 }
