@@ -32,7 +32,7 @@ Repeat 6 times max
           Log "@info OTP validation result is:" otpValidationResult
           Quit When otpValidationResult is true
           // The maximum number of attempt has been reached.
-          Log "@error Invalid code provided. Number of attempt(s): " idx[0]
+          Log "@error Invalid code provided "
           // Provide feedback to user.
           uiFeedback.errorMessage = "You have exceeded the maximum number of OTP attempts. Please try again later."
           it_otpmax = { success: false, error: "ExceededTheNumberOfAttemptsAllowed" }
@@ -111,10 +111,10 @@ Repeat 6 times max
                uiFeedback.errorMessage = "Name should contain only alphabets"
      Otherwise
           // Closing the main flow with error.
-          it_jjfad = {success:false, error: "Registration flow exceeded maximum attempts"}
-          Finish it_jjfad
+          it_hmuwd = {success:false, error: "Registration flow exceeded maximum attempts"}
+          Finish it_hmuwd
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_ezlvf = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_ezlvf
+it_lamur = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_lamur
