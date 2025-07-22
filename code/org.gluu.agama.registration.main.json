@@ -1854,8 +1854,8 @@
 			"id": "logNode-ed4a0b9c-bb0c-421c-8e95-06927dfbc891",
 			"type": "logNode",
 			"position": {
-				"x": 10.179466494864954,
-				"y": 754.4686928833966
+				"x": -5.820533505135046,
+				"y": 694.4686928833966
 			},
 			"data": {
 				"id": "logNode-ed4a0b9c-bb0c-421c-8e95-06927dfbc891",
@@ -1880,6 +1880,49 @@
 			"measured": {
 				"width": 170,
 				"height": 122
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf",
+			"type": "whenNode",
+			"position": {
+				"x": -28.820533505135046,
+				"y": 537.4686928833966
+			},
+			"data": {
+				"id": "whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf",
+				"type": "whenNode",
+				"position": {
+					"x": 244.17946649486495,
+					"y": 694.4686928833966
+				},
+				"previousNodeId": "logNode-ed4a0b9c-bb0c-421c-8e95-06927dfbc891",
+				"agamaData": {
+					"variableField": "",
+					"valueField": "",
+					"conditionInputField": "",
+					"conditions": [
+						{
+							"variable": "otpValidationResult",
+							"operator": "is",
+							"dataValue": "true",
+							"combinator": "none"
+						}
+					],
+					"nodeIcon": "ph:swap",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "If otp validation was successful"
+				}
+			},
+			"measured": {
+				"width": 109,
+				"height": 58
 			},
 			"selected": true,
 			"dragging": false
@@ -2744,11 +2787,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_callNode-29a7db61-a002-4bff-bbf0-b044f77aac15"
+		},
+		{
+			"id": "logNode-ed4a0b9c-bb0c-421c-8e95-06927dfbc891-whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf",
+			"type": "default",
+			"source": "logNode-ed4a0b9c-bb0c-421c-8e95-06927dfbc891",
+			"target": "whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-ed4a0b9c-bb0c-421c-8e95-06927dfbc891"
 		}
 	],
 	"viewport": {
-		"x": 426.9247769760361,
-		"y": -238.4927855199968,
+		"x": 422.9247769760361,
+		"y": -86.4927855199968,
 		"zoom": 1
 	}
 }
