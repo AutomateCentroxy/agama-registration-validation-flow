@@ -56,7 +56,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "{}",
+							"assignmentExpression": "{\n     email: email,\n     accountExists: existingAccount,\n     matches: true,\n     resent: false\n}",
 							"assignedVariableName": "emailObj"
 						},
 						{
@@ -83,7 +83,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -718,7 +718,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "finishNode-57d108a2-a5a6-4a52-96d0-8cfafc5cfdc9",
@@ -1165,8 +1165,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1971.8694388765198,
-		"y": -181.4845261957771,
+		"x": -164,
+		"y": 107,
 		"zoom": 1
 	}
 }
