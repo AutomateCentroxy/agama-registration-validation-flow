@@ -714,7 +714,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-0e012b0b-c93b-4f2a-a4db-0efc8d4a8b48",
@@ -757,7 +757,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1169,8 +1169,8 @@
 		}
 	],
 	"viewport": {
-		"x": -63,
-		"y": 170,
-		"zoom": 1
+		"x": -827.0869316166384,
+		"y": -65.88773259083496,
+		"zoom": 0.7412335049014176
 	}
 }
