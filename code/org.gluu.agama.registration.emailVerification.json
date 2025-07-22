@@ -21,7 +21,7 @@
 					"basepath": "",
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
-					"timeout": "",
+					"timeout": "700",
 					"inputs": "email existingAccount",
 					"configs": "",
 					"flowname": "org.gluu.agama.registration.emailVerification",
@@ -35,7 +35,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-278be43a-d475-4c46-a887-3a805d414c25",
@@ -88,7 +88,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -991,8 +991,8 @@
 		}
 	],
 	"viewport": {
-		"x": 61.63793460607576,
-		"y": 146.5273749360481,
+		"x": 314,
+		"y": 115,
 		"zoom": 1
 	}
 }
