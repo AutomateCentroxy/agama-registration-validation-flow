@@ -1931,8 +1931,8 @@
 			"id": "logNode-ae36d1fa-e6f9-410f-912d-5a9c5dd1cd6c",
 			"type": "logNode",
 			"position": {
-				"x": -472.820533505135,
-				"y": 77.46869288339656
+				"x": -455.39790252624914,
+				"y": 61.20757063643646
 			},
 			"data": {
 				"id": "logNode-ae36d1fa-e6f9-410f-912d-5a9c5dd1cd6c",
@@ -1956,8 +1956,8 @@
 				}
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
+				"width": 170,
+				"height": 122
 			},
 			"selected": false,
 			"dragging": false
@@ -1998,7 +1998,47 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
+		},
+		{
+			"id": "assignmentNode-5e975906-1e85-4ed6-9495-b2bf4b659e72",
+			"type": "assignmentNode",
+			"position": {
+				"x": -159.9723657073221,
+				"y": 318.9019594016359
+			},
+			"data": {
+				"id": "assignmentNode-5e975906-1e85-4ed6-9495-b2bf4b659e72",
+				"type": "assignmentNode",
+				"position": {
+					"x": -381.820533505135,
+					"y": 416.46869288339656
+				},
+				"previousNodeId": "whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf",
+				"branching": "success",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "otpValidationResult",
+							"assignedVariableName": "isPhoneVerified"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "assign otpValidationResult",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -2917,11 +2957,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-ae36d1fa-e6f9-410f-912d-5a9c5dd1cd6c"
+		},
+		{
+			"id": "whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf-assignmentNode-5e975906-1e85-4ed6-9495-b2bf4b659e72",
+			"type": "default",
+			"source": "whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf",
+			"target": "assignmentNode-5e975906-1e85-4ed6-9495-b2bf4b659e72",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf_success"
 		}
 	],
 	"viewport": {
-		"x": 743.9247769760361,
-		"y": 122.5072144800032,
-		"zoom": 1
+		"x": 575.5288165671725,
+		"y": 201.045464782129,
+		"zoom": 0.860949188338904
 	}
 }
