@@ -22,7 +22,8 @@ max = Repeat 3 times max
                emailObj = { success: false, error: "Unable_to_deliver_email_message" }
                // Finish flow unsuccessfully
                Finish emailObj
-          RRF "__________" 
+          // Redirect to email otp page
+          uiInput = RRF "emailOtp.ftlh" emailObj
           // resent will false
           uiInput.resent = false
           // If user clicked on "resend code" button
