@@ -61,11 +61,11 @@ public class JansUserRegistration extends UserRegistration {
         logger.debug("Flow config provided is  {}.", config);
     }
 
-    // public static synchronized JansUserRegistration getInstance() {
-    //     if (INSTANCE == null)
-    //         INSTANCE = new JansUserRegistration();
-    //     return INSTANCE;
-    // }
+    public static synchronized JansUserRegistration getInstance() {
+        if (INSTANCE == null)
+            INSTANCE = new JansUserRegistration();
+        return INSTANCE;
+    }
 
     public boolean passwordPolicyMatch(String userPassword) {
         String regex = '''^(?=.*[!@#$^&*])[A-Za-z0-9!@#$^&*]{6,}$''';
