@@ -1956,11 +1956,49 @@
 				}
 			},
 			"measured": {
+				"width": 168,
+				"height": 120
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "assignmentNode-233edfc5-ffd0-4efd-a872-63bf861656d9",
+			"type": "assignmentNode",
+			"position": {
+				"x": -222.82053350513502,
+				"y": 77.46869288339656
+			},
+			"data": {
+				"id": "assignmentNode-233edfc5-ffd0-4efd-a872-63bf861656d9",
+				"type": "assignmentNode",
+				"position": {
+					"x": -222.82053350513502,
+					"y": 77.46869288339656
+				},
+				"previousNodeId": "logNode-ae36d1fa-e6f9-410f-912d-5a9c5dd1cd6c",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"The provided code is not valid.\"",
+							"assignedVariableName": "uiFeedback.errorMessage"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Provide feedback",
+					"hasComment": true,
+					"comment": "Provide feedback to user."
+				}
+			},
+			"measured": {
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
-			"dragging": false
+			"selected": true
 		}
 	],
 	"edges": [
@@ -2860,11 +2898,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf_continue"
+		},
+		{
+			"id": "logNode-ae36d1fa-e6f9-410f-912d-5a9c5dd1cd6c-assignmentNode-233edfc5-ffd0-4efd-a872-63bf861656d9",
+			"type": "default",
+			"source": "logNode-ae36d1fa-e6f9-410f-912d-5a9c5dd1cd6c",
+			"target": "assignmentNode-233edfc5-ffd0-4efd-a872-63bf861656d9",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-ae36d1fa-e6f9-410f-912d-5a9c5dd1cd6c"
 		}
 	],
 	"viewport": {
-		"x": 1089.9247769760361,
-		"y": 131.5072144800032,
+		"x": 743.9247769760361,
+		"y": 122.5072144800032,
 		"zoom": 1
 	}
 }
