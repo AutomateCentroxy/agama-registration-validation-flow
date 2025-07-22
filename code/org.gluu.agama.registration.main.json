@@ -2074,7 +2074,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-c10fb9a4-2c61-4611-b904-e7c8dfa06b8a",
@@ -2093,8 +2093,8 @@
 				"previousNodeId": "repeatNode-913b8027-3910-43cc-af3f-5432e9357b3a",
 				"branching": "continue",
 				"agamaData": {
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "Max attempted",
+					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
@@ -2107,7 +2107,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -3102,8 +3103,8 @@
 		}
 	],
 	"viewport": {
-		"x": 1845.9197547959338,
-		"y": 126.08390309176161,
+		"x": 1674.0081698796985,
+		"y": 161.21485977575324,
 		"zoom": 0.5
 	}
 }
