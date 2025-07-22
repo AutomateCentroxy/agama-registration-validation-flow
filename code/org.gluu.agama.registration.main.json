@@ -1906,7 +1906,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "\"You have exceeded the maximum number of OTP attempts. Please try again later.\"",
+							"assignmentExpression": "\"Invalid code provided. Number of attempt(s): ${idx[0]}\"",
 							"assignedVariableName": "uiFeedback.errorMessage"
 						},
 						{
@@ -1928,7 +1928,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2035,7 +2035,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -3153,8 +3153,8 @@
 		}
 	],
 	"viewport": {
-		"x": 360.33139659849235,
-		"y": -48.55061901699548,
+		"x": -94.66860340150765,
+		"y": -64.55061901699548,
 		"zoom": 0.7012496253212007
 	}
 }
