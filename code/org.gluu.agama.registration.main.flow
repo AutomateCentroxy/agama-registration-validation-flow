@@ -108,11 +108,10 @@ Repeat 6 times max
                // Name should contain only alphabets
                uiFeedback.errorMessage = "Name should contain only alphabets"
      Otherwise
-          // Closing the main flow with error.
-          it_rwobw = {success:false, error: "Registration flow exceeded maximum attempts"}
-          Finish it_rwobw
+          Log "@ " __________
+          Finish __________
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_vsogy = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_vsogy
+it_vbcvl = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_vbcvl
