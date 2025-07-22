@@ -2086,8 +2086,8 @@
 				"previousNodeId": "whenNode-10ce6d32-1edc-42fd-8414-fdfbbdfdb610",
 				"branching": "otherwise",
 				"agamaData": {
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "OTP validation failed after 3 attempts",
+					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
@@ -2101,7 +2101,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -3197,8 +3197,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1439.6546206520816,
-		"y": 442.02532872115864,
+		"x": -1348.6546206520816,
+		"y": 470.02532872115864,
 		"zoom": 1.3491025343396987
 	}
 }
