@@ -2086,7 +2086,7 @@
 				"previousNodeId": "whenNode-10ce6d32-1edc-42fd-8414-fdfbbdfdb610",
 				"branching": "otherwise",
 				"agamaData": {
-					"logMessage": "OTP validation failed after 3 attempts",
+					"logMessage": "\"OTP validation failed after 3 attempts\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
