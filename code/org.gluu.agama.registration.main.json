@@ -1709,8 +1709,8 @@
 			"id": "rrfNode-53a12e63-aa33-4969-80c9-deffb2068fea",
 			"type": "rrfNode",
 			"position": {
-				"x": -2332.4667552995097,
-				"y": 846.6224644296051
+				"x": -2421.8097691175362,
+				"y": 789.1876698323023
 			},
 			"data": {
 				"id": "rrfNode-53a12e63-aa33-4969-80c9-deffb2068fea",
@@ -1746,8 +1746,8 @@
 			"id": "logNode-7bd15442-850b-43a2-88c8-a84b7c60a62b",
 			"type": "logNode",
 			"position": {
-				"x": -2023.9672485150095,
-				"y": 858.148053375184
+				"x": -2138.836837709615,
+				"y": 833.8978067674338
 			},
 			"data": {
 				"id": "logNode-7bd15442-850b-43a2-88c8-a84b7c60a62b",
@@ -1758,7 +1758,7 @@
 				},
 				"previousNodeId": "rrfNode-53a12e63-aa33-4969-80c9-deffb2068fea",
 				"agamaData": {
-					"logMessage": "\"Information provided by the user is : \" otpCreds",
+					"logMessage": "\"Information provided by the user is : \" otpCreds.code",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -1773,7 +1773,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2108,7 +2108,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -3103,8 +3103,8 @@
 		}
 	],
 	"viewport": {
-		"x": 1674.0081698796985,
-		"y": 161.21485977575324,
-		"zoom": 0.5
+		"x": 2102.782214689275,
+		"y": -308.1271250561931,
+		"zoom": 0.7834971869493407
 	}
 }
