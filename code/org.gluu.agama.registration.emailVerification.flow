@@ -22,6 +22,10 @@ max = Repeat 3 times max
                emailObj = { success: false, error: "Unable_to_deliver_email_message" }
                // Finish flow unsuccessfully
                Finish emailObj
+          // Variable assignment after successful email delivery
+          emailObj.email = email
+          emailObj.matches = uiInput.matches
+          emailObj.accountExists = existingAccount
           // Redirect to email otp page
           uiInput = RRF "emailOtp.ftlh" emailObj
           // resent will false
