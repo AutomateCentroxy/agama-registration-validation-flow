@@ -1789,14 +1789,15 @@
 				"agamaData": {
 					"assignments": [],
 					"nodeIcon": "ph:globe-simple",
-					"templatePath": "",
-					"asssignedVariableName": "",
+					"templatePath": "smsOtp.ftlh",
+					"asssignedVariableName": "otpCreds",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "RRF",
 					"hasComment": true,
-					"comment": ""
+					"comment": " Show UI to collect OTP code from user.",
+					"arguments": "uiFeedback"
 				}
 			},
 			"measured": {
