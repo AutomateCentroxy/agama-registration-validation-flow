@@ -179,8 +179,8 @@
 				}
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
+				"width": 170,
+				"height": 122
 			},
 			"selected": false,
 			"dragging": false
@@ -1088,7 +1088,7 @@
 						{
 							"variableTypeCheck": true,
 							"assignmentExpression": "\"Error sending email. Check email address and SMTP configuration.\"",
-							"assignedVariableName": "emailObj.errorMessage"
+							"assignedVariableName": "uiFeedback.errorMessage"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -1104,7 +1104,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2174,15 +2174,15 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
 			"id": "finishNode-a0ba2018-b7e5-40c0-9cba-e71cacfcff20",
 			"type": "finishNode",
 			"position": {
-				"x": 1607.99069387068,
-				"y": -301.2116160076269
+				"x": 1648.732547592046,
+				"y": -288.67566101643746
 			},
 			"data": {
 				"id": "finishNode-a0ba2018-b7e5-40c0-9cba-e71cacfcff20",
@@ -3320,8 +3320,8 @@
 		}
 	],
 	"viewport": {
-		"x": -590.8717402175266,
-		"y": 274.7871693900551,
-		"zoom": 1
+		"x": -3180.5807820975933,
+		"y": -256.7631617651741,
+		"zoom": 0.860949188338904
 	}
 }
