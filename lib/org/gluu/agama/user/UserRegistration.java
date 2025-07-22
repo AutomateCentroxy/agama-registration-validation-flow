@@ -21,7 +21,7 @@ public abstract class UserRegistration {
     
     public abstract boolean checkIfUserExists(String username, String email);
 
-    public static UserRegistration getInstance(HashMap config){
-        return new JansUserRegistration(config);
+    public static UserRegistration getInstance(){
+        return new JansUserRegistration();
     }
 }
