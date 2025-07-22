@@ -1869,7 +1869,7 @@
 				"previousNodeId": "quitNode-d9737850-9ffa-4d92-aa4d-263e36df583f",
 				"branching": "continue",
 				"agamaData": {
-					"logMessage": "\"Invalid code provided. Number of attempt(s): \" idx[0]",
+					"logMessage": "\"Invalid code provided \"",
 					"logLevel": "error",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -1884,7 +1884,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2069,7 +2069,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -3152,8 +3152,8 @@
 		}
 	],
 	"viewport": {
-		"x": 1658.5994983603343,
-		"y": -27.932589828127107,
+		"x": 1191.5539728906829,
+		"y": -290.4391273867608,
 		"zoom": 0.580754365962861
 	}
 }
