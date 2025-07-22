@@ -41,7 +41,6 @@ max = Repeat 3 times max
                Finish true
           // Variable assigned when OTP entered by user does not matches
           uiInput.matches = false
-          sendMail = true
 // Variable assignment when user exceeds the number of attempts allowed
 obj = { success: false, error: "ExceededTheNumberOfAttemptsAllowed" }
 // Finish flow when user exceeds maximum number of flows allowed
