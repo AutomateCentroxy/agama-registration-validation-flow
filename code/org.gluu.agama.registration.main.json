@@ -1888,8 +1888,8 @@
 			"id": "whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf",
 			"type": "whenNode",
 			"position": {
-				"x": -28.820533505135046,
-				"y": 537.4686928833966
+				"x": -631.820533505135,
+				"y": 216.46869288339656
 			},
 			"data": {
 				"id": "whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf",
@@ -1923,6 +1923,41 @@
 			"measured": {
 				"width": 109,
 				"height": 58
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "logNode-ae36d1fa-e6f9-410f-912d-5a9c5dd1cd6c",
+			"type": "logNode",
+			"position": {
+				"x": -472.820533505135,
+				"y": 77.46869288339656
+			},
+			"data": {
+				"id": "logNode-ae36d1fa-e6f9-410f-912d-5a9c5dd1cd6c",
+				"type": "logNode",
+				"position": {
+					"x": -381.820533505135,
+					"y": 216.46869288339656
+				},
+				"previousNodeId": "whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf",
+				"branching": "continue",
+				"agamaData": {
+					"logMessage": "\"Invalid code provided. Number of attempt(s): \" idx[0]",
+					"logLevel": "error",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Log invalid code",
+					"hasComment": true,
+					"comment": "The maximum number of attempt has been reached."
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
 			},
 			"selected": true,
 			"dragging": false
@@ -2806,11 +2841,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-ed4a0b9c-bb0c-421c-8e95-06927dfbc891"
+		},
+		{
+			"id": "whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf-logNode-ae36d1fa-e6f9-410f-912d-5a9c5dd1cd6c",
+			"type": "default",
+			"source": "whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf",
+			"target": "logNode-ae36d1fa-e6f9-410f-912d-5a9c5dd1cd6c",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "continue",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf_continue"
 		}
 	],
 	"viewport": {
-		"x": 422.9247769760361,
-		"y": -86.4927855199968,
+		"x": 1089.9247769760361,
+		"y": 131.5072144800032,
 		"zoom": 1
 	}
 }
