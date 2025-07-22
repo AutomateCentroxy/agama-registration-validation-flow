@@ -1973,8 +1973,8 @@
 			"id": "repeatNode-e3feaffe-9422-4c00-94a7-b2e595c61ff9",
 			"type": "repeatNode",
 			"position": {
-				"x": -2680.0023001181776,
-				"y": 448.16379567398303
+				"x": -2832.8888225637684,
+				"y": 453.6240286184684
 			},
 			"data": {
 				"id": "repeatNode-e3feaffe-9422-4c00-94a7-b2e595c61ff9",
@@ -1986,14 +1986,14 @@
 				"previousNodeId": "callNode-83d9c559-e3e7-4175-9cc6-c4a8786dbb57",
 				"agamaData": {
 					"nodeIcon": "material-symbols:event-repeat-outline-rounded",
-					"maxIteration": "",
-					"maxIterationVariableName": "",
+					"maxIteration": "3",
+					"maxIterationVariableName": "maxSMS",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "sms OTP check",
 					"hasComment": true,
-					"comment": ""
+					"comment": "sms OTP check"
 				}
 			},
 			"measured": {
@@ -2997,8 +2997,8 @@
 		}
 	],
 	"viewport": {
-		"x": 1808.866301796551,
-		"y": 139.66349782460213,
+		"x": 1919.8663017965512,
+		"y": 89.66349782460213,
 		"zoom": 0.5494271087884399
 	}
 }
