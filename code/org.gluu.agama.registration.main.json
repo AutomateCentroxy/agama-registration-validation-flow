@@ -2073,8 +2073,8 @@
 			"id": "logNode-b9c7b214-dc6b-43c9-a7fd-a66f1e6563d3",
 			"type": "logNode",
 			"position": {
-				"x": 1127.0830271835289,
-				"y": -158.9073630753071
+				"x": 1118.9884119774908,
+				"y": -195.33313150247898
 			},
 			"data": {
 				"id": "logNode-b9c7b214-dc6b-43c9-a7fd-a66f1e6563d3",
@@ -2108,8 +2108,8 @@
 			"id": "assignmentNode-ca9d2125-c031-4852-9af0-419f3f455854",
 			"type": "assignmentNode",
 			"position": {
-				"x": 1314.8194127718095,
-				"y": -248.59661716837866
+				"x": 1374.1799242827562,
+				"y": -298.5134109389475
 			},
 			"data": {
 				"id": "assignmentNode-ca9d2125-c031-4852-9af0-419f3f455854",
@@ -2179,15 +2179,15 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
 			"id": "finishNode-a0ba2018-b7e5-40c0-9cba-e71cacfcff20",
 			"type": "finishNode",
 			"position": {
-				"x": 1564.8194127718095,
-				"y": -248.59661716837866
+				"x": 1607.99069387068,
+				"y": -301.2116160076269
 			},
 			"data": {
 				"id": "finishNode-a0ba2018-b7e5-40c0-9cba-e71cacfcff20",
@@ -2201,7 +2201,7 @@
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "SMS OTP error",
 					"hasComment": true,
 					"comment": "",
 					"flowfilename": "",
@@ -2214,7 +2214,8 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -3263,8 +3264,8 @@
 		}
 	],
 	"viewport": {
-		"x": 428.19563376038036,
-		"y": -79.10749148630521,
-		"zoom": 1.3491025343396987
+		"x": -238.42299565550604,
+		"y": 314.3336943572938,
+		"zoom": 0.7412335049014176
 	}
 }
