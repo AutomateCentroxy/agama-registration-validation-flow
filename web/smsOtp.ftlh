@@ -1,7 +1,7 @@
 [#ftl output_format="HTML"]
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>OTP Verification</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css"></head>
+<head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SMS OTP Verification</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css"></head>
 <body>
 
   
@@ -16,44 +16,54 @@
       <div class="md:border md:border-gray-300 bg-white md:shadow-lg shadow-none rounded p-10 w-full max-w-md">
         <div class="flex flex-col items-center space-y-4">
           <img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" alt="logo" class="w-32">
-          <div class="text-2xl font-semibold" data-i18n="otp.otp_verification">OTP Verification</div>
+
+          <div data-i18n="otp.otp_verification" class="text-2xl font-semibold">
+            OTP Verification
+          </div>
 
           [#if phone??]
-            <div class="text-sm text-gray-700">Enter the OTP sent to <span class="font-bold">${phone}</span></div>
-          [#else]
-            <div class="text-sm text-red-600">No phone number is associated with your account.</div>
+            <div class="text-sm text-gray-700" data-i18n="otp.otp_sent_message_frag1">
+              Enter the OTP sent to <span class="font-bold">${phone}</span>
+            </div>
           [/#if]
 
           [#if resent]
-            <div class="text-sm text-green-600" data-i18n="otp.otp_resent_msg">A new code has been sent.</div>
+            <div data-i18n="otp.otp_resent_msg" class="text-sm text-green-600">
+              A new code has been sent.
+            </div>
           [/#if]
 
           [#if errorMessage??]
             <div class="text-sm text-red-600">${errorMessage}</div>
           [/#if]
 
-          <form method="post" class="w-full" onsubmit="return handleFormValidation();">
-            <div class="flex justify-between mb-4">
-              <input type="number" id="1" min="0" max="9" maxlength="1" class="m-1 border w-10 h-10 text-center rounded">
-              <input type="number" id="2" min="0" max="9" maxlength="1" class="m-1 border w-10 h-10 text-center rounded">
-              <input type="number" id="3" min="0" max="9" maxlength="1" class="m-1 border w-10 h-10 text-center rounded">
-              <input type="number" id="4" min="0" max="9" maxlength="1" class="m-1 border w-10 h-10 text-center rounded">
-              <input type="number" id="5" min="0" max="9" maxlength="1" class="m-1 border w-10 h-10 text-center rounded">
-              <input type="number" id="6" min="0" max="9" maxlength="1" class="m-1 border w-10 h-10 text-center rounded">
+          [#if !matches]
+            <div data-i18n="otp.incorrect_otp_entered" class="text-sm text-red-600">
+              Incorrect OTP entered.
+            </div>
+          [/#if]
+
+          <form method="post" class="w-full">
+            <div class="relative mb-4">
+              <label for="code" data-i18n="otp.enter_otp" class="block text-sm text-gray-700 mb-1">
+                Enter OTP
+              </label>
+              <input type="text" name="passcode" id="passcode" pattern="[0-9]+" placeholder="000000" autocomplete="off" required="" autofocus="" class="w-full border border-gray-300 rounded px-3 py-2 bg-gray-50 focus:border-green-700">
             </div>
 
-            <input type="hidden" id="code" name="code">
-            <input type="hidden" id="hasRequestedNewCode" name="hasRequestedNewCode">
-
             <div class="flex justify-center mb-4">
-              <button type="submit" class="py-2 px-6 rounded text-white bg-green-500 hover:bg-green-600">Continue</button>
+              <button type="submit" value="Continue" data-i18n="otp.continue" class="py-2 px-6 rounded text-white bg-green-500 hover:bg-green-600">
+                Continue
+              </button>
             </div>
           </form>
 
           <form method="post">
             <div class="text-sm text-gray-700">
-              Didn't receive the code?
-              <button type="submit" id="resendButton" name="resend" value="true" class="ml-1 text-green-600 font-bold">Resend</button>
+              <span data-i18n="otp.sms_not_received">Didn't receive the code?</span>
+              <button type="submit" id="resend-otp" name="resend" value="true" class="ml-1 text-green-600 font-bold" data-i18n="otp.resent_code">
+                Resend
+              </button>
             </div>
           </form>
         </div>
@@ -61,48 +71,10 @@
     </div>
 
     
+    
+    
   
 </body>
 
-<script>
-      window.onload = function () {
-        const form = document.querySelector("form");
-        const resendBtn = document.getElementById("resendButton");
-        const firstInput = document.getElementById("1");
-
-        if (resendBtn) {
-          resendBtn.onclick = function () {
-            document.getElementById("hasRequestedNewCode").value = "yes";
-            form.submit();
-          };
-        }
-
-        if (firstInput) {
-          firstInput.onpaste = function (e) {
-            let pasted = (e.clipboardData || window.clipboardData).getData('text').slice(0, 6);
-            let inputs = document.querySelectorAll('input[type="number"]');
-            inputs.forEach((input, i) => input.value = pasted.charAt(i) || '');
-            e.preventDefault();
-          };
-        }
-      };
-
-      function handleFormValidation() {
-        if (document.getElementById("hasRequestedNewCode").value === "yes") {
-          return true;
-        }
-
-        let code = "";
-        let inputs = document.querySelectorAll('input[type="number"]');
-        inputs.forEach(input => code += input.value);
-
-        if (code.length !== 6) {
-          alert("Please enter a 6-digit OTP code.");
-          return false;
-        }
-
-        document.getElementById("code").value = code;
-        return true;
-      }
-    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/2.0.22/i18next.min.js"></script><script src="./locale/loc-i18next.js"></script><script src="./locale/locale.js"></script>
 </html>
