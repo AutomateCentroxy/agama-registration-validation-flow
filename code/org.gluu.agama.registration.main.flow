@@ -40,6 +40,7 @@ Repeat 6 times max
      isPhoneVerified = otpValidationResult
      // Check if OTP validation vas okay
      When isPhoneVerified is true
+          uiFeedback.errorMessage = null
           // check user name policy
           isUsernamePolicyMatch = Call userRegistrationService usernamePolicyMatch userName
           // if username policy match
@@ -115,5 +116,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_ahtnp = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_ahtnp
+it_eluus = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_eluus
