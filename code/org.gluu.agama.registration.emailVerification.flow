@@ -3,7 +3,12 @@ Flow org.gluu.agama.registration.emailVerification
      Basepath ""
      Inputs email existingAccount
 // Initialize variables
-emailObj = {}
+emailObj = {
+     email: email,
+     accountExists: existingAccount,
+     matches: true,
+     resent: false
+}
 sendMail = true
 uiInput = {matches: true, resent: false}
 // Get instance email service
