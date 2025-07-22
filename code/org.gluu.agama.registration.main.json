@@ -1673,7 +1673,7 @@
 					"x": 188.08787510014906,
 					"y": 438.3296420717354
 				},
-				"previousNodeId": "logNode-3aa90386-1a84-4889-ac00-1d27522fdc88",
+				"previousNodeId": "whenNode-083b13a4-af70-4c39-a943-5203d40e24d3",
 				"agamaData": {
 					"variableField": "",
 					"valueField": "",
@@ -1693,13 +1693,14 @@
 					"displayName": "",
 					"hasComment": true,
 					"comment": "Check if OTP validation vas okay"
-				}
+				},
+				"branching": "continue"
 			},
 			"measured": {
 				"width": 109,
 				"height": 58
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1811,8 +1812,8 @@
 			"id": "callNode-29a7db61-a002-4bff-bbf0-b044f77aac15",
 			"type": "callNode",
 			"position": {
-				"x": -235.82053350513505,
-				"y": 414.46869288339656
+				"x": -201.82053350513505,
+				"y": 772.4686928833966
 			},
 			"data": {
 				"id": "callNode-29a7db61-a002-4bff-bbf0-b044f77aac15",
@@ -1850,37 +1851,37 @@
 			"dragging": false
 		},
 		{
-			"id": "logNode-3aa90386-1a84-4889-ac00-1d27522fdc88",
+			"id": "logNode-ed4a0b9c-bb0c-421c-8e95-06927dfbc891",
 			"type": "logNode",
 			"position": {
-				"x": -92.53660266201337,
-				"y": 150.99825181166864
+				"x": 10.179466494864954,
+				"y": 754.4686928833966
 			},
 			"data": {
-				"id": "logNode-3aa90386-1a84-4889-ac00-1d27522fdc88",
+				"id": "logNode-ed4a0b9c-bb0c-421c-8e95-06927dfbc891",
 				"type": "logNode",
 				"position": {
-					"x": 340.179466494865,
-					"y": 662.4686928833966
+					"x": 48.179466494864954,
+					"y": 772.4686928833966
 				},
 				"previousNodeId": "callNode-29a7db61-a002-4bff-bbf0-b044f77aac15",
 				"agamaData": {
-					"logMessage": "\"OTP validation result is:\" otpValidationResult",
+					"logMessage": "\"OTP validation result is:\" otpValidationResult",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "LOG",
+					"displayName": "Log validation result",
 					"hasComment": true,
-					"comment": " Add log entry withvalidation result in log file."
+					"comment": "Add log entry withvalidation result in log file."
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		}
 	],
@@ -2726,10 +2727,10 @@
 			"sourceHandle": "source_logNode-7bd15442-850b-43a2-88c8-a84b7c60a62b"
 		},
 		{
-			"id": "callNode-29a7db61-a002-4bff-bbf0-b044f77aac15-logNode-3aa90386-1a84-4889-ac00-1d27522fdc88",
+			"id": "callNode-29a7db61-a002-4bff-bbf0-b044f77aac15-logNode-ed4a0b9c-bb0c-421c-8e95-06927dfbc891",
 			"type": "default",
 			"source": "callNode-29a7db61-a002-4bff-bbf0-b044f77aac15",
-			"target": "logNode-3aa90386-1a84-4889-ac00-1d27522fdc88",
+			"target": "logNode-ed4a0b9c-bb0c-421c-8e95-06927dfbc891",
 			"labelBgPadding": [
 				8,
 				4
@@ -2743,29 +2744,11 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_callNode-29a7db61-a002-4bff-bbf0-b044f77aac15"
-		},
-		{
-			"source": "logNode-3aa90386-1a84-4889-ac00-1d27522fdc88",
-			"sourceHandle": "source_logNode-3aa90386-1a84-4889-ac00-1d27522fdc88",
-			"target": "whenNode-10ce6d32-1edc-42fd-8414-fdfbbdfdb610",
-			"targetHandle": "target_whenNode-10ce6d32-1edc-42fd-8414-fdfbbdfdb610",
-			"label": "",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"id": "xy-edge__logNode-3aa90386-1a84-4889-ac00-1d27522fdc88source_logNode-3aa90386-1a84-4889-ac00-1d27522fdc88-whenNode-10ce6d32-1edc-42fd-8414-fdfbbdfdb610target_whenNode-10ce6d32-1edc-42fd-8414-fdfbbdfdb610"
 		}
 	],
 	"viewport": {
-		"x": 633,
-		"y": 124,
+		"x": 426.9247769760361,
+		"y": -238.4927855199968,
 		"zoom": 1
 	}
 }
