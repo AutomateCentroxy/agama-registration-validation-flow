@@ -115,5 +115,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_cvwur = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_cvwur
+it_oajqi = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_oajqi
