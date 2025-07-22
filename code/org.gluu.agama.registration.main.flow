@@ -27,8 +27,10 @@ Repeat 6 times max
      Log "@info Information provided by the user is : " otpCreds
      //  Validate the OTP code provided by the user.
      otpValidationResult = Call userRegistrationService validateOTPCode phone otpCreds.code
+     //  Add log entry withvalidation result in log file.
+     Log "@info OTP validation result is:" otpValidationResult
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_aqxyn = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_aqxyn
+it_eeagr = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_eeagr
