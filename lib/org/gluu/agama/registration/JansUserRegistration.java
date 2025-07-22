@@ -44,30 +44,35 @@ public class JansUserRegistration extends UserRegistration {
     private static final String COUNTRY = "country";
     private static final String REFERRAL = "referralCode";
     private static final String EXT_ATTR = "jansExtUid";
-    private HashMap<String, String> userCodes = new HashMap<>();
-    private HashMap<String, String> flowConfig;
     private static final int OTP_LENGTH = 6;
     public static final int OTP_CODE_LENGTH = 6;
     private static final String SUBJECT_TEMPLATE = "Here's your verification code: %s";
     private static final String MSG_TEMPLATE_TEXT = "%s is the code to complete your verification";
     private static final SecureRandom RAND = new SecureRandom();
-
+    
     private static JansUserRegistration INSTANCE = null;
-
+    
     private final Map<String, String> emailOtpStore = new HashMap<>();
+    
+    private HashMap<String, String> flowConfig = new HashMap<>();
+    
+    private HashMap<String, String> userCodes = new HashMap<>();
 
-    public JansUserRegistration(HashMap config) {
-        flowConfig = config;
+    public JansUserRegistration() {
+        // Required by Agama
+    }
+
+    public JansUserRegistration(HashMap<String, String> config) {
+        this.flowConfig = config;
         logger.debug("Flow config provided is  {}.", config);
     }
 
-    public JansUserRegistration() {
-       
-    }
-
-    public static synchronized JansUserRegistration getInstance() {
-        if (INSTANCE == null)
+    public static synchronized JansUserRegistration getInstance(Map<String, String> config) {
+        if (INSTANCE == null) {
             INSTANCE = new JansUserRegistration();
+        }
+        INSTANCE.flowConfig = new HashMap<>(config);
+        logger.info("Using Twilio account SID: {}", INSTANCE.flowConfig.get("ACCOUNT_SID"));
         return INSTANCE;
     }
 
