@@ -1838,6 +1838,48 @@
 				"width": 170,
 				"height": 122
 			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "callNode-29a7db61-a002-4bff-bbf0-b044f77aac15",
+			"type": "callNode",
+			"position": {
+				"x": 90.17946649486495,
+				"y": 662.4686928833966
+			},
+			"data": {
+				"id": "callNode-29a7db61-a002-4bff-bbf0-b044f77aac15",
+				"type": "callNode",
+				"position": {
+					"x": 134.08787510014906,
+					"y": 663.3296420717354
+				},
+				"previousNodeId": "logNode-7bd15442-850b-43a2-88c8-a84b7c60a62b",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "validateOTPCode",
+					"javaVariableName": "userRegistrationService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"phone",
+						"otpCreds.code"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": " Validate the OTP code provided by the user.",
+					"asssignedVariableName": "otpValidationResult"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
 			"selected": true,
 			"dragging": false
 		}
@@ -2682,11 +2724,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_rrfNode-53a12e63-aa33-4969-80c9-deffb2068fea"
+		},
+		{
+			"id": "logNode-7bd15442-850b-43a2-88c8-a84b7c60a62b-callNode-29a7db61-a002-4bff-bbf0-b044f77aac15",
+			"type": "default",
+			"source": "logNode-7bd15442-850b-43a2-88c8-a84b7c60a62b",
+			"target": "callNode-29a7db61-a002-4bff-bbf0-b044f77aac15",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-7bd15442-850b-43a2-88c8-a84b7c60a62b"
 		}
 	],
 	"viewport": {
-		"x": 772.1320380959419,
-		"y": -185.86835202702548,
-		"zoom": 1
+		"x": 869.4723884624802,
+		"y": -350.0066372552701,
+		"zoom": 1.161508731925722
 	}
 }
