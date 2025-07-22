@@ -1,6 +1,7 @@
 // Verifies the possession of an e-mail address by sending a random passcode
 Flow org.gluu.agama.registration.emailVerification
      Basepath ""
+     Timeout 700 seconds
      Inputs email existingAccount
 // Initialize variables
 emailObj = {}
