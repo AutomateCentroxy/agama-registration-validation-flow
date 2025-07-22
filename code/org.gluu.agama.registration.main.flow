@@ -105,16 +105,17 @@ Repeat 6 times max
                          uiFeedback.errorMessage = "Name should contain only alphabets"
                Otherwise
                     // Closing the main flow with error.
-                    it_gwclz = {success:false, error: "Registration flow exceeded maximum attempts"}
-                    Finish it_gwclz
+                    it_txofe = {success:false, error: "Registration flow exceeded maximum attempts"}
+                    Finish it_txofe
           // The maximum number of attempt has been reached.
           Log "@error Invalid code provided. Number of attempt(s): " idx[0]
           // Provide feedback to user.
           uiFeedback.errorMessage = "You have exceeded the maximum number of OTP attempts. Please try again later."
           it_otpmax = { success: false, error: "ExceededTheNumberOfAttemptsAllowed" }
+          Finish it_otpmax
      Log "@info " Max attempted
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_umxay = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_umxay
+it_fbkud = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_fbkud
