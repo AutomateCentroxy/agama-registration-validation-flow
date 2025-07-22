@@ -28,13 +28,6 @@ max = Repeat 3 times max
           emailObj.accountExists = existingAccount
           // Redirect to email otp page
           uiInput = RRF "emailOtp.ftlh" emailObj
-          // resent will false
-          uiInput.resent = false
-          // If user clicked on "resend code" button
-          When uiInput.resent is ""
-               // Variable assignment when user clicked on "resend code" button
-               sendMail = true
-               uiInput.resent = true
           // When passcode entered by user matches
           When uiInput.passcode is otpCode
                Finish true
