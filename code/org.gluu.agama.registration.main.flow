@@ -21,7 +21,7 @@ Repeat 6 times max
      smsOtpSend = Call userRegistrationService sendOTPCode phone
      // The OTP Code has been send to user.
      Log "@info OTP generated and send to: " phone
-     Repeat __________ times max
+     Repeat 3 times max
           //  Show UI to collect OTP code from user.
           otpCreds = RRF "smsOtp.ftlh" uiFeedback
           //  Add log entry with collected code in log file.
@@ -105,8 +105,8 @@ Repeat 6 times max
                          uiFeedback.errorMessage = "Name should contain only alphabets"
                Otherwise
                     // Closing the main flow with error.
-                    it_tdtrf = {success:false, error: "Registration flow exceeded maximum attempts"}
-                    Finish it_tdtrf
+                    it_wbjfu = {success:false, error: "Registration flow exceeded maximum attempts"}
+                    Finish it_wbjfu
           // The maximum number of attempt has been reached.
           Log "@error Invalid code provided. Number of attempt(s): " idx[0]
           // Provide feedback to user.
@@ -115,5 +115,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_vnwac = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_vnwac
+it_vtyvw = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_vtyvw
