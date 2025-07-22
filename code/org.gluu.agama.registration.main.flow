@@ -108,10 +108,10 @@ Repeat 6 times max
                // Name should contain only alphabets
                uiFeedback.errorMessage = "Name should contain only alphabets"
      Otherwise
-          Log "@info " OTP validation failed after 3 attempts
+          Log "@info OTP validation failed after 3 attempts"
           Finish __________
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_vmwky = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_vmwky
+it_qyole = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_qyole
