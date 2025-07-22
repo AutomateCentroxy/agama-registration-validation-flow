@@ -22,10 +22,10 @@
 				<h1 class="text-2xl font-bold">OTP Verification
 				</h1>
 				<div class="flex flex-col mt-4">
-				  [#if username??]
+				  [#if phone??]
 				  <div role="alert" class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400">
-					<span class="font-medium"></span>Welcome back ${username}!
-					[#if maskedPhone??]
+					<span class="font-medium"></span>Welcome back!
+					[#if phone??]
 					<span class="font-medium">${infoMessage}</span> 
 					[#else]
 					<span class="font-medium">It looks like there is no phone number associated to your account.</span> 
