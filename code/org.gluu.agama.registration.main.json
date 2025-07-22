@@ -1951,6 +1951,11 @@
 							"variableTypeCheck": true,
 							"assignmentExpression": "\"You have exceeded the maximum number of OTP attempts. Please try again later.\"",
 							"assignedVariableName": "uiFeedback.errorMessage"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{ success: false, error: \"ExceededTheNumberOfAttemptsAllowed\" }",
+							"assignedVariableName": "it_otpmax"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
