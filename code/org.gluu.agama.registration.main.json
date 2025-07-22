@@ -1871,7 +1871,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "\"Invalid code provided. Number of attempt(s): ${idx[0]}\"",
+							"assignmentExpression": "\"Invalid code provided.\"",
 							"assignedVariableName": "uiFeedback.errorMessage"
 						}
 					],
@@ -1888,7 +1888,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2214,7 +2214,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
@@ -3264,8 +3264,8 @@
 		}
 	],
 	"viewport": {
-		"x": -238.42299565550604,
-		"y": 314.3336943572938,
+		"x": -46.07579964869092,
+		"y": 8.896611217946486,
 		"zoom": 0.7412335049014176
 	}
 }
