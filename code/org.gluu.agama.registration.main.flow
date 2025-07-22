@@ -30,9 +30,7 @@ Repeat 6 times max
           otpValidationResult = Call userRegistrationService validateOTPCode phone otpCreds.code
           // Add log entry withvalidation result in log file.
           Log "@info OTP validation result is:" otpValidationResult
-          // If otp validation was successful
-          When otpValidationResult is true
-               Quit When otpValidationResult is true
+          Quit When otpValidationResult is true
           // The maximum number of attempt has been reached.
           Log "@error Invalid code provided. Number of attempt(s): " idx[0]
           // Provide feedback to user.
@@ -113,10 +111,10 @@ Repeat 6 times max
                uiFeedback.errorMessage = "Name should contain only alphabets"
      Otherwise
           // Closing the main flow with error.
-          it_xaccn = {success:false, error: "Registration flow exceeded maximum attempts"}
-          Finish it_xaccn
+          it_ndtng = {success:false, error: "Registration flow exceeded maximum attempts"}
+          Finish it_ndtng
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_jtzqa = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_jtzqa
+it_gssmg = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_gssmg
