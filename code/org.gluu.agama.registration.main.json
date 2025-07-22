@@ -35,7 +35,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2022,7 +2022,7 @@
 				"agamaData": {
 					"nodeIcon": "material-symbols:event-repeat-outline-rounded",
 					"maxIteration": "3",
-					"maxIterationVariableName": "",
+					"maxIterationVariableName": "max",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
@@ -2035,7 +2035,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2077,8 +2077,8 @@
 			"id": "quitNode-d9737850-9ffa-4d92-aa4d-263e36df583f",
 			"type": "quitNode",
 			"position": {
-				"x": 1010.6138049202079,
-				"y": 790.0898622868265
+				"x": 1037.5958556070018,
+				"y": 794.1371698898456
 			},
 			"data": {
 				"id": "quitNode-d9737850-9ffa-4d92-aa4d-263e36df583f",
@@ -3153,8 +3153,8 @@
 		}
 	],
 	"viewport": {
-		"x": 988.7198728284002,
-		"y": 299.1742771386614,
-		"zoom": 0.5
+		"x": 360.33139659849235,
+		"y": -48.55061901699548,
+		"zoom": 0.7012496253212007
 	}
 }
