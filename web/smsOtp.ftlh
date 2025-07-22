@@ -39,9 +39,9 @@
 					<span class="font-medium"></span>${errorMessage}
 				  </div>
 				  [/#if]
-				  [#if maskedPhone??]
+				  [#if phone??]
 				  <span>Enter the OTP you received at</span>
-				  <span class="font-bold">${maskedPhone}</span>
+				  <span class="font-bold">${phone}</span>
 				  [/#if]
 				</div>
 				<div id="otp" class="flex flex-row justify-center text-center px-2 mt-5">
