@@ -83,7 +83,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -397,64 +397,10 @@
 			"dragging": false
 		},
 		{
-			"id": "assignmentNode-2407de3b-e3ac-4c72-bc5c-c804c72ee269",
-			"type": "assignmentNode",
-			"position": {
-				"x": 1951.8939867244517,
-				"y": 469.29377390842643
-			},
-			"data": {
-				"id": "assignmentNode-2407de3b-e3ac-4c72-bc5c-c804c72ee269",
-				"type": "assignmentNode",
-				"position": {
-					"x": 1951.8939867244517,
-					"y": 469.29377390842643
-				},
-				"previousNodeId": "whenNode-1007dbbd-7380-4c8c-aa2b-06121b7fcb86",
-				"branching": "continue",
-				"agamaData": {
-					"assignments": [
-						{
-							"variableTypeCheck": true,
-							"assignmentExpression": "email",
-							"assignedVariableName": "emailObj.email"
-						},
-						{
-							"variableTypeCheck": true,
-							"assignmentExpression": "existingAccount",
-							"assignedVariableName": "emailObj.accountExists"
-						},
-						{
-							"variableTypeCheck": true,
-							"assignmentExpression": "uiInput.matches",
-							"assignedVariableName": "emailObj.matches"
-						},
-						{
-							"variableTypeCheck": true,
-							"assignmentExpression": "uiInput.resent",
-							"assignedVariableName": "emailObj.resent"
-						}
-					],
-					"nodeIcon": "material-symbols:equal",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "",
-					"hasComment": true,
-					"comment": "Variable assignment after successful email delivery"
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 122
-			},
-			"selected": false
-		},
-		{
 			"id": "rrfNode-c23ce294-9090-4b12-9908-2b452ec133c7",
 			"type": "rrfNode",
 			"position": {
-				"x": 2201.8939867244517,
+				"x": 1951.8939867244517,
 				"y": 469.29377390842643
 			},
 			"data": {
@@ -464,7 +410,7 @@
 					"x": 2201.8939867244517,
 					"y": 469.29377390842643
 				},
-				"previousNodeId": "assignmentNode-2407de3b-e3ac-4c72-bc5c-c804c72ee269",
+				"previousNodeId": "whenNode-1007dbbd-7380-4c8c-aa2b-06121b7fcb86",
 				"agamaData": {
 					"assignments": [],
 					"nodeIcon": "ph:globe-simple",
@@ -477,7 +423,8 @@
 					"hasComment": true,
 					"comment": "Redirect to page asking for OTP received using email",
 					"arguments": "emailObj"
-				}
+				},
+				"branching": "continue"
 			},
 			"measured": {
 				"width": 170,
@@ -489,7 +436,7 @@
 			"id": "assignmentNode-2e23d41a-6036-402d-9643-e14898e3707b",
 			"type": "assignmentNode",
 			"position": {
-				"x": 2451.8939867244517,
+				"x": 2201.8939867244517,
 				"y": 469.29377390842643
 			},
 			"data": {
@@ -600,7 +547,7 @@
 			"id": "whenNode-147a967b-a133-4b00-b1b8-d2539a9029f1",
 			"type": "whenNode",
 			"position": {
-				"x": 2701.8939867244517,
+				"x": 2451.8939867244517,
 				"y": 469.29377390842643
 			},
 			"data": {
@@ -642,7 +589,7 @@
 			"id": "whenNode-6dfdc4fa-669b-48b0-b681-ae47f0c0931e",
 			"type": "whenNode",
 			"position": {
-				"x": 2951.8939867244517,
+				"x": 2701.8939867244517,
 				"y": 469.29377390842643
 			},
 			"data": {
@@ -685,7 +632,7 @@
 			"id": "assignmentNode-184b8f77-c3aa-4727-9d93-0375ff29533a",
 			"type": "assignmentNode",
 			"position": {
-				"x": 3201.8939867244517,
+				"x": 2951.8939867244517,
 				"y": 469.29377390842643
 			},
 			"data": {
@@ -724,7 +671,7 @@
 			"id": "finishNode-57d108a2-a5a6-4a52-96d0-8cfafc5cfdc9",
 			"type": "finishNode",
 			"position": {
-				"x": 3201.8939867244517,
+				"x": 2951.8939867244517,
 				"y": 669.2937739084264
 			},
 			"data": {
@@ -759,7 +706,7 @@
 			"id": "assignmentNode-3a11390a-8ff6-43da-8f58-08461ae4ac56",
 			"type": "assignmentNode",
 			"position": {
-				"x": 2841.4501944941403,
+				"x": 2591.4501944941403,
 				"y": 690.0483120456661
 			},
 			"data": {
@@ -974,44 +921,6 @@
 			"sourceHandle": "source_callNode-ece73344-1545-4b50-b428-234b9f03c503"
 		},
 		{
-			"id": "whenNode-1007dbbd-7380-4c8c-aa2b-06121b7fcb86-assignmentNode-2407de3b-e3ac-4c72-bc5c-c804c72ee269",
-			"type": "default",
-			"source": "whenNode-1007dbbd-7380-4c8c-aa2b-06121b7fcb86",
-			"target": "assignmentNode-2407de3b-e3ac-4c72-bc5c-c804c72ee269",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "continue",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_whenNode-1007dbbd-7380-4c8c-aa2b-06121b7fcb86_continue"
-		},
-		{
-			"id": "assignmentNode-2407de3b-e3ac-4c72-bc5c-c804c72ee269-rrfNode-c23ce294-9090-4b12-9908-2b452ec133c7",
-			"type": "default",
-			"source": "assignmentNode-2407de3b-e3ac-4c72-bc5c-c804c72ee269",
-			"target": "rrfNode-c23ce294-9090-4b12-9908-2b452ec133c7",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_assignmentNode-2407de3b-e3ac-4c72-bc5c-c804c72ee269"
-		},
-		{
 			"id": "rrfNode-c23ce294-9090-4b12-9908-2b452ec133c7-assignmentNode-2e23d41a-6036-402d-9643-e14898e3707b",
 			"type": "default",
 			"source": "rrfNode-c23ce294-9090-4b12-9908-2b452ec133c7",
@@ -1162,11 +1071,29 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-147a967b-a133-4b00-b1b8-d2539a9029f1_success"
+		},
+		{
+			"source": "whenNode-1007dbbd-7380-4c8c-aa2b-06121b7fcb86",
+			"sourceHandle": "source_whenNode-1007dbbd-7380-4c8c-aa2b-06121b7fcb86_continue",
+			"target": "rrfNode-c23ce294-9090-4b12-9908-2b452ec133c7",
+			"targetHandle": "target_rrfNode-c23ce294-9090-4b12-9908-2b452ec133c7",
+			"label": "continue",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"id": "xy-edge__whenNode-1007dbbd-7380-4c8c-aa2b-06121b7fcb86source_whenNode-1007dbbd-7380-4c8c-aa2b-06121b7fcb86_continue-rrfNode-c23ce294-9090-4b12-9908-2b452ec133c7target_rrfNode-c23ce294-9090-4b12-9908-2b452ec133c7"
 		}
 	],
 	"viewport": {
-		"x": -164,
-		"y": 107,
+		"x": -1069,
+		"y": -42,
 		"zoom": 1
 	}
 }
