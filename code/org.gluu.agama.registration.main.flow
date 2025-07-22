@@ -87,7 +87,7 @@ Repeat 6 times max
                                    // When email verification is invalid
                                    When emailVerificationResult.success is false
                                         // Error variable assignment. 
-                                        emailObj.errorMessage = "Error sending email. Check email address and SMTP configuration."
+                                        uiFeedback.errorMessage = "Error sending email. Check email address and SMTP configuration."
                               Otherwise
                                    // Password and Confirm password doesn't match
                                    Log "@trace Password and Confirm password doesn't match"
@@ -116,5 +116,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_eluus = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_eluus
+it_qbgtd = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_qbgtd
