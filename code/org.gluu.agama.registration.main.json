@@ -1773,14 +1773,14 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
 			"id": "callNode-29a7db61-a002-4bff-bbf0-b044f77aac15",
 			"type": "callNode",
 			"position": {
-				"x": -1651.8882404021087,
+				"x": -1904.6013366302413,
 				"y": 845.8429700247858
 			},
 			"data": {
@@ -1822,8 +1822,8 @@
 			"id": "logNode-ed4a0b9c-bb0c-421c-8e95-06927dfbc891",
 			"type": "logNode",
 			"position": {
-				"x": -979.820533505135,
-				"y": 720.4686928833966
+				"x": -1628.1955480702431,
+				"y": 851.9305560727788
 			},
 			"data": {
 				"id": "logNode-ed4a0b9c-bb0c-421c-8e95-06927dfbc891",
@@ -1856,8 +1856,8 @@
 			"id": "whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf",
 			"type": "whenNode",
 			"position": {
-				"x": -733.820533505135,
-				"y": 780.4686928833966
+				"x": -1360.5915426158572,
+				"y": 890.6701889907763
 			},
 			"data": {
 				"id": "whenNode-b9bb1dc4-ae6f-4bf9-ab04-0ceb8939daaf",
@@ -1899,8 +1899,8 @@
 			"id": "logNode-ae36d1fa-e6f9-410f-912d-5a9c5dd1cd6c",
 			"type": "logNode",
 			"position": {
-				"x": -733.3979025262493,
-				"y": 127.20757063643646
+				"x": -1093.274663251911,
+				"y": 557.6821648058884
 			},
 			"data": {
 				"id": "logNode-ae36d1fa-e6f9-410f-912d-5a9c5dd1cd6c",
@@ -1934,8 +1934,8 @@
 			"id": "assignmentNode-233edfc5-ffd0-4efd-a872-63bf861656d9",
 			"type": "assignmentNode",
 			"position": {
-				"x": -358.820533505135,
-				"y": 23.468692883396557
+				"x": -785.8513309212314,
+				"y": 342.0198925687911
 			},
 			"data": {
 				"id": "assignmentNode-233edfc5-ffd0-4efd-a872-63bf861656d9",
@@ -1949,7 +1949,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "\"The provided code is not valid.\"",
+							"assignmentExpression": "\"You have exceeded the maximum number of OTP attempts. Please try again later.\"",
 							"assignedVariableName": "uiFeedback.errorMessage"
 						}
 					],
@@ -1966,7 +1966,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2007,8 +2007,8 @@
 			"id": "assignmentNode-5e975906-1e85-4ed6-9495-b2bf4b659e72",
 			"type": "assignmentNode",
 			"position": {
-				"x": -502.30215386087093,
-				"y": 1047.7336799800128
+				"x": -778.4153860127092,
+				"y": 1021.6037858273255
 			},
 			"data": {
 				"id": "assignmentNode-5e975906-1e85-4ed6-9495-b2bf4b659e72",
@@ -3103,8 +3103,8 @@
 		}
 	],
 	"viewport": {
-		"x": 2102.782214689275,
-		"y": -308.1271250561931,
-		"zoom": 0.7834971869493407
+		"x": 655.991267187997,
+		"y": 25.66425671131219,
+		"zoom": 0.5
 	}
 }
