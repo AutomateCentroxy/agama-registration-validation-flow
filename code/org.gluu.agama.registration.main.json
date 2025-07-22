@@ -1545,7 +1545,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1629,8 +1629,8 @@
 			"id": "logNode-8071e7fc-fc0b-45d2-8b18-cbde3fed6306",
 			"type": "logNode",
 			"position": {
-				"x": -494.91212489985094,
-				"y": 663.3296420717354
+				"x": -543.9121248998509,
+				"y": 666.3296420717354
 			},
 			"data": {
 				"id": "logNode-8071e7fc-fc0b-45d2-8b18-cbde3fed6306",
@@ -1770,6 +1770,41 @@
 				"height": 122
 			},
 			"selected": false
+		},
+		{
+			"id": "rrfNode-53a12e63-aa33-4969-80c9-deffb2068fea",
+			"type": "rrfNode",
+			"position": {
+				"x": -305.91212489985094,
+				"y": 663.3296420717354
+			},
+			"data": {
+				"id": "rrfNode-53a12e63-aa33-4969-80c9-deffb2068fea",
+				"type": "rrfNode",
+				"position": {
+					"x": -293.91212489985094,
+					"y": 666.3296420717354
+				},
+				"previousNodeId": "logNode-8071e7fc-fc0b-45d2-8b18-cbde3fed6306",
+				"agamaData": {
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "",
+					"asssignedVariableName": "",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -2574,11 +2609,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-10ce6d32-1edc-42fd-8414-fdfbbdfdb610_otherwise"
+		},
+		{
+			"id": "logNode-8071e7fc-fc0b-45d2-8b18-cbde3fed6306-rrfNode-53a12e63-aa33-4969-80c9-deffb2068fea",
+			"type": "default",
+			"source": "logNode-8071e7fc-fc0b-45d2-8b18-cbde3fed6306",
+			"target": "rrfNode-53a12e63-aa33-4969-80c9-deffb2068fea",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-8071e7fc-fc0b-45d2-8b18-cbde3fed6306"
 		}
 	],
 	"viewport": {
-		"x": 1102.1320380959419,
-		"y": -212.86835202702548,
+		"x": 990.1320380959419,
+		"y": -251.86835202702548,
 		"zoom": 1
 	}
 }
