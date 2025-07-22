@@ -61,6 +61,10 @@ public class JansUserRegistration extends UserRegistration {
         logger.debug("Flow config provided is  {}.", config);
     }
 
+    public JansUserRegistration() {
+       
+    }
+
     public static synchronized JansUserRegistration getInstance() {
         if (INSTANCE == null)
             INSTANCE = new JansUserRegistration();
