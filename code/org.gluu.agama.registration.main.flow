@@ -23,8 +23,10 @@ Repeat 6 times max
      Log "@info OTP generated and send to: " phone
      //  Show UI to collect OTP code from user.
      otpCreds = RRF "smsOtp.ftlh" uiFeedback
+     //  Add log entry with collected code in log file.
+     Log "@info Information provided by the user is : " otpCreds
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_rwgli = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_rwgli
+it_pfyrf = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_pfyrf
