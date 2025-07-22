@@ -66,6 +66,12 @@ public class JansUserRegistration extends UserRegistration {
         this.flowConfig = config;
         logger.info("Using Twilio account SID: {}", config.get("ACCOUNT_SID"));
     }
+    
+    public static UserRegistration getInstance() {
+        return new JansUserRegistration(); // uses no-arg constructor
+    }
+
+ 
  
     public boolean passwordPolicyMatch(String userPassword) {
         String regex = '''^(?=.*[!@#$^&*])[A-Za-z0-9!@#$^&*]{6,}$''';
