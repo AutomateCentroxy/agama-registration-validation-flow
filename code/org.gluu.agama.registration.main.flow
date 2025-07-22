@@ -31,10 +31,13 @@ Repeat 6 times max
      Log "@info OTP validation result is:" otpValidationResult
      // If otp validation was successful
      When otpValidationResult is true
+          isPhoneVerified = otpValidationResult
      // The maximum number of attempt has been reached.
      Log "@error Invalid code provided. Number of attempt(s): " idx[0]
+     // Provide feedback to user.
+     uiFeedback.errorMessage = "The provided code is not valid."
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_ovplr = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_ovplr
+it_tasor = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_tasor
