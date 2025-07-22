@@ -37,7 +37,7 @@ Repeat 6 times max
           uiFeedback.errorMessage = "You have exceeded the maximum number of OTP attempts. Please try again later."
           it_otpmax = { success: false, error: "ExceededTheNumberOfAttemptsAllowed" }
           Finish it_otpmax
-     Log "@info " Max attempted
+     Log "@info OTP verification loop completed"
      isPhoneVerified = otpValidationResult
      // Check if OTP validation vas okay
      When isPhoneVerified is true
@@ -111,10 +111,10 @@ Repeat 6 times max
                uiFeedback.errorMessage = "Name should contain only alphabets"
      Otherwise
           // Closing the main flow with error.
-          it_ndtng = {success:false, error: "Registration flow exceeded maximum attempts"}
-          Finish it_ndtng
+          it_jjfad = {success:false, error: "Registration flow exceeded maximum attempts"}
+          Finish it_jjfad
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_gssmg = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_gssmg
+it_ezlvf = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_ezlvf
