@@ -35,7 +35,7 @@ Repeat 6 times max
           // The maximum number of attempt has been reached.
           Log "@error Invalid code provided "
           // Provide feedback to user.
-          uiFeedback.errorMessage = "Invalid code provided. Number of attempt(s): ${idx[0]}"
+          uiFeedback.errorMessage = "Invalid code provided."
      Log "@info OTP verification loop completed"
      isPhoneVerified = otpValidationResult
      // Check if OTP validation vas okay
@@ -115,5 +115,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_oajqi = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_oajqi
+it_leyhc = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_leyhc
