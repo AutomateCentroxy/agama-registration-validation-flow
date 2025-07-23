@@ -2467,8 +2467,8 @@
 			"id": "assignmentNode-8f69448d-6bc8-4cef-840c-fbe47b35185f",
 			"type": "assignmentNode",
 			"position": {
-				"x": 5510.244872621099,
-				"y": 487.21575605781436
+				"x": 5558.594458194481,
+				"y": 708.0854537907671
 			},
 			"data": {
 				"id": "assignmentNode-8f69448d-6bc8-4cef-840c-fbe47b35185f",
@@ -2477,7 +2477,7 @@
 					"x": 5277.879485200496,
 					"y": 433.15188162030324
 				},
-				"previousNodeId": "whenNode-e0a82d0c-943e-483f-9943-435c2b350691",
+				"previousNodeId": "quitNode-3c2fb40f-f099-4d1c-92c3-ee78b1a7c5b2",
 				"branching": "otherwise",
 				"agamaData": {
 					"assignments": [
@@ -2614,7 +2614,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -3795,6 +3795,24 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_rrfNode-a5451673-5065-4847-a26c-1a3d4d3a4a69"
+		},
+		{
+			"source": "quitNode-3c2fb40f-f099-4d1c-92c3-ee78b1a7c5b2",
+			"sourceHandle": "source_quitNode-3c2fb40f-f099-4d1c-92c3-ee78b1a7c5b2",
+			"target": "assignmentNode-8f69448d-6bc8-4cef-840c-fbe47b35185f",
+			"targetHandle": "target_assignmentNode-8f69448d-6bc8-4cef-840c-fbe47b35185f",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"id": "xy-edge__quitNode-3c2fb40f-f099-4d1c-92c3-ee78b1a7c5b2source_quitNode-3c2fb40f-f099-4d1c-92c3-ee78b1a7c5b2-assignmentNode-8f69448d-6bc8-4cef-840c-fbe47b35185ftarget_assignmentNode-8f69448d-6bc8-4cef-840c-fbe47b35185f"
 		}
 	],
 	"viewport": {
