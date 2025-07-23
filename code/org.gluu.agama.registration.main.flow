@@ -19,7 +19,7 @@ Repeat 6 times max
      email = userInput.mail
      userName = userInput.uid
      referralCode = userInput.referralCode
-     country = userInput.country
+     residenceCountry = userInput.residenceCountry
      phone = userInput.phoneNumber
      // sent sms otp
      smsOtpSend = Call userRegistrationService sendOTPCode phone
@@ -136,5 +136,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_hkcyf = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_hkcyf
+it_hsfxq = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_hsfxq
