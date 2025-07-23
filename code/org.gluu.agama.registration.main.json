@@ -94,7 +94,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2234,6 +2234,46 @@
 				"height": 58
 			},
 			"selected": false
+		},
+		{
+			"id": "callNode-a5644573-0c3c-4c0e-bbfa-5edf559cf724",
+			"type": "callNode",
+			"position": {
+				"x": 3749.9547665428045,
+				"y": 936.6938892908328
+			},
+			"data": {
+				"id": "callNode-a5644573-0c3c-4c0e-bbfa-5edf559cf724",
+				"type": "callNode",
+				"position": {
+					"x": 3749.9547665428045,
+					"y": 936.6938892908328
+				},
+				"previousNodeId": "logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "sendEmail",
+					"javaVariableName": "userRegistrationService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"email"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Call email service to send mail",
+					"asssignedVariableName": "otpCode"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -3262,11 +3302,30 @@
 				"fillOpacity": 0.7
 			},
 			"id": "xy-edge__whenNode-2c941c15-5982-42fe-b507-55461f609050source_whenNode-2c941c15-5982-42fe-b507-55461f609050_success-assignmentNode-8e32c650-1631-4d44-8105-e98367587096target_assignmentNode-8e32c650-1631-4d44-8105-e98367587096"
+		},
+		{
+			"id": "logNode-03a587ef-b76f-4d16-a191-ab20a6be711d-callNode-a5644573-0c3c-4c0e-bbfa-5edf559cf724",
+			"type": "default",
+			"source": "logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
+			"target": "callNode-a5644573-0c3c-4c0e-bbfa-5edf559cf724",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-03a587ef-b76f-4d16-a191-ab20a6be711d"
 		}
 	],
 	"viewport": {
-		"x": 1678.0264525668608,
-		"y": 191.76579428098046,
+		"x": -2003.9735474331392,
+		"y": -232.23420571901954,
 		"zoom": 0.6381643844144765
 	}
 }
