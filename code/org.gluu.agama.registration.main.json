@@ -59,6 +59,26 @@
 							"variableTypeCheck": false,
 							"assignmentExpression": "{}",
 							"assignedVariableName": "uiFeedback"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"\"",
+							"assignedVariableName": "uiFeedback.errorMessage"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{}",
+							"assignedVariableName": "emailObj"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "true",
+							"assignedVariableName": "sendMail"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{matches: true, resent: false}",
+							"assignedVariableName": "uiInput"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -74,7 +94,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -942,45 +962,6 @@
 			"dragging": false
 		},
 		{
-			"id": "triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
-			"type": "triggerNode",
-			"position": {
-				"x": 3885.4985592243743,
-				"y": 844.0543529787849
-			},
-			"data": {
-				"id": "triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
-				"type": "triggerNode",
-				"position": {
-					"x": 2481.057748962963,
-					"y": 693.5778454187802
-				},
-				"previousNodeId": "logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
-				"agamaData": {
-					"nodeIcon": "fluent-mdl2:trigger-approval",
-					"flowFileName": "org.gluu.agama.registration.emailVerification",
-					"arguments": [
-						"email"
-					],
-					"asssignedVariableName": "emailVerificationResult",
-					"exceptionVariableField": "",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "",
-					"hasComment": true,
-					"comment": "Trigger sub-routine to verify email",
-					"overrides": []
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 122
-			},
-			"selected": false,
-			"dragging": false
-		},
-		{
 			"id": "whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11",
 			"type": "whenNode",
 			"position": {
@@ -1476,8 +1457,8 @@
 			"id": "logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
 			"type": "logNode",
 			"position": {
-				"x": 3604.9433895940156,
-				"y": 875.5811087087842
+				"x": 3499.9547665428045,
+				"y": 936.6938892908328
 			},
 			"data": {
 				"id": "logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
@@ -1581,7 +1562,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2667,24 +2648,6 @@
 			"id": "xy-edge__callNode-1e9e2090-3521-421c-b1a9-e8bafc4b306csource_callNode-1e9e2090-3521-421c-b1a9-e8bafc4b306c-whenNode-c1ae3675-fb2f-40f2-8290-c5190571a966target_whenNode-c1ae3675-fb2f-40f2-8290-c5190571a966"
 		},
 		{
-			"source": "triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
-			"sourceHandle": "source_triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
-			"target": "whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11",
-			"targetHandle": "target_whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11",
-			"label": "",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"id": "xy-edge__triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20source_triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20-whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11target_whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11"
-		},
-		{
 			"source": "whenNode-0428b3a3-d006-476d-a53f-f4e0216b0a57",
 			"sourceHandle": "source_whenNode-0428b3a3-d006-476d-a53f-f4e0216b0a57_success",
 			"target": "callNode-1e9e2090-3521-421c-b1a9-e8bafc4b306c",
@@ -2890,24 +2853,6 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-73d94606-3a2b-4465-b1d2-37bfd32b4374_success"
-		},
-		{
-			"source": "logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
-			"sourceHandle": "source_logNode-03a587ef-b76f-4d16-a191-ab20a6be711d",
-			"target": "triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
-			"targetHandle": "target_triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20",
-			"label": "",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"id": "xy-edge__logNode-03a587ef-b76f-4d16-a191-ab20a6be711dsource_logNode-03a587ef-b76f-4d16-a191-ab20a6be711d-triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20target_triggerNode-f5640ca0-71db-40e8-aa7d-2a3285723a20"
 		},
 		{
 			"id": "whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11-logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d",
@@ -3320,8 +3265,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1960.8745107487657,
-		"y": -145.92072128284292,
+		"x": 1678.0264525668608,
+		"y": 191.76579428098046,
 		"zoom": 0.6381643844144765
 	}
 }
