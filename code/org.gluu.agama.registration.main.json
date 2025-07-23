@@ -2307,7 +2307,50 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
+		},
+		{
+			"id": "whenNode-42756678-b72d-4376-acee-862791969ed7",
+			"type": "whenNode",
+			"position": {
+				"x": 4142.15083405602,
+				"y": 832.3948724125288
+			},
+			"data": {
+				"id": "whenNode-42756678-b72d-4376-acee-862791969ed7",
+				"type": "whenNode",
+				"position": {
+					"x": 4231.15083405602,
+					"y": 941.3948724125288
+				},
+				"previousNodeId": "logNode-ed7219b0-370c-44ec-b018-4582e0b67b06",
+				"agamaData": {
+					"variableField": "",
+					"valueField": "",
+					"conditionInputField": "",
+					"conditions": [
+						{
+							"variable": "otpCode",
+							"operator": "is",
+							"dataValue": "null",
+							"combinator": "none"
+						}
+					],
+					"nodeIcon": "ph:swap",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "When OTP code null"
+				}
+			},
+			"measured": {
+				"width": 109,
+				"height": 58
+			},
+			"selected": false,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -3374,6 +3417,25 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_callNode-a5644573-0c3c-4c0e-bbfa-5edf559cf724"
+		},
+		{
+			"id": "logNode-ed7219b0-370c-44ec-b018-4582e0b67b06-whenNode-42756678-b72d-4376-acee-862791969ed7",
+			"type": "default",
+			"source": "logNode-ed7219b0-370c-44ec-b018-4582e0b67b06",
+			"target": "whenNode-42756678-b72d-4376-acee-862791969ed7",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-ed7219b0-370c-44ec-b018-4582e0b67b06"
 		}
 	],
 	"viewport": {
