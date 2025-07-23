@@ -1417,7 +1417,7 @@
 					"x": 3748.4024311746584,
 					"y": 976.9257125741746
 				},
-				"previousNodeId": "whenNode-6b72b89d-87ca-4469-8c3d-3c489336ad11",
+				"previousNodeId": "assignmentNode-ad260688-2a81-49db-8e1c-4d7536f111d1",
 				"branching": "success",
 				"agamaData": {
 					"logMessage": "\"E-mail verification passed, initiating user provisioning flow\"",
@@ -2587,7 +2587,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -3787,11 +3787,29 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-e0a82d0c-943e-483f-9943-435c2b350691_success"
+		},
+		{
+			"source": "assignmentNode-ad260688-2a81-49db-8e1c-4d7536f111d1",
+			"sourceHandle": "source_assignmentNode-ad260688-2a81-49db-8e1c-4d7536f111d1",
+			"target": "logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d",
+			"targetHandle": "target_logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"id": "xy-edge__assignmentNode-ad260688-2a81-49db-8e1c-4d7536f111d1source_assignmentNode-ad260688-2a81-49db-8e1c-4d7536f111d1-logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175dtarget_logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d"
 		}
 	],
 	"viewport": {
-		"x": -3689.2058265638643,
-		"y": -286.71627094311793,
-		"zoom": 0.860949188338904
+		"x": -2996.7248155153925,
+		"y": -132.2878109826546,
+		"zoom": 0.7012496253212007
 	}
 }
