@@ -75,6 +75,8 @@ Repeat 6 times max
                                    Log "@info Send Email Otp method called"
                                    // When OTP code null
                                    When otpCode is null
+                                        // Variable assignment for unsuccessful Email delivery
+                                        emailObj = { success: false, error: "Unable_to_deliver_email_message" }
                               Otherwise
                                    // Password and Confirm password doesn't match
                                    Log "@trace Password and Confirm password doesn't match"
@@ -103,5 +105,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_hsldh = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_hsldh
+it_kabdk = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_kabdk
