@@ -2601,7 +2601,7 @@
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "emailVerificationSuccess",
 					"hasComment": true,
 					"comment": "",
 					"variableField": "uiInput.passcode",
@@ -2614,7 +2614,8 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -3816,8 +3817,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4385.282134937467,
-		"y": -347.67453677401204,
-		"zoom": 0.9100388240808991
+		"x": -2899.1345077483793,
+		"y": -98.10071561733048,
+		"zoom": 0.6381643844144765
 	}
 }
