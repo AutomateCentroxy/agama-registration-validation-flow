@@ -82,6 +82,10 @@ Repeat 6 times max
                                    emailVerificationSuccess = false
                                    // Iterate x times max
                                    otpTries = Repeat 3 times max
+                                        // Variable assignment after successful email delivery
+                                        emailObj.email = email
+                                        emailObj.matches = uiInput.matches
+                                        emailObj.resent = uiInput.resent
                               Otherwise
                                    // Password and Confirm password doesn't match
                                    Log "@trace Password and Confirm password doesn't match"
@@ -110,5 +114,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_haxnx = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_haxnx
+it_rtbdo = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_rtbdo
