@@ -136,5 +136,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_xblvd = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_xblvd
+it_wpcnb = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_wpcnb
