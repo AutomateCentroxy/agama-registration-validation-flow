@@ -73,6 +73,8 @@ Repeat 6 times max
                                    otpCode = Call userRegistrationService sendEmail email
                                    // Send Email Otp method called
                                    Log "@info Send Email Otp method called"
+                                   // When OTP code null
+                                   When otpCode is null
                               Otherwise
                                    // Password and Confirm password doesn't match
                                    Log "@trace Password and Confirm password doesn't match"
@@ -101,5 +103,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_bvhct = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_bvhct
+it_hsldh = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_hsldh
