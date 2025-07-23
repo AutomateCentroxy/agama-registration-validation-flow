@@ -80,6 +80,7 @@ Repeat 6 times max
                                         uiFeedback.errorMessage = "Unable to send OTP to the provided email address"
                                         Finish emailObj
                                    emailVerificationSuccess = false
+                                   Repeat __________ times max
                               Otherwise
                                    // Password and Confirm password doesn't match
                                    Log "@trace Password and Confirm password doesn't match"
@@ -108,5 +109,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_ztjfy = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_ztjfy
+it_pchaq = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_pchaq
