@@ -44,8 +44,8 @@
 			<input type="tel" id="phoneNumber" name="phoneNumber" pattern="^\+?[1-9]\d{1,14}$" title="Enter a valid phone number (e.g., +1234567890" required="" placeholder="+1234567890" class="form-control">
 		  </div>
 		  <div class="form-group">
-			<label class="form-label">Country: <span class="required">*</span></label>
-			<input type="text" id="residenceCountry" name="residenceCountry" required="" placeholder="Enter your country" class="form-control">
+			<label class="form-label">Residence Country: <span class="required">*</span></label>
+			<input type="text" id="residenceCountry" name="residenceCountry" required="" placeholder="Enter country code (e.g., IN, US)" class="form-control">
 		  </div>
 		  <div class="form-group">
 			<label class="form-label">Referral Code:</label>
