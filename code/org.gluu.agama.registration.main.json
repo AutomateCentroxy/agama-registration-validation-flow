@@ -1417,7 +1417,7 @@
 					"x": 3748.4024311746584,
 					"y": 976.9257125741746
 				},
-				"previousNodeId": "assignmentNode-ad260688-2a81-49db-8e1c-4d7536f111d1",
+				"previousNodeId": "assignmentNode-cc68b8dc-2d67-47f4-a2f5-ea4674fb2201",
 				"branching": "success",
 				"agamaData": {
 					"logMessage": "\"E-mail verification passed, initiating user provisioning flow\"",
@@ -2404,11 +2404,6 @@
 							"variableTypeCheck": true,
 							"assignmentExpression": "uiInput.matches",
 							"assignedVariableName": "emailObj.matches"
-						},
-						{
-							"variableTypeCheck": true,
-							"assignmentExpression": "uiInput.resent",
-							"assignedVariableName": "emailObj.resent"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -2424,7 +2419,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2619,7 +2614,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -3837,11 +3832,29 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_assignmentNode-938b09ca-f572-402f-b3e5-1e352ba5c4e3"
+		},
+		{
+			"source": "assignmentNode-cc68b8dc-2d67-47f4-a2f5-ea4674fb2201",
+			"sourceHandle": "source_assignmentNode-cc68b8dc-2d67-47f4-a2f5-ea4674fb2201",
+			"target": "logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d",
+			"targetHandle": "target_logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"id": "xy-edge__assignmentNode-cc68b8dc-2d67-47f4-a2f5-ea4674fb2201source_assignmentNode-cc68b8dc-2d67-47f4-a2f5-ea4674fb2201-logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175dtarget_logNode-ad6adc8b-8acb-4649-be84-fca1c3d8175d"
 		}
 	],
 	"viewport": {
-		"x": -2588.1345077483793,
-		"y": -25.10071561733048,
-		"zoom": 0.6381643844144765
+		"x": -3757.442212656815,
+		"y": -229.70996081765156,
+		"zoom": 0.860949188338904
 	}
 }
