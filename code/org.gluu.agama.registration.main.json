@@ -274,8 +274,8 @@
 						},
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "userInput.country",
-							"assignedVariableName": "country"
+							"assignmentExpression": "userInput.residenceCountry",
+							"assignedVariableName": "residenceCountry"
 						},
 						{
 							"variableTypeCheck": true,
@@ -296,7 +296,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -958,7 +958,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -3853,8 +3853,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3810.5497117039276,
-		"y": -258.4897839108511,
+		"x": 1673.033567952055,
+		"y": 89.7545604185512,
 		"zoom": 0.860949188338904
 	}
 }
