@@ -2351,6 +2351,45 @@
 			},
 			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "assignmentNode-3de28335-8f5c-4b33-b4c3-3e1ae374f88d",
+			"type": "assignmentNode",
+			"position": {
+				"x": 4392.15083405602,
+				"y": 1032.394872412529
+			},
+			"data": {
+				"id": "assignmentNode-3de28335-8f5c-4b33-b4c3-3e1ae374f88d",
+				"type": "assignmentNode",
+				"position": {
+					"x": 4392.15083405602,
+					"y": 1032.394872412529
+				},
+				"previousNodeId": "whenNode-42756678-b72d-4376-acee-862791969ed7",
+				"branching": "success",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{ success: false, error: \"Unable_to_deliver_email_message\" }",
+							"assignedVariableName": "emailObj"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "unsuccessful Email delivery",
+					"hasComment": true,
+					"comment": "Variable assignment for unsuccessful Email delivery"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -3436,11 +3475,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-ed7219b0-370c-44ec-b018-4582e0b67b06"
+		},
+		{
+			"id": "whenNode-42756678-b72d-4376-acee-862791969ed7-assignmentNode-3de28335-8f5c-4b33-b4c3-3e1ae374f88d",
+			"type": "default",
+			"source": "whenNode-42756678-b72d-4376-acee-862791969ed7",
+			"target": "assignmentNode-3de28335-8f5c-4b33-b4c3-3e1ae374f88d",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-42756678-b72d-4376-acee-862791969ed7_success"
 		}
 	],
 	"viewport": {
-		"x": -3746.998040469788,
-		"y": -447.5432908832545,
-		"zoom": 1
+		"x": -3432.4747703325143,
+		"y": -323.398620865926,
+		"zoom": 0.860949188338904
 	}
 }
