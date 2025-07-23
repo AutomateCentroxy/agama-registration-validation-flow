@@ -2374,6 +2374,11 @@
 							"variableTypeCheck": true,
 							"assignmentExpression": "{ success: false, error: \"Unable_to_deliver_email_message\" }",
 							"assignedVariableName": "emailObj"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"Unable to send OTP to the provided email address\"",
+							"assignedVariableName": "uiFeedback.errorMessage"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
