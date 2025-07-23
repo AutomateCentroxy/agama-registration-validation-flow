@@ -24,7 +24,6 @@
         },
         "": {},
         "org.gluu.agama.registration.emailVerification.flow": {},
-        "org.gluu.agama.registration.emailVerification": {},
         "org.gluu.agama.registration.smsVerification": {},
         "org.gluu.agama.registration.smsOTPVerification": {}
     },
