@@ -2552,15 +2552,15 @@
 			"dragging": false
 		},
 		{
-			"id": "quitNode-8d503571-07d2-4d02-844c-d43a5ca40d62",
-			"type": "quitNode",
+			"id": "assignmentNode-a4260d27-7d4f-40e3-a6ae-0063437bac12",
+			"type": "assignmentNode",
 			"position": {
-				"x": 5452.197110453113,
-				"y": 941.7667230883726
+				"x": 5404.758166139422,
+				"y": 974.380997304035
 			},
 			"data": {
-				"id": "quitNode-8d503571-07d2-4d02-844c-d43a5ca40d62",
-				"type": "quitNode",
+				"id": "assignmentNode-a4260d27-7d4f-40e3-a6ae-0063437bac12",
+				"type": "assignmentNode",
 				"position": {
 					"x": 5474.434115600156,
 					"y": 1015.8900735785144
@@ -2568,16 +2568,20 @@
 				"previousNodeId": "whenNode-e0a82d0c-943e-483f-9943-435c2b350691",
 				"branching": "success",
 				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "true",
+							"assignedVariableName": "emailVerificationSuccess"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "emailVerificationSuccess",
 					"hasComment": true,
-					"comment": "",
-					"variableField": "emailVerificationSuccess",
-					"valueField": "true",
-					"conditionInputField": "is",
-					"nodeIcon": "material-symbols:pip-exit-outline-rounded"
+					"comment": ""
 				}
 			},
 			"measured": {
@@ -3768,10 +3772,10 @@
 			"sourceHandle": "source_whenNode-e0a82d0c-943e-483f-9943-435c2b350691_otherwise"
 		},
 		{
-			"id": "whenNode-e0a82d0c-943e-483f-9943-435c2b350691-quitNode-8d503571-07d2-4d02-844c-d43a5ca40d62",
+			"id": "whenNode-e0a82d0c-943e-483f-9943-435c2b350691-assignmentNode-a4260d27-7d4f-40e3-a6ae-0063437bac12",
 			"type": "default",
 			"source": "whenNode-e0a82d0c-943e-483f-9943-435c2b350691",
-			"target": "quitNode-8d503571-07d2-4d02-844c-d43a5ca40d62",
+			"target": "assignmentNode-a4260d27-7d4f-40e3-a6ae-0063437bac12",
 			"labelBgPadding": [
 				8,
 				4
@@ -3788,8 +3792,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3146.7036624547122,
-		"y": -92.88685295493292,
+		"x": -3122.703662454712,
+		"y": -234.8868529549328,
 		"zoom": 0.6745512671698494
 	}
 }
