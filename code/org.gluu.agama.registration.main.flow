@@ -93,6 +93,7 @@ Repeat 6 times max
                                         uiInput.matches = false
                                         uiFeedback.errorMessage = "Incorrect OTP entered. Please try again."
                                    emailVerificationSuccess = true
+                                   emailObj.success = true
                               Otherwise
                                    // Password and Confirm password doesn't match
                                    Log "@trace Password and Confirm password doesn't match"
@@ -121,5 +122,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_eueso = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_eueso
+it_dsgpq = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_dsgpq
