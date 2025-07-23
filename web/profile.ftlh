@@ -3,15 +3,69 @@
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>User Registration
 	</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></head>
-<body><div class="registration-container"><div align="center" class="flex"><img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m"></div><div class="header"><i class="fas fa-user-plus">
+<body>
+
+  
+	
+	
+	
+	
+  
+  
+	<div class="registration-container">
+	  <div align="center" class="flex">
+		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
+	  </div>
+	  <div class="header">
+		<i class="fas fa-user-plus">
 		</i> User Registration
-	  </div><!-- Error Message Block -->
+	  </div>
+	  <!-- Error Message Block -->
 	  [#if errorMessage?has_content]
-	  <div role="alert" align="center" class="alert alert-danger mt-3 error"><p>${errorMessage} 
-		</p></div>
+	  <div role="alert" align="center" class="alert alert-danger mt-3 error">
+		<p>${errorMessage} 
+		</p>
+	  </div>
 	  [/#if]
-	  <div class="content"><p class="text-center">To create an account, please enter your details below.
-		</p><form method="post" enctype="application/x-www-form-urlencoded" id="registerForm"><div class="form-group"><label class="form-label">Username: <span class="required">*</span></label><input type="text" id="uid" name="uid" pattern="[A-Za-z]+" title="Name should contain only alphabets" required="" placeholder="Choose a username" class="form-control"></div><div class="form-group"><label class="form-label">Email: <span class="required">*</span></label><input type="email" id="mail" name="mail" required="" placeholder="Enter your email" class="form-control"></div><div class="form-group"><label class="form-label">Country: <span class="required">*</span></label><input type="text" id="jansCountry" name="jansCountry" required="" placeholder="Enter your country" class="form-control"></div><div class="form-group"><label class="form-label">Referral Code:</label><input type="text" id="referralCode" name="referralCode" placeholder="Optional referral code" class="form-control"></div><div class="buttons"><button type="submit" class="btn btn-primary">Register</button><button type="reset" id="cancel" name="cancel" value="cancel" class="btn btn-primary">Reset</button></div><!-- Hidden fields for context auto-fill --><input type="hidden" id="location" name="location" value="Unknown"><input type="hidden" id="zone" name="zone" value=""><input type="hidden" id="device" name="device" value=""></form></div></div></body>
+	  <div class="content">
+		<p class="text-center">To create an account, please enter your details below.
+		</p>
+		<form method="post" enctype="application/x-www-form-urlencoded" id="registerForm">
+		  <div class="form-group">
+			<label class="form-label">Username: <span class="required">*</span></label>
+			<input type="text" id="uid" name="uid" pattern="[A-Za-z]+" title="Name should contain only alphabets" required="" placeholder="Choose a username" class="form-control">
+		  </div>
+		  <div class="form-group">
+			<label class="form-label">Email: <span class="required">*</span></label>
+			<input type="email" id="mail" name="mail" required="" placeholder="Enter your email" class="form-control">
+		  </div>
+		  <div class="form-group">
+			<label class="form-label">Mobile Number: <span class="required">*</span></label>
+			<input type="tel" id="phoneNumber" name="phoneNumber" pattern="^\+?[1-9]\d{1,14}$" title="Enter a valid phone number (e.g., +1234567890" required="" placeholder="+1234567890" class="form-control">
+		  </div>
+		  <div class="form-group">
+			<label class="form-label">Country: <span class="required">*</span></label>
+			<input type="text" id="jansCountry" name="jansCountry" required="" placeholder="Enter your country" class="form-control">
+		  </div>
+		  <div class="form-group">
+			<label class="form-label">Referral Code:</label>
+			<input type="text" id="referralCode" name="referralCode" placeholder="Optional referral code" class="form-control">
+		  </div>
+		  <div class="buttons">
+			<button type="submit" class="btn btn-primary">Register</button>
+			<button type="reset" id="cancel" name="cancel" value="cancel" class="btn btn-primary">Reset</button>
+		  </div>
+		  <!-- Hidden fields for context auto-fill -->
+		  <input type="hidden" id="location" name="location" value="Unknown">
+		  <input type="hidden" id="zone" name="zone" value="">
+		  <input type="hidden" id="device" name="device" value="">
+		</form>
+	  </div>
+	</div>
+  
+  
+  
+</body>
 <style>
 	body {
 	  font-family: Arial, sans-serif;

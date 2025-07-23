@@ -1,48 +1,98 @@
 // User Registration Techniques
 Flow org.gluu.agama.registration.main
      Basepath ""
-     Timeout 360 seconds
+     Timeout 700 seconds
+     Configs conf
 // Create  variable for UI feedback
 uiFeedback = {}
+uiFeedback.errorMessage = ""
+emailObj = {}
+sendMail = true
+uiInput = {matches: true, resent: false}
 // Iterate x times max
 Repeat 6 times max
      // Retrieve user profile  from UI
      userInput = RRF "profile.ftlh" uiFeedback
      // create an instance of Registration service
-     userRegistrationService = Call org.gluu.agama.user.UserRegistration#getInstance 
+     userRegistrationService = Call org.gluu.agama.user.UserRegistration#getInstance conf
      // Assign userName, email and password  to a variable
      email = userInput.mail
      userName = userInput.uid
      referralCode = userInput.referralCode
      country = userInput.country
-     // Check user name policy
-     isUsernamePolicyMatch = Call userRegistrationService usernamePolicyMatch userName
-     // if username policy match
-     When isUsernamePolicyMatch is true
-          // Check user already exist or not with mail
-          user = Call userRegistrationService getUserEntityByMail email
-          // If user not found
-          When user.empty is true
-               // Check user already exist or not with username
-               userWithUid = Call userRegistrationService getUserEntityByUsername userName
-               // user not found
-               When userWithUid.empty is true
-                    // Retrieve user password from UI
-                    passwordInput = RRF "password.ftlh" uiFeedback
-                    // Assign  password  to a variable
-                    userPassword = passwordInput.userPassword
-                    confirmPassword = passwordInput.confirmPassword
-                    // Password policy check
-                    isPasswordPolicyMatch = Call userRegistrationService passwordPolicyMatch userPassword
-                    // if password policy match
-                    When isPasswordPolicyMatch is true
-                         // Matching password 
-                         When userPassword is confirmPassword
-                              Log "@info Send-Email-page-trigger"
-                              // Trigger sub-routine to verify email
-                              emailVerificationResult = Trigger org.gluu.agama.registration.emailVerification email
-                              // If email data is valid
-                              When emailVerificationResult.success is true
+     phone = userInput.phoneNumber
+     // sent sms otp
+     smsOtpSend = Call userRegistrationService sendOTPCode phone
+     // The OTP Code has been send to user.
+     Log "@info OTP generated and send to: " phone
+     otpValidationResult = false
+     max = Repeat 3 times max
+          //  Show UI to collect OTP code from user.
+          otpCreds = RRF "smsOtp.ftlh" uiFeedback
+          //  Add log entry with collected code in log file.
+          Log "@info Information provided by the user is : " otpCreds.code
+          //  Validate the OTP code provided by the user.
+          otpValidationResult = Call userRegistrationService validateOTPCode phone otpCreds.code
+          // Add log entry withvalidation result in log file.
+          Log "@info OTP validation result is:" otpValidationResult
+          Quit When otpValidationResult is true
+          // The maximum number of attempt has been reached.
+          Log "@error Invalid code provided "
+          // Provide feedback to user.
+          uiFeedback.errorMessage = "Invalid code provided."
+     Log "@info OTP verification loop completed"
+     isPhoneVerified = otpValidationResult
+     // Check if OTP validation vas okay
+     When isPhoneVerified is true
+          uiFeedback.errorMessage = null
+          // check user name policy
+          isUsernamePolicyMatch = Call userRegistrationService usernamePolicyMatch userName
+          // if username policy match
+          When isUsernamePolicyMatch is true
+               // Check user already exist or not with mail
+               user = Call userRegistrationService getUserEntityByMail email
+               // If user not found
+               When user.empty is true
+                    // Check user already exist or not with username
+                    userWithUid = Call userRegistrationService getUserEntityByUsername userName
+                    // user not found
+                    When userWithUid.empty is true
+                         // Retrieve user password from UI
+                         passwordInput = RRF "password.ftlh" uiFeedback
+                         // Assign  password  to a variable
+                         userPassword = passwordInput.userPassword
+                         confirmPassword = passwordInput.confirmPassword
+                         // Password policy check
+                         isPasswordPolicyMatch = Call userRegistrationService passwordPolicyMatch userPassword
+                         // if password policy match
+                         When isPasswordPolicyMatch is true
+                              // Matching password 
+                              When userPassword is confirmPassword
+                                   Log "@info Send-Email-page-trigger"
+                                   // Call email service to send mail
+                                   otpCode = Call userRegistrationService sendEmail email
+                                   // Send Email Otp method called
+                                   Log "@info Send Email Otp method called"
+                                   // When OTP code null
+                                   When otpCode is null
+                                        // Variable assignment for unsuccessful Email delivery
+                                        emailObj = { success: false, error: "Unable_to_deliver_email_message" }
+                                        uiFeedback.errorMessage = "Unable to send OTP to the provided email address"
+                                        Finish emailObj
+                                   emailVerificationSuccess = false
+                                   // Iterate x times max
+                                   otpTries = Repeat 3 times max
+                                        // Variable assignment after successful email delivery
+                                        emailObj.email = email
+                                        emailObj.matches = uiInput.matches
+                                        // Redirect to page asking for OTP received using email
+                                        uiInput = RRF "emailOtp.ftlh" emailObj
+                                        Quit When uiInput.passcode is otpCode
+                                        // Variable assigned when OTP entered by user does not matches
+                                        uiInput.matches = false
+                                        uiFeedback.errorMessage = "Incorrect OTP entered. Please try again."
+                                   emailVerificationSuccess = true
+                                   emailObj.success = true
                                    // E-mail verification passed, initiating user provisioning flow
                                    Log "@info E-mail verification passed, initiating user provisioning flow"
                                    inum | E = Call userRegistrationService addNewUser userInput passwordInput
@@ -58,33 +108,33 @@ Repeat 6 times max
                                         Finish userName
                                    // Registration failed log
                                    Log "@info User registration failed. Error : %" E
-                              // When email verification is invalid
-                              When emailVerificationResult.success is false
-                                   // Error variable assignment. 
-                                   emailObj.errorMessage = "Error sending email. Check email address and SMTP configuration."
+                              Otherwise
+                                   // Password and Confirm password doesn't match
+                                   Log "@trace Password and Confirm password doesn't match"
+                                   // Error variable assignment
+                                   uiFeedback.errorMessage = "Password and confirm password not matching"
                          Otherwise
-                              // Password and Confirm password doesn't match
-                              Log "@trace Password and Confirm password doesn't match"
-                              // Error variable assignment
-                              uiFeedback.errorMessage = "Password and confirm password not matching"
+                              // password policy
+                              uiFeedback.errorMessage = "Password must be at least 6 characters long and contain at least one special character"
                     Otherwise
-                         // password policy
-                         uiFeedback.errorMessage = "Password must be at least 6 characters long and contain at least one special character"
+                         // User already registered with UID
+                         Log "@info User already registered with uid: %" userName
+                         // User already registered with UID
+                         uiFeedback.errorMessage = "User already registered with this UserName"
                Otherwise
-                    // User already registered with UID
-                    Log "@info User already registered with uid: %" userName
-                    // User already registered with UID
-                    uiFeedback.errorMessage = "User already registered with this UserName"
+                    // User already registered with mail
+                    Log "@info User already registered with mail: %" email
+                    // User already Registered
+                    uiFeedback.errorMessage = "User already Registered with this mail"
           Otherwise
-               // User already registered with mail
-               Log "@info User already registered with mail: %" email
-               // User already Registered
-               uiFeedback.errorMessage = "User already Registered with this mail"
+               // Name should contain only alphabets
+               uiFeedback.errorMessage = "Name should contain only alphabets"
      Otherwise
-          // Name should contain only alphabets
-          uiFeedback.errorMessage = "Name should contain only alphabets"
+          Log "@info OTP validation failed after 3 attempts"
+          it_otpmax = { success: false, error: "ExceededTheNumberOfAttemptsAllowed" }
+          Finish it_otpmax
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_dydyb = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_dydyb
+it_hkcyf = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_hkcyf
