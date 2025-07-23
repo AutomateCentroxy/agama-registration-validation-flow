@@ -2428,7 +2428,47 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
+		},
+		{
+			"id": "assignmentNode-cadf72bb-82dd-4820-a017-62f140c16f04",
+			"type": "assignmentNode",
+			"position": {
+				"x": 4277.161469595374,
+				"y": 609.3851958827902
+			},
+			"data": {
+				"id": "assignmentNode-cadf72bb-82dd-4820-a017-62f140c16f04",
+				"type": "assignmentNode",
+				"position": {
+					"x": 4392.15083405602,
+					"y": 832.3948724125288
+				},
+				"previousNodeId": "whenNode-42756678-b72d-4376-acee-862791969ed7",
+				"branching": "continue",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "false",
+							"assignedVariableName": "emailVerificationSuccess"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "emailVerificationSuccess check",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -3552,11 +3592,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_assignmentNode-3de28335-8f5c-4b33-b4c3-3e1ae374f88d"
+		},
+		{
+			"id": "whenNode-42756678-b72d-4376-acee-862791969ed7-assignmentNode-cadf72bb-82dd-4820-a017-62f140c16f04",
+			"type": "default",
+			"source": "whenNode-42756678-b72d-4376-acee-862791969ed7",
+			"target": "assignmentNode-cadf72bb-82dd-4820-a017-62f140c16f04",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "continue",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-42756678-b72d-4376-acee-862791969ed7_continue"
 		}
 	],
 	"viewport": {
-		"x": -3432.4747703325143,
-		"y": -323.398620865926,
+		"x": -3393.474770332514,
+		"y": -324.3986208659261,
 		"zoom": 0.860949188338904
 	}
 }
