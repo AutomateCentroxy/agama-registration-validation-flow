@@ -2239,8 +2239,8 @@
 			"id": "callNode-a5644573-0c3c-4c0e-bbfa-5edf559cf724",
 			"type": "callNode",
 			"position": {
-				"x": 3749.9547665428045,
-				"y": 936.6938892908328
+				"x": 3731.1508340560204,
+				"y": 941.3948724125288
 			},
 			"data": {
 				"id": "callNode-a5644573-0c3c-4c0e-bbfa-5edf559cf724",
@@ -2267,6 +2267,40 @@
 					"hasComment": true,
 					"comment": "Call email service to send mail",
 					"asssignedVariableName": "otpCode"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "logNode-ed7219b0-370c-44ec-b018-4582e0b67b06",
+			"type": "logNode",
+			"position": {
+				"x": 3981.1508340560204,
+				"y": 941.3948724125288
+			},
+			"data": {
+				"id": "logNode-ed7219b0-370c-44ec-b018-4582e0b67b06",
+				"type": "logNode",
+				"position": {
+					"x": 3981.1508340560204,
+					"y": 941.3948724125288
+				},
+				"previousNodeId": "callNode-a5644573-0c3c-4c0e-bbfa-5edf559cf724",
+				"agamaData": {
+					"logMessage": "\"Send Email Otp method called\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Send Email Otp method called"
 				}
 			},
 			"measured": {
@@ -3321,11 +3355,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-03a587ef-b76f-4d16-a191-ab20a6be711d"
+		},
+		{
+			"id": "callNode-a5644573-0c3c-4c0e-bbfa-5edf559cf724-logNode-ed7219b0-370c-44ec-b018-4582e0b67b06",
+			"type": "default",
+			"source": "callNode-a5644573-0c3c-4c0e-bbfa-5edf559cf724",
+			"target": "logNode-ed7219b0-370c-44ec-b018-4582e0b67b06",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-a5644573-0c3c-4c0e-bbfa-5edf559cf724"
 		}
 	],
 	"viewport": {
-		"x": -2003.9735474331392,
-		"y": -232.23420571901954,
-		"zoom": 0.6381643844144765
+		"x": -3746.998040469788,
+		"y": -447.5432908832545,
+		"zoom": 1
 	}
 }
