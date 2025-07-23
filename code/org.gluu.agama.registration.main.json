@@ -2394,6 +2394,40 @@
 				"width": 170,
 				"height": 122
 			},
+			"selected": false
+		},
+		{
+			"id": "finishNode-93200156-5a2d-43e8-9d39-2d909cb3ec2d",
+			"type": "finishNode",
+			"position": {
+				"x": 4642.15083405602,
+				"y": 1032.394872412529
+			},
+			"data": {
+				"id": "finishNode-93200156-5a2d-43e8-9d39-2d909cb3ec2d",
+				"type": "finishNode",
+				"position": {
+					"x": 4642.15083405602,
+					"y": 1032.394872412529
+				},
+				"previousNodeId": "assignmentNode-3de28335-8f5c-4b33-b4c3-3e1ae374f88d",
+				"agamaData": {
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "\"Unable to send OTP to the provided email address\"",
+					"hasComment": true,
+					"comment": "",
+					"flowfilename": "",
+					"returnVariable": "emailObj",
+					"finishMode": "withVariable",
+					"nodeIcon": "material-symbols:line-end-square-rounded"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
 			"selected": true
 		}
 	],
@@ -3499,6 +3533,25 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-42756678-b72d-4376-acee-862791969ed7_success"
+		},
+		{
+			"id": "assignmentNode-3de28335-8f5c-4b33-b4c3-3e1ae374f88d-finishNode-93200156-5a2d-43e8-9d39-2d909cb3ec2d",
+			"type": "default",
+			"source": "assignmentNode-3de28335-8f5c-4b33-b4c3-3e1ae374f88d",
+			"target": "finishNode-93200156-5a2d-43e8-9d39-2d909cb3ec2d",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_assignmentNode-3de28335-8f5c-4b33-b4c3-3e1ae374f88d"
 		}
 	],
 	"viewport": {
