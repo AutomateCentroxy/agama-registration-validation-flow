@@ -2501,6 +2501,56 @@
 				"width": 170,
 				"height": 122
 			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "assignmentNode-6a6dda2d-554d-47e3-a4d4-6ef611f79fd5",
+			"type": "assignmentNode",
+			"position": {
+				"x": 4558.873655980696,
+				"y": 649.5748632750859
+			},
+			"data": {
+				"id": "assignmentNode-6a6dda2d-554d-47e3-a4d4-6ef611f79fd5",
+				"type": "assignmentNode",
+				"position": {
+					"x": 4638.941930496214,
+					"y": 660.7672027234918
+				},
+				"previousNodeId": "repeatNode-a685052f-e2e6-47d7-b64f-42b93a240329",
+				"branching": "repeat",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "email",
+							"assignedVariableName": "emailObj.email"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "uiInput.matches",
+							"assignedVariableName": "emailObj.matches"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "uiInput.resent",
+							"assignedVariableName": "emailObj.resent"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Variable assignment after successful email delivery"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
 			"selected": true,
 			"dragging": false
 		}
@@ -3664,11 +3714,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_assignmentNode-cadf72bb-82dd-4820-a017-62f140c16f04"
+		},
+		{
+			"id": "repeatNode-a685052f-e2e6-47d7-b64f-42b93a240329-assignmentNode-6a6dda2d-554d-47e3-a4d4-6ef611f79fd5",
+			"type": "default",
+			"source": "repeatNode-a685052f-e2e6-47d7-b64f-42b93a240329",
+			"target": "assignmentNode-6a6dda2d-554d-47e3-a4d4-6ef611f79fd5",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "repeat",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_repeatNode-a685052f-e2e6-47d7-b64f-42b93a240329_repeat"
 		}
 	],
 	"viewport": {
-		"x": -2100.023047791311,
-		"y": 2.833101784224084,
-		"zoom": 0.5494271087884399
+		"x": -5080.131877371791,
+		"y": -358.91060956763124,
+		"zoom": 1.161508731925722
 	}
 }
