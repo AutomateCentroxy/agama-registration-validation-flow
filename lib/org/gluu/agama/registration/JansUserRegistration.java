@@ -41,7 +41,7 @@ public class JansUserRegistration extends UserRegistration {
     private static final String PASSWORD = "userPassword";
     private static final String INUM_ATTR = "inum";
     private static final String USER_STATUS = "jansStatus";
-    private static final String COUNTRY = "country";
+    private static final String COUNTRY = "residenceCountry";
     private static final String REFERRAL = "referralCode";
     private static final String EXT_ATTR = "jansExtUid";
     private static final int OTP_LENGTH = 6;
@@ -198,8 +198,8 @@ public class JansUserRegistration extends UserRegistration {
         user.setAttribute("sn", uid);
         user.setAttribute("userPassword", password); // let Jans hash it
  
-        if (StringHelper.isNotEmpty(combined.get("country"))) {
-            user.setAttribute("country", combined.get("country"));
+        if (StringHelper.isNotEmpty(combined.get("residenceCountry"))) {
+            user.setAttribute("residenceCountry", combined.get("residenceCountry"));
         }
  
         if (StringHelper.isNotEmpty(combined.get("referralCode"))) {
