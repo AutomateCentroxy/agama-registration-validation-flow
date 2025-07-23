@@ -85,7 +85,6 @@ Repeat 6 times max
                                         // Variable assignment after successful email delivery
                                         emailObj.email = email
                                         emailObj.matches = uiInput.matches
-                                        emailObj.resent = uiInput.resent
                                         // Redirect to page asking for OTP received using email
                                         uiInput = RRF "emailOtp.ftlh" emailObj
                                         Quit When uiInput.passcode is otpCode
@@ -94,6 +93,21 @@ Repeat 6 times max
                                         uiFeedback.errorMessage = "Incorrect OTP entered. Please try again."
                                    emailVerificationSuccess = true
                                    emailObj.success = true
+                                   // E-mail verification passed, initiating user provisioning flow
+                                   Log "@info E-mail verification passed, initiating user provisioning flow"
+                                   inum | E = Call userRegistrationService addNewUser userInput passwordInput
+                                   // If user registration success
+                                   When inum is not null
+                                        // Show user creation log
+                                        Log "@info User % has been created" inum
+                                        // Show acknowledgement UI page for successful registration
+                                        acknowledgementInput = RRF "acknowledgement.ftlh" 
+                                        // Finish the flow successfully
+                                        Log "@info Finish the flow successfully"
+                                        // Finish the flow successfully
+                                        Finish userName
+                                   // Registration failed log
+                                   Log "@info User registration failed. Error : %" E
                               Otherwise
                                    // Password and Confirm password doesn't match
                                    Log "@trace Password and Confirm password doesn't match"
@@ -122,5 +136,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_dsgpq = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_dsgpq
+it_jpkat = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_jpkat
