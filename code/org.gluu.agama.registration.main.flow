@@ -90,7 +90,7 @@ Repeat 6 times max
                                         uiInput = RRF "emailOtp.ftlh" emailObj
                                         // When passcode entered by user matches
                                         When uiInput.passcode is otpCode
-                                             Quit When emailVerificationSuccess is true
+                                             emailVerificationSuccess = true
                                         Otherwise
                                              // Variable assigned when OTP entered by user does not matches
                                              uiInput.matches = false
@@ -123,5 +123,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_ibjhz = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_ibjhz
+it_nfikg = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_nfikg
