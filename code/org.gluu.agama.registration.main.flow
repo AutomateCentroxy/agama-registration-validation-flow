@@ -93,6 +93,7 @@ Repeat 6 times max
                                         Otherwise
                                              // Variable assigned when OTP entered by user does not matches
                                              uiInput.matches = false
+                                             uiFeedback.errorMessage = "Incorrect OTP entered. Please try again."
                               Otherwise
                                    // Password and Confirm password doesn't match
                                    Log "@trace Password and Confirm password doesn't match"
@@ -121,5 +122,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_vnhuk = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_vnhuk
+it_aggbh = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_aggbh
