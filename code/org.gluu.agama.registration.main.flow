@@ -78,6 +78,7 @@ Repeat 6 times max
                                         // Variable assignment for unsuccessful Email delivery
                                         emailObj = { success: false, error: "Unable_to_deliver_email_message" }
                                         uiFeedback.errorMessage = "Unable to send OTP to the provided email address"
+                                        Finish emailObj
                               Otherwise
                                    // Password and Confirm password doesn't match
                                    Log "@trace Password and Confirm password doesn't match"
@@ -106,5 +107,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_kiryh = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_kiryh
+it_dwzhk = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_dwzhk
