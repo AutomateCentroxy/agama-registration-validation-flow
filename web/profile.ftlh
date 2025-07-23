@@ -45,7 +45,7 @@
 		  </div>
 		  <div class="form-group">
 			<label class="form-label">Country: <span class="required">*</span></label>
-			<input type="text" id="jansCountry" name="jansCountry" required="" placeholder="Enter your country" class="form-control">
+			<input type="text" id="residenceCountry" name="residenceCountry" required="" placeholder="Enter your country" class="form-control">
 		  </div>
 		  <div class="form-group">
 			<label class="form-label">Referral Code:</label>
