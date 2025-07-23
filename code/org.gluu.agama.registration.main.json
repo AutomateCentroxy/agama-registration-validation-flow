@@ -2655,6 +2655,11 @@
 							"variableTypeCheck": true,
 							"assignmentExpression": "false",
 							"assignedVariableName": "uiInput.matches"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"Incorrect OTP entered. Please try again.\"",
+							"assignedVariableName": "uiFeedback.errorMessage"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
